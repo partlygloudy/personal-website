@@ -1,0 +1,190 @@
+html {
+	overflow-x: hidden;
+}
+
+body {
+	font-family: Cardo;
+	margin: 0;
+}
+
+p {
+	font-size: 1.05rem;
+	line-height: 1.6;
+}
+
+li {
+	margin-top: 20px;
+	line-height: 1.5;
+}
+
+a {
+	color: black;
+}
+
+a:hover {
+	background-color: black;
+	color: white;
+}
+
+/* -----------
+    Home Icon
+   ----------- */
+
+#nav-icon-home {
+    position: fixed;
+    z-index: 2;
+    top: 3%;
+    right: 5%;
+    height: 30px;
+    background: none;
+}
+
+#nav-icon-home:hover {
+    height: 34px;
+    background: none;
+}
+
+#nav-icon-home-img {
+    height: 100%;
+}
+
+/* ------------------
+    Bottom nav links 
+   ------------------ */
+
+#bottom-nav-links {
+	font-style: italic;
+	margin-top: 50px;
+}
+
+#back-to-projects {
+	float: left;
+}
+
+#continue-to-next {
+	float: right;
+}
+
+
+#article-header {
+	position: relative;
+}
+
+#article-header-image{
+	width: 100%;
+}
+
+#article-title-wrapper {
+	width: 90%;
+	max-width: 1200px;	
+	margin: 0 auto;
+	position: absolute;
+	bottom: 10%;
+	left: 10%;
+}
+
+#article-title {
+	font-size: 2.5rem;
+	margin: 0;
+}
+
+#article-subtitle {
+	font-size: 1.25rem;
+	margin: 5px 0 0 0;
+}
+
+#article-title-background {
+	color: white;
+	background-color: black;
+}
+
+#article-content {
+	width:90%;
+	max-width: 800px;
+	text-align: left;
+	margin: 0 auto 150px auto;
+}
+
+#article-intro-p {
+	margin: 50px 0 50px 0;
+	font-style: italic;
+	background-color: rgb(245,245,245);
+	padding: 20px;
+	box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.4);
+}
+
+.article-body-p-it {
+	font-style: italic;
+}
+
+.article-body-h2 {
+	font-size: 1.2rem;
+	margin-top: 20px;
+}
+
+.article-body-h3 {
+	font-size: 1.1rem;
+	margin-top: 20px;
+}
+
+.no-margin-top {
+	margin-top: 0;
+}
+
+.img-fullwidth {
+	margin: 20px 0;
+	width: 100%;
+}
+
+.img-overflow {
+	margin: 20px 0;
+	width: 100%;
+}
+
+.img-right-aligned {
+	width: 100%;
+    margin: 20px 0;
+}
+
+.img-right-aligned-mini {
+	width: 100%;
+    margin: 20px 0;
+}
+
+.video-fullwidth-container {
+	position:relative;
+    padding-bottom:56.27%;
+    margin: 20px 0;
+}
+
+.video-iframe{
+	position:absolute;
+	width:100%;
+	height:100%;   
+}
+
+.video-right-aligned, .video-pair-right {
+	width: 100%;
+    margin: 20px 0;
+}
+
+.video-left-aligned, .video-pair-left {
+	width: 100%;
+    margin: 20px 0;
+}
+
+.video-fullwidth {
+	width: 100%;
+    margin: 20px 0;
+}
+
+.video-right-aligned-skinny {
+	width: 55%;
+    margin: 20px auto;
+    display: block;
+}
+
+.video-right-aligned-skinny-wrapper {
+	width: 100%;
+}
+

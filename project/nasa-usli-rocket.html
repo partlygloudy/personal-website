@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Page title -->
+        <title>NASA USLI Pt. 1 - Jake Gloudemans</title>
+        <!-- Character encoding -->
+        <meta charset="UTF-8">
+        <!-- Viewport -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="/static/css/project-page-small.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/project-page-large.css">
+        <!-- Fonts (from Google Fonts) -->
+        <link href="https://fonts.googleapis.com/css?family=Cardo:400,400i&amp;display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Home icon -->
+        <a id="nav-icon-home" href="https://www.jakeg.cc">
+            <img id="nav-icon-home-img" src="/static/img/home-icon.svg">
+        </a>
+        <!-- Header area -->
+        <div id="article-header">
+            <img src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-fullscale-launch-pic.jpg" id="article-header-image">
+            <!-- Title -->
+            <div id="article-title-wrapper">
+                <h1 id="article-title">
+                    <span id="article-title-background">&nbsp;NASA Student Launch &nbsp;</span>
+                </h1>
+                <h1 id="article-subtitle">
+                    <span id="article-title-background">&nbsp;Part 1 - The Rocket &nbsp;</span>
+                </h1>
+            </div>
+        </div>
+        <!-- Main content container -->
+        <div id="article-content">
+            <p id="article-intro-p">
+                During the 2019-2020 academic year, I worked with the Vanderbilt Aerospace Design Lab to design, build, and test an 10 foot long, 5.5 inch diameter rocket and an accompanying UAV payload to compete in the NASA University Student Launch Initiative (USLI). The competition was cancelled in mid-March due to COVID-19, but by that point, we had completed most of the project and had launched and recovered both a subscale and fullscale version of the rocket. <b>In part 1, I discuss the competition, our proposed design, and the final rocket design.</b>
+                In part 2, I discuss the payload development, my biggest contribution to the project.
+            </p>
+            <h2 class="article-body-h2">About the Competition</h2>
+            <p>
+                USLI is an annual competition organized by NASA in which teams of college students design and build <a href="https://en.wikipedia.org/wiki/High-power_rocketry" target="_blank">high-power rockets</a>
+                and convene at the end of the academic year to demonstrate them. There are two main components to the competition - rocket design and payload design.
+            </p>
+            <p>
+                <a href="https://www.nasa.gov/sites/default/files/atoms/files/2020-sl-handbook.pdf" target="_blank">Design requirements</a>
+                for the rocket don’t typically change much from year to year. The size, weight, and power are constrained, and NASA specifies a target altitude range (this year, 3500 - 5500 feet). The main changes to the rocket are those required to accommodate the new payload for a given year. Teams must build and test both a miniature (subscale) and full size (fullscale) version of their rocket at some point during the year. They are also required to simulate the rocket’s flight performance for each launch and are rewarded for sound methodology and accurately modelling the flight.
+            </p>
+            <p>The payload mission tends to change substantially each year. This year, the payload mission was a post-landing sample collection task. Several rock samples were scattered throughout the launch area. The payload had to travel to one of these locations, collect 10mL of sample material, and move it at least 10 feet away from the collection site. Teams had to design a rover or UAV capable of doing this which could also fit inside their rocket during launch, survive launch and landing forces, and properly deploy from the rocket after landing.</p>
+            <p>
+                Documentation is also a big part of the compeition - NASA requires an initial proposal, preliminary design review, critical design review, flight readiness review, and a post launch assessment review. I won’t spend time talking about the reports, but we did them (except PLAR which is done after launch day and thus was cancelled). Ours were... lengthy, for better or worse - our total page count was close to 1000. For a taste, <a href="https://drive.google.com/file/d/1t_MPlAn6W3qLEhy3XLsN_W50fui6gx5r/view?usp=sharing" target="_blank">here</a>
+                is our FRR. Teams also give a 45-minute presentation to NASA with each report.
+            </p>
+            <h2 class="article-body-h2">About the Team</h2>
+            <img class="img-fullwidth" src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-team-photo.jpg">
+            <p>
+                Our team had 13 members from a variety of engineering disciplines. At Vanderbilt, USLI is a <a href="https://engineering.vanderbilt.edu/ge/engineering-management/ProspectiveSponsors/senior-design-projects.php">senior design</a>
+                project and thus only available to engineering seniors. Juniors who are interested in the project shadow the seniors during the second half of the year to learn about fabrication and launch preparation, so they can more easily pick up the project the following year. 
+            </p>
+            <p>Vanderbilt has historically performed very well at this competition. The project has good funding, a reputation for being a demanding but rewarding project, effective transfer of information from year to year, and many years of accumulated subject knowledge. I suspect that relative to most other schools, we spend comparatively little time finding suppliers, assembling the rocket body, testing recovery components, and preparing for subscale and fullscale launches.</p>
+            <p>In recent years, the team has taken advantage of this by going above and beyond on the payload design. We make sure our payload can meet the requirements specified by NASA, but we also add several additional tasks to the mission. We choose these add-ons so that (a) they are interesting and motivating to work on (b) they have real-world utility related to NASA’s mission requirements, and (c) they will be challenging but not impossible to complete.</p>
+            <h2 class="article-body-h2">Initial Proposal</h2>
+            <p>NASA required the payload to perform a sample collection mission following touch-down of the rocket. We chose to accomplish this with a quadcopter. We considered ground vehicles as well but concluded that the potentially uneven terrain would make mobility less predictable on the ground than in the air. Wind certainly could hinder flight performance, but high winds would likely prevent launch altogether making this less of a concern. </p>
+            <p>As a team, we came up with several additional requirements that we wanted the payload to satisfy.</p>
+            <ul>
+                <li>
+                    The <em>sample collection mission should be repeatable,</em>
+                    as opposed to the one-time sample collection that NASA required. The quadcopter would return the sample to the rocket, recharge, and go to collect another sample. We would accomplish this by integrating an unfolding <em>charging platform</em>
+                    into the rocket, as well as a container for each sample to be dropped in.
+                </li>
+                <li>
+                    The quadcopter should be capable of <em>in-flight sampling, sampling without landing.</em>
+                    The quadcopter would hover over the sample and lower a tool to collect the sample. In a real mission, this would allow samples to be collected from terrain which may be difficult to land on such as slopes, narrow crevasses, or even liquids. 
+                </li>
+                <li>
+                    The quadcopter would be capable of <em>performing each portion of the mission completely autonomously</em>
+                    . This would include identification of sampling zones (which were marked by bright yellow tarps), navigation, sample collection, and recharging. Quadcopters have very limited battery life and require quick reaction and precise control, so in an off-earth mission, reliable autonomy would be a necessity.
+                </li>
+                <li>
+                    As a stretch goal, the quadcopter would be able to <em>navigate without using a GPS or magnetometer,</em>
+                    both of which would be of little use for an off-earth mission. 
+                </li>
+            </ul>
+            <p>We accomplished (1) and (2). We partially accomplished (3) but didn’t get a chance to finish tying everything together because we were abruptly sent home a month and a half early - we could do some parts of the mission autonomously but not others. We made a lot of progress with (4) as well, but probably wouldn’t have had it working to the point of using it at the competition, even with the extra month. 2 - 4 are discussed in Part 2 which focuses on the payload design.</p>
+            <h2 class="article-body-h2">What I worked on</h2>
+            <p>I worked mainly on the payload and contributed to some aspects of the rocket design as well. On the payload side, I did the electrical design, much of the mechanical design, and some of the software work. On the rocket, I designed the charging system and helped out with the recovery electronics, payload retention mechanism, and a few other small things here and there. I also was the team "treasurer" which basically just means I dealt with the part-ordering beaurocracy and made sure we weren't spending too much money.  </p>
+            <h2 class="article-body-h2">Rocket Design</h2>
+            <p>Shown below is the CAD for the fullscale rocket - the top image shows an internal view with the payload bay doors closed, landing legs retracted, and UAV folded. The bottom image is an external, overhead view with the doors open, legs extended, and UAV unfolded.</p>
+            <img class="img-overflow" src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-rocket-diagram.png">
+            <h3 class="article-body-h3">Airframe and Fin Construction</h3>
+            <p>The body of the rocket is made primarily of carbon fiber. The payload bay is reinforced with a layer of Blue Tube (a heavy-duty cardboard-like material) and aluminum rods. Since this section is split into 3 segments to make the doors, the individual segments are weaker and thus get extra reinforcement to prevent buckling.</p>
+            <img class="img-fullwidth" src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-carbon-fiber-rolling.jpg">
+            <p>Aside from the fins, all the carbon fiber is molded and cured in-house. VADL is fortunate to have a bank of knowledge accumulated from previous years when it comes to this process. When we rolled the first section, an alum came in to guide us through it and give us some pointers. The process is roughly (1) layout a sheet of the fiber and cut it to size (2) Soak with just the right amount of epoxy (3) Roll it into shape using an appropriately sized, lubricated metal tube (4) Cure the epoxy in a chamber heated to the appropriate temperature (5) Fill the metal tube with dry ice so it shrinks and the carbon fiber can be removed (6) Cut the carbon fiber to its final shape.</p>
+            <p>To make the fins, we ordered sheets of high strength carbon fiber and sent them to a water-jet cutting service to shape them. We made a jig for aligning the fins around the motor tube and gluing them into place. Once the fins are attached to the motor section, another tube (the full rocket diameter) is slotted and slides over the fins. We then added more carbon fiber between the fins and the outer tube to further reinforce the fins.</p>
+            <img class="img-fullwidth" src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-tail-fab.png">
+            <h3 class="article-body-h3">Recovery System</h3>
+            <img class="img-right-aligned" src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-avionics-sled.png">
+            <p>The recovery system is responsible for deploying the drogue and main parachutes at the appropriate altitudes, ensuring that the rocket lands safely. The main electrical component is an altimeter which is programmed to deploy the parachutes by igniting charges and separating the fore sections of the rocket. The drogue charge ignites one second after apogee, separating the nose cone, main parachute, and  avionics sections (still connected to one another at this point) from the rest of the rocket. This also releases the landing legs which spring open. The rocket falls under the drogue parachute until it reaches 600 feet. At this point, another charge fires from the avionics section, deploying the main parachute. This slows the rocket to a safe landing speed. A backup charge fires shortly after the first in case the first one fails for any reason. We also use two identical altimeters in case one fails.</p>
+            <p>The arming switches at the corners of the avionics sled are accessible from the exterior of the rocket when the sled is installed in its casing. These are just switches that are switched on by screwing in a screw. This lets us wait to turn on the recovery electronics until the rocket is fully assembled and sitting on the launch rail. </p>
+            <p>The avionics section also houses a Raspberry Pi Zero W and an IMU - these are used for logging data throughout the flight but aren't part of the recovery system. It was just convenient to place them in the avionics system.</p>
+            <img class="img-fullwidth" src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-recovery-full.jpg">
+            <h3 class="article-body-h3">Reorientation, Retention, and Release</h3>
+            <p>Once the rocket lands, it needs to release the UAV and unfold the charging station. For this to work, there must be a way to guarantee that the payload bay is oriented with the UAV and charging station are facing upwards. The reorientation system uses a pair of motors and an accelerometer to rotate the payload bay so that it’s oriented appropriately. A small section consisting of a DC Gearmotor and bearing is mounted at each end of the payload bay. These sections couple the payload bay to the tail and recovery sections. An accelerometer inside the payload bay is read by a microcontroller which commands the motors, rotating the bay.</p>
+            <video class="video-fullwidth" controls>
+                <source src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-deployment.mp4" type="video/mp4">
+            </video>
+            <p>The landing legs, together with the fins, elevate the payload bay off the ground so that it can rotate freely. The legs remain folded during launch and pop open when the drogue parachute is deployed. The legs are spring loaded when the rocket is assembled, but prevented from opening by the drogue parachute section which partially covers the slots that the legs slide out of. As soon as the drogue section separates, there is nothing holding the legs back and the spring pulls them out.</p>
+            <p>With the payload bay oriented correctly, the doors open and the UAV is released from its retention mechanism. The bay doors are spring loaded and held closed by locking pins at each end of the section. A pair of motors releases these pins and the doors pop open. Strings connecting the doors to the charging plates pull the charging station open. The legs of the UAV are spring loaded and snap into place with the doors no longer holding them back.</p>
+            <p>When packed in the rocket, the UAV is held firmly in place by 4 tabs, one at each corner. The tabs fit securely into 4 matching holes in retention plates which are fixed to the rocket. This restrains the UAV along two axes but still allows it to freely move upward. Each tab also has a small hole  - a matching set of pins slides through these holes to prevent vertical movement. When it’s time to release the UAV, the pins slide out of the holes and the it's free to take off.</p>
+            <img class="img-fullwidth" src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-urs-0.png">
+            <h3 class="article-body-h3">Charging Station</h3>
+            <p>The charging station makes the payload mission repeatable by giving the drone a way to recharge after collecting a sample. The components of the charging system are divided between the rocket and the UAV. On the rocket, a battery and voltage/current regulator energize a set of large aluminum plates with an appropriate charging voltage, limited to a safe charging current. A MOSFET controlled by a Teensy (microcontroller) on the rocket allows the system to be turned off until the UAV is ready to charge.</p>
+            <p>On the UAV, contacts in the landing legs contact each side of the charging platform, forming a complete circuit with the battery management system (BMS) on the UAV. The BMS connects to the UAV battery and keeps the individual LiPo cells balanced with respect to one another (important for the long term health of the battery). </p>
+            <img class="img-fullwidth" src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-charge-diagram.svg">
+            <p>Designing the charging platform required balancing several variables. We wanted the platform to be as large as possible so that it would be easy to land the drone on. However, adding length to the platform meant adding length and weight to the rocket. Adding width was challenging as well because the platform needed to be able to fold up to fit within the 5.5” diameter of the rocket during launch. We settled on a 4-segment design, where two segments unfolded to each side - one side functioned as the positive terminal, the other as the negative terminal. We planned to add a bridge rectifier to the circuit as well so that the UAV could safely land in either direction without issue, though we never got a chance to do so.</p>
+            <img class="img-fullwidth" src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-charging-final.png">
+            <p>At the competition, we would have had one hour from the time we launched to finish the payload mission. A 1C charge rate (for our 1.85Ah battery, charging at 1.85A) would take a full hour to charge the battery. We bought batteries which were rated for 5C charging (theoretically a 12 minute recharge time!), though the fastest we ever attempted was about 5A, close to a 3C charge rate. Even with the battery mostly depleted, this should recharge it in 30 minutes or less, leaving plenty of time for 2 sample collection runs.</p>
+            <h3 class="article-body-h3">Communication</h3>
+            <p>
+                All the electronics in the payload section of the rocket are controlled by a <a href="https://www.pjrc.com/store/teensy40.html" target="_blank">Teensy 4.0</a>
+                microcontroller. The Teensy is connected to an <a href="https://www.digi.com/products/embedded-systems/digi-xbee/rf-modules/sub-1-ghz-modules/xbee-pro-xsc" target="_blank">XBee radio module</a>
+                which is paired with a second XBee which connects to a laptop and transmits messages using a directional antenna. The Teensy parses command messages sent over the radio link to trigger each post-launch operation on the rocket. First, we detach the parachute. Then, we reorient the payload bay, open the bay doors, and unlock the UAV. When the UAV lands on the charging station, we send a command to energize the platform.
+            </p>
+            <h2 class="article-body-h2">Subscale Launch</h2>
+            <div class="video-right-aligned-skinny-wrapper">
+                <video class="video-right-aligned-skinny" controls>
+                    <source src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-subscale-vid.mp4" type="video/mp4">
+                </video>
+            </div>
+            <p>In December 2019, we launched a miniature version of the rocket to verify that the recovery system worked, test prototypes of several other systems, and demonstrate to NASA that our launch procedures were acceptable. We used a less powerful motor, only launching to about 1500 feet (vs. 3500 for fullscale).</p>
+            <p>For subscale, several sections were repurposed from the rocket built by the previous year’s team (nosecone, parachute sections, and tail section) while the payload section was built from scratch. We didn’t use carbon fiber, only Blue Tube reinforced with aluminum rods. The subscale payload bay held an early version of the UAV retention system (with an accompanying dummy payload), a miniature charging station (pads only, no electronics), as well as the motors and control electronics required for the reorientation and door opening systems.</p>
+            <p>The launch was quite successful - the most important components (launch and recovery systems) worked as expected, most of the other systems at least partially worked, and we gained a lot of valuable experience with launch preparation procedures and complications that can arise in the field.</p>
+            <img class="img-fullwidth" src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-subscale-paybay.jpg">
+            <h2 class="article-body-h2">Fullscale Launch</h2>
+            <p>In mid February, we launched our first iteration of the full-size rocket. We would have gone on to make several improvements to this first version in the time between the fullscale launch and the competition, however the competition was cancelled a few weeks later in early March and we were all sent home. Luckily, we produced a functional version of each system and were able to test them at fullscale.</p>
+            <p>Between subscale and fullscale there were a few design changes worth noting. First, the charging station was now full-sized and its electronics installed and functioninal. Second, we did a pretty significant redesign of the UAV retention system, switching it to printed PLA over aluminum - this was still plenty strong and made it drastically easier to tweak the design as the UAV geometry evolved. All the sections except the nose cone were manufactured from scratch for the fullscale rocket.</p>
+            <img class="img-overflow" src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-fullscale-overhead.jpg">
+            <p>The launch went fairly well although we probably launched in higher winds than would have been advisable. Our best estimate is that winds were in the 15-20mph range with gusts up to 25. This led to a fair amount of weather-cocking on the way up and drift on the way down which was not a big problem but still not ideal. The landing was quite rough - the rocket bounced and flipped over as it touched down. Then, the parachute started pulling the rocket along the ground. The wind drug the rocket about 100 feet before we reigned in the parachute and detached it. The rocket had a mechanism designed to detach the parachute to prevent this exact scenario, however, it failed and wouldn’t release the parachute, so we had to do so manually. The landing - either the initial bounce or the subsequent dragging - also destroyed the two motors used to reorient the payload bay. </p>
+            <p>While there were several system failures, many things went right. The launch and recovery systems worked as expected and brought the rocket down safely, this time from 3x higher than at subscale. While we had to manually reorient the payload bay, the remainder of the operations worked without issue. The doors popped open and the charging station unfolded. The UAV retention system released the UAV. The charging station successfully recharged the drone in less than 30 minutes.</p>
+            <video class="video-fullwidth" controls>
+                <source src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-fullscale-vid.mp4" type="video/mp4">
+            </video>
+            <h2 class="article-body-h2">Changes After Fullscale</h2>
+            <p>Ordinarily, failure of non-critical systems during fullscale wouldn’t be a major concern. It could even be a good thing in the sense that flaws are revealed that were present either way but could have gone undetected had the system not failed. In other words, if a system can fail, better to have it fail during fullscale than at the competition. Unfortunately for us, fullscale turned out to be our last launch opportunity. However, before we were sent home, we did develop plans for improving each of the systems that failed.</p>
+            <p>We believe the parachute detachment system failed because the pulling force from the parachute created friction which stalled it's motor, causing a current spike that permenantly damaged it. When we disassembled the system post-launch, the motor no longer functioned. It was likely too weak for the worst case scenario, so we selected a new motor which should have had sufficient torque to release the parachute, even in worst-case conditions.</p>
+            <p>The reorientation system failed because of a poor design that put too much force on the motor gearbox. The two reorientation motors were directly connected to the payload bay, meaning that if an external force applied a large torque to that section, the full torque would be transferred to the motor shaft and gears. Inspecting the motors after the launch, we found that the gearboxes in both motors were destroyed. To fix this, we planned to add a solenoid pin alongside each motor which would prevent any twisting of the payload bay until the solenoid was energized. Once it was time for reorientation, we would energize the solenoid, freeing the motors to rotate the payload bay. </p>
+            <p>There were a few other smaller tweaks we planned to make to various systems but these were the main ones.</p>
+            <p id="bottom-nav-links">
+                <span id="back-to-projects">
+                    <a href="https://www.jakeg.cc/projects">
+                        <-- back to projects </a></span>
+                            <span id="continue-to-next">
+                                <a href="https://www.jakeg.cc/projects/nasa-usli-part-2">continue to part 2 --></a>
+                            </span>
+            </p>
+        </div>
+    </body>
+</html>

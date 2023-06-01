@@ -1,0 +1,86 @@
+
+@media (min-width: 900px) {
+
+    /* ---------------
+        Intro Section
+       --------------- */
+
+    #intro-section {
+        flex-direction: row;
+        padding: 175px 0;
+    }
+
+    #intro-section-text {
+        width: 35%;
+        max-width: 400px;
+        margin-right: 10%;
+        margin-bottom: 0;
+    }
+
+    #intro-section-image {
+        width: 25%;
+        max-width: 350px;
+    }
+
+    /* ---------------------------------
+        Interests & Influences Sections
+       --------------------------------- */
+
+    #interests-section, #influences-section {
+        flex-direction: row;
+        padding: 175px 0;
+    }
+
+    #interests-section-image {
+        width: 30%;
+        max-width: 450px;
+        margin-right: 10%;
+        display: block;
+    }
+
+    #influences-section-image {
+        width: 30%;
+        max-width: 450px;
+        margin-left: 10%;
+        display: block;
+    }
+
+    #interests-section-text, #influences-section-text {
+        width: 40%;
+        max-width: 450px;
+    }
+
+    #interests-section-blurb, #influences-section-blurb {
+        margin: 15px 0 25px 0;
+    }
+
+    /* ----------------
+        Skills Section
+       ---------------- */
+
+    .skills-section-header-info {
+        width: 225px;
+    }
+
+    .skills-arrow-left {
+        display: none;
+    }
+
+   .skills-arrow-right {
+        display: none;
+    }
+
+
+    /* ---------------
+        Links Section
+       --------------- */
+
+    #links-section {
+        padding: 75px 0;
+        flex-direction: row;
+    }
+
+    #links-section a {
+        margin: 0 50px;
+    }
+}

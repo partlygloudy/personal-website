@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Page title -->
+    <title>Labyrinth Coffee Table - Jake Gloudemans</title>
+
+    <!-- Character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/project-page-small.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/project-page-large.css">
+
+    <!-- Fonts (from Google Fonts) -->
+    <link href="https://fonts.googleapis.com/css?family=Cardo:400,400i&amp;display=swap" rel="stylesheet">
+
+</head>
+    
+<body>
+
+    <!-- Home icon -->
+    <a id="nav-icon-home" href="/">
+        <img id="nav-icon-home-img" src="/static/img/home-icon.svg">
+    </a>
+
+    <!-- Header area -->
+    <div id="article-header">
+
+        <img src="https://storage.googleapis.com/jakeg.cc/images/projects/labyrinth_coffee_table/labyrinth_finished_open.jpg" id="article-header-image">
+
+        <!-- Title -->
+        <div id="article-title-wrapper">
+            <h1 id="article-title">
+                <span id="article-title-background">&nbsp;Labyrinth Coffee Table &nbsp;</span>
+            </h1>
+        </div>
+
+    </div>
+
+    <!-- Main content container -->
+    <div id="article-content">
+
+        <!-- Introduction -->
+        <p id="article-intro-p">
+            <a href="https://derekgloudemans.wordpress.com/about/" target="_blank">My brother</a>
+            and I built a maple coffee table with a giant <a href="https://en.wikipedia.org/wiki/Labyrinth_(marble_game)">labyrinth-style marble game</a>
+            built into the middle. With the table-top installed, it looks like a nice but ordinary piece of furniture. Removing the top reveals the game. Electronics hidden below the game surface allow you to tilt the maze along each axis using a handheld controller that plugs into the bottom of the table.
+        </p>
+        <h2 class="article-body-h2">The Idea</h2>
+        <p class="article-content">The inspiration for this project came as my brother and I spent several hours trying to beat a labyrinth marble maze. The concept of the game is simple. You place a marble on a flat board, riddled with walls and holes, and try and roll it from the starting point to the end. You lose if the marble falls into one of the holes. To move the marble, you can adjust two knobs, each of which tilts the board on a different axis. The game was fun, but easy enough to master in a few hours, which got us thinking... how can we make it harder?</p>
+        <p class="article-content">The version we were playing had about 50 holes to avoid. We envisioned a table with hundreds of holes, magnets pulling the marble off-course, sloped "gravity wells," and some really nasty turns right near the end. A maze that big would take up a lot of space so we came up with the idea of building it into the inside of a coffee table. That would make it both practical (at the very least, you've got a nice coffee table) and great entertainment.</p>
+        <h2 class="article-body-h2">Building the Table</h2>
+        <p class="article-content">We used maple for the bulk of the wood since it's durable, looks great, and is relatively affordable, and we added strips of walnut to the lid as an accent. We made the table roughly 3ft x 3ft - this let us make the game nice and big while still being a practical size for a coffee table. We used mortise and tenon joints to attach the side panels and legs to make the main structure of the table. To make the lid, we glued the segments together and added two support beams to the bottom to add strength. The support beams are positioned so that they guide the lid into place and prevent it from sliding around over the frame.</p>
+        <img class="img-fullwidth" src="https://storage.googleapis.com/jakeg.cc/images/projects/labyrinth_coffee_table/labyrinth_table_construction.jpg">
+        <h2 class="article-body-h2">Building the Maze</h2>
+        <p class="article-content">
+            The original labyrinth game tilts the maze using rods and strings (like <a href="https://www.robotshop.com/community/forum/uploads/default/original/3X/1/3/130fe5bcf1ba847d3b8ae87ae5243625c845a925.jpeg" target="_blank">this</a>
+            ) where the knobs rotate the rods which then pull on the platform through the strings. The pivot points are separate and at the edges of the tilting surface. In our design, we combined both pivots into one mechanism at the center of the platform and eliminated the rods altogether. Timing belt runs between the center of opposite edges and a stepper motor pulls on it to move the tilting surface about the pivot point (this is a little hard to describe with words but you can see what's going on pretty clearly in the pictures). A handheld controller with knobs plugs into the table and the steppers are controlled using a microcontroller which maps the controller input to stepper movements.
+        </p>
+        <img class="img-right-aligned" src="https://storage.googleapis.com/jakeg.cc/images/projects/labyrinth_coffee_table/labyrinth_milling.jpg">
+        <p class="article-content">We used a CNC mill to carve the maze into 3/4" birch plywood panels rather than using a thin board and making the walls separately and gluing them on. Our CNC mill has limited travel so we made the game surface as 8 individual segments which connect to form the full maze. The maze pieces are held by a square wooden frame which attaches to the table through through the pivot in the center. This approach is nice because it means we could design different panels and swap them for existing ones in the future if we have a cool new idea, one of them breaks, it's still too easy, etc.</p>
+        <p class="article-content">The controller is nothing but a piece of wood with some potentiometers hidden inside. The signal wires from the controller plug into a port in the bottom of the table which routes them into an elecronics box inside the table. An Arduino reads the potentiometers and adjusts the stepper motors accordingly. Everything is powered from a 12V DC power adapter that also plugs into the electronics box at the bottom of the table.</p>
+        <img class="img-fullwidth" src="https://storage.googleapis.com/jakeg.cc/images/projects/labyrinth_coffee_table/labyrinth_internal.jpg">
+        <h2 class="article-body-h2">Finished Table</h2>
+        <img class="img-fullwidth" src="https://storage.googleapis.com/jakeg.cc/images/projects/labyrinth_coffee_table/labyrinth_two_views.jpg">
+        <h2 class="article-body-h2">Notes</h2>
+        <p class="article-content">For a first attempt, this project turned out surprisingly well. It looks great and is mostly playable! There are a bunch of relatively simple changes that could make it a lot better though.</p>
+        <ul>
+            <li>The stepper motors are a bit too jittery and also quite loud. Geared DC motors with encoders might be a better option. </li>
+            <li>Machining the maze pieces was great because it was fast, precise, and gave us lots of flexibility in designing the maze. However, it didn't leave a perfectly smooth finish. This ended up being a big problem because it makes it hard to get/keep the marble rolling - if you've played a game like this, one thing you'll realize is that a key to getting good at it is keeping the marble moving slowly at all times. Solutions to this problem could include using some kind of wood finish to smooth out the surface and fill in the gaps or using a different material (perhaps some kind of plastic) that machines more smoothly.</li>
+            <li>When the game is turned on, the microcontrolelr doesn't know what position it's in. We intended to add limit switches and write an auto-levelling routine that runs during startup but never got around to it. Without this you just have to tell the program where the board will start and position it there by hand before you turn the game on</li>
+            <li>The controller could definitely be better than the 2-knob version we made. One interesting idea would be to embed an accelerometer into a square wood panel and program the table to match the orientation of the panel. So you'd essentially be tilting a miniature version of the table in your hand and the game would respond to mimic it.</li>
+        </ul>
+        <h2 class="article-body-h2">Acknowledgements</h2>
+        <p class="article-content">
+            My brother definitely carried this project - we couldn't have done it without his woodworking expertise and general engineering skill. He has a <a href="https://derekgloudemans.wordpress.com/portfolio/maze-coffee-table/">brief writeup</a>
+            of this project on his website, as well as some <a href="https://derekgloudemans.wordpress.com/">other cool projects</a>
+            . Our  <a href="https://www.linkedin.com/in/mark-gloudemans-78451857/" target="_blank">dad</a>
+            also helped out with this project and our grandpa provided wood shop access.
+        </p>
+        <p id="bottom-nav-links">
+            <span id="back-to-projects">
+                <a href="https://www.jakeg.cc/projects">
+                    <-- back to projects </a></span>
+        </p>
+        
+    </div>
+
+</body>
+
+</html>

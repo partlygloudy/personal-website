@@ -1,36 +1,36 @@
 {
     
     "nasa-usli-drone": {
-        "img": "static/img/projects/cards/usli-drone-card.png",
-        "href": "projects/nasa-usli-drone",
+        "img": "/static/img/projects/cards/usli-drone-card.png",
+        "href": "project/nasa-usli-drone",
         "title": "NASA USLI (Drone)",
         "description": "Foldable quadcopter for aerial sample collection, plus a rocket to transport the drone. Built for the NASA Student Launch Initiative"
     },
 
     "nasa-usli-rocket": {
-        "img": "static/img/projects/cards/usli-rocket-card.png",
-        "href": "projects/nasa-usli-rocket",
+        "img": "/static/img/projects/cards/usli-rocket-card.png",
+        "href": "project/nasa-usli-rocket",
         "title": "NASA USLI (Rocket)",
         "description": "Foldable quadcopter for aerial sample collection, plus a rocket to transport the drone. Built for the NASA Student Launch Initiative"
     },
 
     "mining-robot": {
-        "img": "static/img/projects/cards/mining-robot-card.png",
-        "href": "projects/mining-robot",
+        "img": "/static/img/projects/cards/mining-robot-card.png",
+        "href": "project/mining-robot",
         "title": "Mining Robot",
         "description": "Semi-autonomous robot for collecting gravel buried 1 foot beneath the ground. Built for the NASA Robotic Mining Competition"
     },
 
     "labyrinth-coffee-table": {
-        "img": "static/img/projects/cards/labyrinth-card.png",
-        "href": "projects/labyrinth-coffee-table",
+        "img": "/static/img/projects/cards/labyrinth-card.png",
+        "href": "project/labyrinth-coffee-table",
         "title": "Labyrinth Coffee Table",
         "description": "Giant, electronically-controlled labyrinth-style marble maze built into a coffee table"
     },
 
     "robot-arm": {
-        "img": "static/img/projects/cards/robot-arm-card.png",
-        "href": "projects/robot-arm",
+        "img": "/static/img/projects/cards/robot-arm-card.png",
+        "href": "project/robot-arm",
         "title": "6-Axis Robot Arm",
         "description": "Programmable robot arm built to compete in the Robot Arm event for the 2016 Science Olympiad Competition"
     }

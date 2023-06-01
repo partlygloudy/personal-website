@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Page title -->
+        <title>NASA USLI Pt. 2 - Jake Gloudemans</title>
+        <!-- Character encoding -->
+        <meta charset="UTF-8">
+        <!-- Viewport -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="/static/css/project-page-small.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/project-page-large.css">
+        <!-- Fonts (from Google Fonts) -->
+        <link href="https://fonts.googleapis.com/css?family=Cardo:400,400i&amp;display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Home icon -->
+        <a id="nav-icon-home" href="https://www.jakeg.cc">
+            <img id="nav-icon-home-img" src="/static/img/home-icon.svg">
+        </a>
+        <!-- Header area -->
+        <div id="article-header">
+            <img src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-subscale-drone.jpg" id="article-header-image">
+            <!-- Title -->
+            <div id="article-title-wrapper">
+                <h1 id="article-title">
+                    <span id="article-title-background">&nbsp;NASA Student Launch &nbsp;</span>
+                </h1>
+                <h1 id="article-subtitle">
+                    <span id="article-title-background">&nbsp;Part 2 - The Drone &nbsp;</span>
+                </h1>
+            </div>
+        </div>
+        <!-- Main content container -->
+        <div id="article-content">
+            <p id="article-intro-p">
+                During the 2019-2020 academic year, I worked with the Vanderbilt Aerospace Design Lab to design, build, and test an 10 foot long, 5.5 inch diameter rocket and an accompanying UAV payload to compete in the NASA University Student Launch Initiative (USLI). The competition was cancelled in mid-March due to COVID-19, but by that point, we had completed most of the project and had launched and recovered both a subscale and fullscale version of the rocket. In part 1, I discuss the competition parameters, our proposed design, and the final rocket design. <b>In part 2, I discuss the payload design, my biggest contribution to the project.</b>
+            </p>
+            <p>
+                As discussed in <a href="https://www.jakeg.cc/projects/nasa-usli-part-1">part 1</a>
+                , the goal of this project was to build a drone capable of:
+            </p>
+            <ul>
+                <li>collecting a 10mL sample of lunar ice simulant from a remote sampling location (required capability)</li>
+                <li>in-flight sample collection (team capability)</li>
+                <li>repeatable sample collection (team capability)</li>
+                <li>autonomous operation during all portions of the mission (team capability)</li>
+                <li>GPS free navigation (team capability)</li>
+            </ul>
+            <p>The final iteration of our drone was capable of both in-flight sampling and recharging for mission-repeatability. It could perform some portions of the mission autonomously but not others (though we made significant progress in every area). We also achieved GPS-free navigation in certain controlled environments, but we think it’s unlikely that we would have had it working reliably enough to use it at the competition had the project continued.</p>
+            <p>We viewed the payload mission in several stages, indicated by the columns in the figure below. Our goal was to be able to accomplish each part of the mission under manual control, GPS-based autonomous control, or GPS-free autonomous control. We would start the mission under autonomous control and could take manual control if something went wrong. The figure shows all the control methods we planned to implement for each mission stage and highlights those used at our fullscale launch in February.</p>
+            <img class="img-fullwidth" src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-payload-mission-sequence.gif">
+            <h2 class="article-body-h2">Responsibilities</h2>
+            <p>I worked mainly with two other students, Alex Barnett and Luke Neise, to design the payload. Alex helped build early versions of the drone and then worked on autonomy software for most of the year (he was also team president). Luke worked on mechanical design and testing plans, and shifted towards software as the year progressed. I worked on the drone's electronics and mechanical design, as well as select parts of the software such as control of the sampling tool and radio communication.</p>
+            <h2 class="article-body-h2">Development</h2>
+            <p>At the start of the project, none of us had any experience working on drones. We decided right away that our top priority should be building a simple drone - this would familiarize us with the hardware and give us something to tinker with while we worked on the rest of the problem.</p>
+            <p>Once that first version was built, we worked on several things in parallel: (1) prototyping different sampling tool designs, (2) iterating the structure of the UAV so that it efficiently housed all the electronics and fit in the rocket, (3) learning the flight control software and accomplishing basic flight maneuvers, and (4) coming up with theoretical approaches for automating each portion of the mission.</p>
+            <p>As the design of the drone progressed, we shifted focus towards testing/verification and implementation of the autonomy software. By the time we were sent home in March, the electromechanical design of the drone was essentially finalized and our focus was on software and testing.</p>
+            <p>The images below show the progression of the drone as features were added and as the frame was optimized to efficiently house all the components. For most of these versions, there were several “sub-versions” that aren’t shown, mainly the result of fixes after crashes or minor modifications we made to test a new idea. The versions shown are the most important milestones.</p>
+            <img class="img-fullwidth" src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-drone-version-progress.svg">
+            <h2 class="article-body-h2">Final Design</h2>
+            <!-- ADD TABLE HERE WITH GENERAL SPECS / HARDWARE -->
+            <p>The final version of the drone is shown below. The arms, legs, and propellers fold inward so that the drone can fit within the 5.5" rocket tube during launch. Springs between each pair of arms pulls the arms open when the rocket doors open. Spring-loaded pins within the arm joints lock the arms in the open configuration. The propellers straighten as the centrifugal force from the spinning motors pulls them outward.</p>
+            <img class="img-overflow" src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-drone-overview.png">
+            <p>The drone is equipped with a dual-scoop sample collection tool that can be raised and lowered by a winch mounted to the side of the drone. The tool is attached to the drone through a pair of cables that are wound/unwound on a spool spun by the winch motor. The tool has its own battery and communicates with the body of the drone through a radio-equipped microcontroller.</p>
+            <img class="img-fullwidth" src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-drone-bottom-view.jpg">
+            <p>
+                The drone is controlled by a <a target="_blank" href="https://docs.px4.io/v1.9.0/en/flight_controller/pixhawk.html">Pixhawk</a>
+                flight controller connected to a <a target="_blank" href="https://www.raspberrypi.org/products/raspberry-pi-4-model-b/">Raspberry Pi 4 Model B</a>
+                . The Pixhawk is equipped with multiple IMUs and an altimeter and is also connected to a GPS module - it uses these sensors to stabilize the vehicle during flight and execute flight commands. The Raspberry Pi runs the autonomy software, controls the winch, and sends commands to the tool using a second radio module.
+            </p>
+            <p>Finally, the drone can recharge its battery by landing on the charging station at the rocket. Contacts on the legs of the drone complete a circuit between the charging electronics on the rocket and those on the drone, causing charge current to flow into the drone's battery in a controlled manner.</p>
+            <h3 class="article-body-h3">Frame</h3>
+            <img class="img-right-aligned" src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-printed-parts.jpg">
+            <p>The frame design evolved gradually with each iteration of the drone. Early in the project, the focus was basically to get something that worked and kept all the components safe from the propellers. We gradually optimized the packing of the electronics, improved wire management and accessibility, and reduced the width of the drone.</p>
+            <p>We quickly switched from an X-shaped frame to an H-shaped frame. An H-frame is nice because the middle section of the H provides lots of space to store components if necessary - we had lots of hardware to carry so this was important. With an X, the frame itself can't easily be used to house components without adding an extra panel or box. Using an H also shortens the arms, in our case allowing all four of them to fold inward.</p>
+            <p>
+                We also realized early on that we could 3D-print the entire frame with PLA plastic. Flexibility was an issue at first - if we made the arms too thin, vibration was so bad that it confused the IMUs and destabilized the drone. However, with the right reinforcement, the vibration could be mitigated and the drone flew just fine. The PLA did snap pretty easily, but we decided this was okay, possibly even a good thing. Any time we had a crash (and we had MANY), the arms were almost always the only thing damaged. They were easy to swap out, and we kept extras printed, so breaking an arm wasn't a big deal at all. The arms effectively served as a <a target="_blank" href="https://en.wikipedia.org/wiki/Crumple_zone">crumple zone</a>
+                , absorbing most impact from crashes - breaking, but protecting the hard-to-replace components in the process.
+            </p>
+            <h3 class="article-body-h3">Electronics</h3>
+            <p>The body of the drone houses components for power distribution, flight control, radio communication, and control of the winch and sampling tool. The image below shows how the components are organized within the drone. I've also included a block diagram showing how things connect.</p>
+            <img class="img-fullwidth" src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-drone-electronics.png">
+            <!-- TODO: add caption, mention that mosfet not added to this versio of the drone -->
+            <p>
+                The battery connects to a <a target="_blank" href="https://ardupilot.org/copter/docs/common-3dr-power-module.html">power monitor</a>
+                that provides 5V power plus voltage and current information to the flight controller. It also passes the unregulated battery voltage on to a <a target="_blank" href="http://www.mateksys.com/?portfolio=hub5v12v">power distribution board</a>
+                (PDB) which splits power lines off to each of the four <a target="_blank" href="https://www.genstattu.com/tattu-30a-blheli-s-esc-2-5s-w-dshot-no-bec-for-fpv-rc-model-1pcs.html">speed controllers</a>
+                . The PDB provides another regulated 5V power supply which feeds the Raspberry Pi and an Adafruit Feather microcontroller (used for communicating with the sampling tool). Before the wires from the battery reach the power monitor, they pass through both a large "master switch" and a <a target="_blank" href="https://www.pololu.com/product/2815">MOSFET</a>
+                . The MOSFET is switched on/off by a small push-switch on the exterior of the drone - this switch disconnects power when the arms are folded and turns it back on when they swing open.
+            </p>
+            <p>The Pixhawk controls each ESC with a PWM signal. It has multiple IMUs and an altimeter onboard and also receives data from an external GPS/compass module. A radio receiver allows an operator to control the drone using a handheld radio transmitter. The Raspberry Pi communicates with the Pixhawk via UART using the MAVLINK protocol.</p>
+            <img class="img-fullwidth" src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-drone-electronics-diagram.png">
+            <p>
+                To enable wireless control of the sampling tool (eliminating the need to run wires between the tool and the drone), we added an <a target="_blank" href="https://www.adafruit.com/product/3176">Adafruit Feather M0 RFM69HCW</a>
+                to both the body of the drone and the tool. The is a microcontroller with an embedded short-range radio module. Using a few digital pins, the Raspberry Pi sends commands to the Feather which then forwards those commands over the radio link to the Feather on the tool. The Feather on the drone also controls the winch motor.
+            </p>
+            <h3 class="article-body-h3">Sampling tool and winch system</h3>
+            <p>The drone was required to collect at least 10mL of sample material. We weren't told the precise sample material but we were given the approximate grain size and density - we found that clay cat litter was a good match so we used that for testing. In-flight sampling complicated tool-design because with the drone hovering, the tool can't use its weight to counteract reaction forces from digging. We considered adhesive pads, augers, scoops, and several other approaches to sample collection.</p>
+            <p>We were optimistic about adhesive pads due to their simplicity, but ultimately (a) the surface area needed to reliably collect enough material was too large, (b) the weight needed to press the pad on to the material was too great for in-flight sampling to be feasible, and (c) this approach couldn't easily be made repeatable.</p>
+            <div class="video-pair">
+                <video class="video-pair-left" controls>
+                    <source src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-vibration-tool.mp4" type="video/mp4">
+                </video>
+                <video class="video-pair-right" controls>
+                    <source src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-disk-tool.mp4" type="video/mp4">
+                </video>
+            </div>
+            <p>A pneumatic tool, one that would use compressed air to blow the material into a collector, seemed intriguing as well but was ruled out due to the lack of availability of small/lightweight pneumatic components. Another interesting approach we considered was a vibration-based sampling tool that used vibration to bury a mesh in the sample. We had some interesting results with this design and may have been able to make it work, but the difficulty of retaining the material in the grate, the difficulty of making it repeatable, and overall design complexity led us to rule it out.</p>
+            <p>Augers are favorable in that, unlike large scoops, they collect only a small amount of material with each rotation and thus experience smaller reaction forces, potentially allowing for a lighter-weight design. While a typical auger is long and would be difficult to fit under the drone, we came up with a different take, a "double disk" design. It operates like an auger, collecting material by rotating disks with slots and teeth on the bottom to pull up material. Using two counter-rotating disks cancels the counter-torques from each disk so the tool doesn't spin. This approach was definitely viable and was our second choice behind the one we went with, the double scoop.</p>
+            <img class="img-right-aligned" src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-scoop-tool.jpg">
+            <p>Ultimately, the simplicity and reliability of a using scoops won out. The scoops are large enough that by actuating once, they collect a full sample. We initially were hesitant to use a scoop because we thought the need to counteract the reaction forces from the scoop would require the tool to be heavier than alternative designs (for this application, even 50-100 added grams cost us a minute or more of flight time). This probably was true, however the advantages outweighed the potentially suboptimal tool weight.</p>
+            <p>Our final double-scoop design (double scoops to cancel counter-torques) had very few parts and was extremely simple to fabricate and assemble. Another huge plus was that the scoops would retain the sample during flight and easily release it when it was time to deposit it. This was a challenge that most of our other designs struggled to address. And ultimately, because the tool was so easy to build, we were still able to optimize its weight pretty well - its mass ended up at about 125g, well within our budget.</p>
+            <p>Once we settled on a scoop, there were two major problems to address: we needed a way to raise and lower the tool reliably and a way to power and communicate with the tool.</p>
+            <img class="img-fullwidth" src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-tool-inside-view.png">
+            <p>
+                To solve the first problem, we mounted a gearmotor to the side of the drone which turns a spool to raise and lower the tool. Two cables (<a target="_blank" href="https://www.amazon.com/KastKing-Superpower-Braided-Fishing-Line/dp/B01EFQZF18/">braided fishing line</a>
+                ) run between the spool and the tool - with two lines, we both minimize rotation in the cables and guarantee that the tool always returns to the same place when it's fully retracted (this worked surprisingly well - we tried spinning the tool way out of alignment when it was retracting and it always unwound and aligned itself). You'll notice that the top of the tool has two pegs protruding upward. The cables attach to the top of the pegs rather than the tool case. This serves two purposes: (1) it minimizes tilting of the tool by increasing the distance between the attachment point and the center of mass of the tool, and (2) the pegs keep the tool locked in alignment when it's retracted. The drone body has matching slots that the pegs slide into, preventing the tool from moving laterally.
+            </p>
+            <div class="video-right-aligned-skinny-wrapper">
+                <video class="video-right-aligned-skinny" controls>
+                    <source src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-sampling-clips.mp4" type="video/mp4">
+                </video>
+            </div>
+            <p>To solve the second problem, we gave the tool its own small battery and an Adafruit Feather M0 RFM69HCW - a radio-equipped microcontroller which communicates with its twin on the drone. The Feather waits for "OPEN" or "CLOSE" commands from the drone and adjusts its servos accordingly. The electronics are all very thin, so we were able to pack them all along the top of the inside of the tool case.</p>
+            <p>The whole system came together really nicely and worked quite well! The scoops reliably collected about twice the required sample size, giving us a healthy safety margin. We were able to demonstrate in-flight sampling at our fullscale launch, though it was quite windy so it was difficult to control the drone. When we were sent home, we were in the process of automating the whole sample collection process, meaning the drone would automatically keep itself centered over the sample, lower the tool, collect the sample, and retract the tool.</p>
+            <p>Also, while the tool was designed for in-flight sampling, it also works when the drone is landed. This gave us a backup in case it was too windy hover in place, plus in a theoretical real-world application, it would be preferable in situations not requiring in-flight sampling.</p>
+            <h3 class="article-body-h3">Manual Operation</h3>
+            <p>
+                The Pixhawk flight controller runs open-source flight control software called <a target="_blank" href="https://ardupilot.org/copter/">Arducopter</a>
+                that handles vehicle stabilization and implements a variety of convenient flight modes. After plenty of time spent tuning parameters, parsing documentation, and scraping forums, we had the drone flying stably, holding its altitude, and even navigating between GPS waypoints. Arducopter also supports the <a target="_blank" href="https://en.wikipedia.org/wiki/MAVLink"></a>
+                MAVLINK protocol which (among many other things), allows you to control the vehicle by sending flight commands from a companion computer. For manual operation, however, we kept the vehicle in "Loiter" mode which uses GPS to hold the drone in place unless explicitly commanded to move.
+            </p>
+            <p>
+                We controlled the drone with a <a target="_blank" href="https://www.frsky-rc.com/product/taranis-q-x7-2/">Taranis QX7</a>
+                controller paired with a <a target="_blank" href="https://www.frsky-rc.com/product/xsr/">receiver module</a>
+                connected to the Pixhawk. The QX7 is capable of quite a lot, having lots of extra programmable switches in addition to the two main sticks. We used these switches to control the winch and sampling tool. One switch raised/lowered the winch while another opened/closed the scoops. The Raspberry Pi monitored the states of the switches, reading their states over the MAVLINK connection, and forwarded the commands to the Feather. Under manual control, we were able to complete the full mission, including in-flight sampling and recharging.
+            </p>
+            <h2 class="article-body-h2">Autonomous Operation</h2>
+            <h3 class="article-body-h3">GPS-Based Navigation</h3>
+            <p>At a minimum, we knew we'd be able to automate the navigation to and from the sampling area using GPS positioning. Arducopter makes this trivial to do - you can either upload a waypoint mission to the flight controller in advance or have the companion computer feed it waypoints using a MAVLINK connection. Using the latter approach, we had a script that would determine the closest sampling zone after the rocket landed and the drone turned on, and fly the drone to and from that area at the appropriate times. We used this approach to automate navigation to and from the sampling area during our fullscale launch demonstration.</p>
+            <h3 class="article-body-h3">GPS-Free Navigation</h3>
+            <p>
+                We hoped to achieve GPS-free navigation using simultaneous localization and mapping (SLAM) to provide an alternative source of position data. Arducopter allows you to provide pose data from an external source and use it instead of a GPS, as long as the data arrives at a fast enough rate. What's really great is that you can still use all the flight modes that typically require GPS. This means that if we were able to use SLAM to provide reliable pose data, we wouldn't have to change any other software - none of the other software cared <em>where</em>
+                the pose estimate was coming from so long as it was a <em>good</em>
+                estimate.
+            </p>
+            <p>
+                We first tried using open-source ROS package implementations of the <a target="_blank" href="https://arxiv.org/pdf/1708.03852.pdf">VINS-Mono</a>
+                (visual inertial slam, single camera) and <a target="_blank" href="https://webdiis.unizar.es/~raulmur/orbslam/">ORB-SLAM</a>
+                algorithms, along with a USB fisheye camera. Ultimately we found that these wouldn't run fast enough on the Raspberry Pi, so using it would require switching to an <a target="_blank" href="https://developer.nvidia.com/embedded/jetson-tx2">Nvidia Jetson TX2</a>
+                as our computer. This would have required some major structural changes to the drone and would have made debugging a real pain (Jetson boards are quite poorly documented).
+            </p>
+            <img class="img-right-aligned" src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-realsense-mount.jpg">
+            <p>
+                We instead opted to try the <a target="blank" href="https://www.intelrealsense.com/tracking-camera-t265/">Intel Realsense T265</a>
+                SLAM camera/sensor. This is a small, lightweight stereo camera + IMU that essentially is a plug-and-play SLAM solution - you connect it with a USB cable, install the drivers, and it spits out pose data. Sounds incredible right? We thought so too, and we invested lots of time and effort into getting it to work. Our reviews are mixed.
+            </p>
+            <p>
+                For the right application (indoor, ideally non-flying vehicle), it's definitely a great option - when it's working, the pose data is truly excellent, and the fact that everything is done on the module itself is a huge plus. Drones, however, particularly <em>outdoor drones</em>
+                subject the sensor to two things that it really doesn't like - vibration and scale. Quite frequently, the pose estimate would rapidly shoot off in one direction as soon as the drone took off. Early in the year, before our safety protocols were up to snuff, this may or may not have led to an unplanned, high-altitude, cross-campus flight. The problem seemed to be exacerbated when the scale of the scene in front of the Realsense was large. For instance, we were actually able to get pretty reliable flight in the lab, where there are tons of small objects with clear edges and nothing is very far away. In the field house, we found it much harder to prevent tracking divergence.
+            </p>
+            <p>Despite all the challenges, we eventually worked out some tricks that enabled us to get SLAM working well in the field house. Facing the camera straight down was helpful, as was placing a feature-rich object directly beneath the camera during initialization. We tried many different vibration damping approaches, though it's not clear if any of these was actually particularly helpful. The video below shows our most impressive GPS-free flight. The drone is programmed to take off to 20 feet and fly 40 yards in a straight line. We then switch it to "return-to-launch" mode which should make it fly back to where it started and land. With GPS, this will typically get the drone within about a 10 foot radius of where it started. We landed within about a 2-inch radius!</p>
+            <video class="video-fullwidth" controls>
+                <source src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-slam-rtl.mp4" type="video/mp4">
+            </video>
+            <p>When we left, we had started testing outdoor SLAM-guided flight and were starting to address the new challenges imposed by that. However, we had decided to put aside SLAM for the moment to focus on the other automy functions which we considered higher priority. It's unlikely we would have achieved outdoor flight on the scale we needed with our remaining time (as far as we can tell, nobody on the internet has gotten it working outdoors for long flights either), however we were pretty thrilled to make as much progress as we did!</p>
+            <p>
+                <em>The software for everything below here was agnostic to the pose-estimate source. The SLAM positioning seemed to be less noisy, particularly around the origin point, so we would have expected somewhat better performance using SLAM-positioning.</em>
+            </p>
+            <h3 class="article-body-h3">Sampling Zone Detection</h3>
+            <img class="img-right-aligned" src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-tarp-detection.png">
+            <p>According to the rules, we were technically permitted to pre-program the GPS coordinates of the sampling locations into the drone. While we did implement hard-coding of the coordinates as a failsafe, our goal was to locate and navigate to the sample using computer vision. This (a) was necessary if we were going to navigate GPS-free, (b) could use a similar (perhaps identical) approach to the one we would use to autonomously hover over the sample when we reached it, and (c) was a good challenge!</p>
+            <p>The general approach was to apply a series of thresholds, filters, erosions, and dilations to the video frames to isolate the bright yellow pixels belonging to the tarp. From there we could locate the center of the tarp, and determine the direction and distance to it. We got this working at close and medium ranges (up to at least a hundred or so feet away at 50 foot altitude). When we left we were working on getting direction and distance estimates when the tarp was way to the edges of the frame (the worst-case distance to the nearest tarp was about 500 feet). Once we were within about 100 feet of the tarp, we'd run a control loop that would drive the drone's offset from the center of the tarp close to zero.</p>
+            <video class="video-fullwidth" controls>
+                <source src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-image-pipeline.mp4" type="video/mp4">
+            </video>
+            <h3 class="article-body-h3">Sample Collection</h3>
+            <div class="video-right-aligned-skinny-wrapper">
+                <video class="video-right-aligned-skinny" controls>
+                    <source src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-sample-hover.mp4" type="video/mp4">
+                </video>
+            </div>
+            <p>To collect the sample, the quadcopter would hover about 4 feet above the sample, lower the tool, collect a sample, and raise the tool. Using the same image filtering technique used for detecting and approaching the sampling area, the drone would determine its offset from the center of the yellow tarp (where the sample should be located) and adjust its position to minimize that offset. Once the drone was nearly centered over the sample, it would then descend to its sampling height of about 4 feet. At that point, it would simply lower the winch for a set amount of time, close the scoops, and raise the winch.</p>
+            <p>We successfully demonstrated the hovering routine as shown in the video (in the video, the drone is also using SLAM positioning rather than GPS positioning!). The week we were sent home, we had been planning to test that same routine using a tool-equipped version of the quadcopter to test if it could still hold its hover as the tool was lowered and raised. We're pretty confident that this would have worked - we tested the image processing algorithm with the tool being raised and lowered and the tool caused very little interference with the downward facing camera. We just weren't able to test it in-flight.</p>
+            <h3 class="article-body-h3">Docking</h3>
+            <p>We anticipated that autonomous docking on the charging station would be a particularly challenging task, mainly due to the relatively small size of the landing platform. To avoid falling off the platform, the drone could only land with about 4 inches of error on either axis of the platform. GPS was good enough to get the drone within a few feet of the rocket, but not nearly precise/accurate enough to land the drone on the platform. SLAM-positioning was significantly more accurate and can take advantage of loop closure to get much better accuracy (see the SLAM demo above) - however, we weren't confident that we'd have SLAM working outdoors at the scales we would need.</p>
+            <img class="img-fullwidth" src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-landing-markers.jpg">
+            <p>
+                To reliably achieve the kind of accuracy we needed, we planned to use fiducial markers on both the rocket tube and the landing platform to provide fixed references which could be used to determine the position of the drone relative to the platform. The idea was roughly (1) use "return-to-launch" mode with either GPS or SLAM positioning to get the drone close to the rocket, (2) use bright, colored markers on the exterior of the rocket to center the drone over the payload bay of the rocket, (3) descend to roughly 5 feet above the rocket, low enough to see a smaller  <a href="http://www.uco.es/investiga/grupos/ava/node/26" target="_blank">ArUco</a>
+                marker near the middle of the charging platform, and (4) use the ArUco marker to infer the drone's position relative to the platform as it descends the rest of the way.
+            </p>
+            <div class="video-right-aligned-skinny-wrapper">
+                <video class="video-right-aligned-skinny" controls>
+                    <source src="https://storage.googleapis.com/jakeg.cc/images/projects/usli/usli-aruco-land.mp4" type="video/mp4">
+                </video>
+            </div>
+            <p>For each step, an image processing algorithm determines the drone's offset relative to a goal position, in this case, the center of the landing platform. At high altitudes, the algorithm would use bright markers on the rocket which could be made large and easy to see far away. At low altitudes, the algorithm would instead use the ArUco marker on the landing platform. A control loop would be constantly minimizing the offset by making small adjustments to the drone's target position.</p>
+            <p>Around about 1 foot, the camera starts to lose focus on the markers and ground effects start to be significant, making it difficult to keep the drone centered over a point. To deal with this, we had the drone stop descending at around 2 feet above the platform, wait until the offset was below some threshold, and then immediately land, ignoring the offset information after that point. The video demonstrates a lab test of this operation. We still needed to do a bunch more testing of this procedure, but we were making steady progress.</p>
+            <p>Notice that the docking routine, sample zone approach/hover routines all work on the same principle - some external reference is used to determine a lateral offset that needs to be minimized. Once the offset is small, the drone adjusts its altitude, either hovering at a certain height or fully landing. We were having success using this approach to keep the drone hovering above various objects which is why we're confident we could have gotten a lot of the autonomy functions working with a little more time.</p>
+            <h2 class="article-body-h2">Acknowledgements</h2>
+            <p>
+                This project was only possible through the collective effort of the entire Vanderbilt team:
+			<a target="_blank" href="https://www.linkedin.com/in/alex-b-413432129/">Alex Barnett</a>
+                ,&nbsp;<a target="_blank" href="https://www.linkedin.com/in/luke-neise/">Luke Neise</a>
+                ,&nbsp;<a target="_blank" href="https://www.linkedin.com/in/adam-smith-008967122/">Adam Smith</a>
+                ,&nbsp;<a target="_blank" href="https://www.linkedin.com/in/jonathanpowles/">Jon Powles</a>
+                ,&nbsp;<a target="_blank" href="https://www.linkedin.com/in/tamasakis/">Tomi Kis</a>
+                ,&nbsp;<a target="_blank" href="https://www.linkedin.com/in/ethan-james2/">Ethan James</a>
+                ,&nbsp;<a target="_blank" href="https://www.linkedin.com/in/abbey-carlson-1622b612b/">Abbey Carlson</a>
+                ,&nbsp;<a target="_blank" href="https://www.linkedin.com/in/emrekanli/">Emre Kanli</a>
+                ,&nbsp;<a target="_blank" href="https://www.linkedin.com/in/benjamin-hsu-88441a129/">Ben Hsu</a>
+                ,&nbsp;<a target="_blank" href="https://www.linkedin.com/in/mkmacd/">Matt MacDonald</a>
+                ,&nbsp;<a target="_blank" href="https://www.linkedin.com/in/sophia-moak-24a89513b/">Sophia Moak</a>
+                , and
+			<a target="_blank" href="https://www.linkedin.com/in/tristanagilbert/">Tristan Gilbert</a>
+                . Robin Midgett, the long time rocketry mentor to the team gave us invaluable instruction and support. We're incredibly grateful to the several VADL alumni who helped us out at various points throughout the year, as well as the many alumni whose cumulative knowledge and work we inherited, enabling us to be ambitious with our project. Finally, huge thanks to our funding sponsors - Vanderbilt School of Engineering, VADL alumni, Boeing, and NASA.
+
+		
+            <p>
+                I am personally incredibly grateful to NASA for hosting these challenging engineering competitions. This competition and the <a target="_blank" href="https://www.jakeg.cc/projects/mining-robot">Robotic Mining Competition</a>
+                were easily the most valuable experiences of my four years in college.
+            </p>
+            <p id="bottom-nav-links">
+                <span id="back-to-projects">
+                    <a href="https://www.jakeg.cc/projects">
+                        <-- back to projects </a></span>
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+
+@media only screen and (min-width: 768px) {
+
+    .img-overflow {
+        margin: 20px 0;
+        width: 140%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .img-right-aligned {
+        width: 45%;
+        float: right;
+        margin: 10px 0 10px 30px;
+    }
+
+    .img-right-aligned-mini {
+        width: 30%;
+        float: right;
+        margin: 10px 0 10px 30px;
+    }
+
+    .video-right-aligned {
+        width: 45%;
+        float: right;
+        margin: 10px 0 10px 30px;
+    }
+
+    .video-left-aligned {
+        width: 45%;
+        float: left;
+        margin: 10px 30px 10px 0;
+    }
+
+    .video-pair {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .video-pair-right {
+        width: 49%;
+        margin: 10px 0;
+    }
+
+    .video-pair-left {
+        width: 49%;
+        margin: 10px 0;
+    }
+
+    .video-right-aligned-skinny {
+        width: 40%;
+        float: right;
+        margin: 10px 0 10px 30px;
+    }
+
+}

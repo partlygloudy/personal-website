@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Page title -->
+        <title>6-axis Robot Arm - Jake Gloudemans</title>
+        <!-- Character encoding -->
+        <meta charset="UTF-8">
+        <!-- Viewport -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="/static/css/project-page-small.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/project-page-large.css">
+        <!-- Fonts (from Google Fonts) -->
+        <link href="https://fonts.googleapis.com/css?family=Cardo:400,400i&amp;display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Home icon -->
+        <a id="nav-icon-home" href="https://www.jakeg.cc">
+            <img id="nav-icon-home-img" src="/static/img/home-icon.svg">
+        </a>
+        <!-- Header area -->
+        <div id="article-header">
+            <img src="https://storage.googleapis.com/jakeg.cc/images/projects/robot_arm/robot_arm_wideview.jpg" id="article-header-image">
+            <!-- Title -->
+            <div id="article-title-wrapper">
+                <h1 id="article-title">
+                    <span id="article-title-background">&nbsp;6-axis Robot Arm &nbsp;</span>
+                </h1>
+            </div>
+        </div>
+        <!-- Main content container -->
+        <div id="article-content">
+            <!-- Introduction -->
+            <p id="article-intro-p">
+                My senior year of high school, I built a robot arm to compete in a <a href="https://www.soinc.org/" target="_blank">Science Olympiad</a>
+                event. The arm had to pick up ping pong balls, legos, and pencils, and drop them in specific slots in three different egg cartons. It also had to flip dice over so that a particular number was facing upwards. I wrote a GUI for controlling the arm from my laptop which let me save, store, and replay arbitrary trajectories. The arm placed 2nd at the Indiana state competition, missing only 2 point of the possible 110
+            </p>
+            <!-- Article body -->
+            <h2 class="article-body-h2">Background</h2>
+            <p class="article-body-p">
+                I started computer programming as a high school sophomore and became interested in robotics a year later. By senior year, I was comfortable with the basics of Arduino - reading sensors, moving servos, etc. - but I had never done any big project with complicated hardware and software like this one. When the list of events came out, I was hoping for at least one or two build events that would let me use of my new robotics skills. I was in luck... there was an event called ‘Robot Arm’ which <em>required</em>
+                building a robot! So began my first big robotics project.
+            </p>
+            <h2 class="article-body-h2">Rules</h2>
+            <img class="img-right-aligned" src="https://storage.googleapis.com/jakeg.cc/images/projects/robot_arm/competition_area_diagram.webp">
+            <p class="article-body-p">The robot operated within a 75cm square region. The base of the robot could never leave the 30cm "device square" in the south zone of the area. Three egg cartons, cut in half so the slots were exposed, were placed on the side opposite the robot. Two slots in each egg carton were randomly marked as "bonus slots" before each run. A variety of small objects - ping pong balls, 2x4 lego bricks, dice, and pencils - were arranged around the device square. The initial position of everything in the arena, aside from the bonus slots, was always the same.
+
+		
+            <p class="article-body-p">The robot had 3 minutes to accumulate as many points as possible. I won't give a detailed scoring breakdown but basically, the goal was to (1) move the pencils to the west carton and the Legos to the north carton (2) place the ping pong balls in the randomly assigned bonus slots, preferentially those in the east carton, and (3) move the dice to anywhere in the north zone and orient them so that an even number was facing up - they started with a '1' facing up so the easiest way to do this was to flip them upside down so that a '6' faced up.</p>
+            <h2 class="article-body-h2">Design</h2>
+            <p class="article-body-p">I considered a few configurations for the arm and ultimately opted for a 6-axis design. I also considered a crane-style arm but found it would be difficult to have the reach I needed and still be able to make everything fit inside the 30cm square at the beginning. The (almost) final product is shown at the top.</p>
+            <p class="article-body-p">The base is controlled by a geared stepper motor while each of the other joints is actuated by a servo. I used two servos in parallel at the base since I was concerned about that joint having insufficient torque when the arm was fully extended. A 5 pound dumbell on the back of the platform prevented tipping.</p>
+            <img class="img-fullwidth" src="https://storage.googleapis.com/jakeg.cc/images/projects/robot_arm/robot_arm_sideview.webp">
+            <p class="article-body-p">
+                All the motors are controlled from an <a href="https://www.adafruit.com/product/2590" target="_blank">Arduino</a>
+                , the stepper through a <a href="https://www.sparkfun.com/products/12859" target="_blank">stepper driver</a>
+                and the servos through a many-output <a href="https://www.adafruit.com/product/815" target="_blank">PWM controller</a>
+                connected to the Arduino via I<sup>2</sup>
+                C. Cable management was challenging but was aided by the fact that the arm didn’t have to make a full rotation. I put the PWM controller on the rotating platform so that the only wires running between the other electronics and the arm were the I2C signal wires, 5V, and ground. I routed those wires through a flexible plastic tube with strain relief on each end - this took most of the force away from the solder joints at the end of the wire.
+            </p>
+            <p class="article-body-p">The motors were powered from a 3S LiPo. The stepper took the full voltage while the servos ran through a 5V linear regulator. The linear regulator got VERY hot (I should've used a buck converter, I probably just didn't know about them yet). Thus the large, scrap metal heatsink attached to the regulator.</p>
+            <p class="article-body-p">While autonomous operation wasn't required, I decided right away that it was the approach I wanted to take. I made that decision both out of personal interest - again, I was just getting into software and robotics so it was a good challenge - and because I thought it was probably the only way the arm would move with enough speed and precision to get all the points.</p>
+            <h2 class="article-body-h2">Fabrication</h2>
+            <p class="article-body-p">The arm was made mostly from ¼” birch plywood panels plus a few larger chunks of wood. I cut the panels to size with a table saw and chop saw and used a drill press for the holes. I was still a soldering novice at the time, but the solder work wasn’t too difficult since there weren’t very many components. As I mentioned earlier, cable management was the most difficult electronics "assembly" challenge</p>
+            <h2 class="article-body-h2">Software</h2>
+            <p class="article-body-p">The arm was allowed to connect to an external computer so I had the Arduino plugged into a laptop through a USB cable. The software on the Arduino wasn’t terribly complicated. It just continuously moved each joint to the current target position - either the default starting position (arm straight up) or the latest position sent from the laptop. I did a few things to make the movements smooth, adjust travel speed, and check for collisions, but this was basically as simple as decoding the message and setting the position for each joint motor accordingly.</p>
+            <p class="article-body-p">
+                On the laptop side, I made a simple GUI with a slider for each joint so I could control the joints individually. I later made another version of this where I could adjust the X, Y, and Z positions and wrist angle of the gripper. I later discovered the math for this is called <a href="https://en.wikipedia.org/wiki/Inverse_kinematics" target="_blank">inverse kinematics</a>
+                and there are straightforward ways to approach it, but at the time I recall doing extensive trig, drawing lots of triangles, and occasionally miscalculating things with startling results (e.g. the arm suddenly tries to move to 'NaN' or "inf" degrees).
+            </p>
+            <p class="article-body-p">Next I added the ability to save the current position to a list, building up 'motion sequences.' I could then auto-replay the sequence and the arm would move to each saved position, one after the other. At this point, I could (very tediously) move the arm to every position required to grab and place all the objects, save each position, and replay the whole thing. This is how far I was by the first few competitions. I could reliably get about 75 - 80 points out of 110. This video was from around that time.</p>
+            <div class="video-fullwidth-container">
+                <iframe src="https://www.youtube.com/embed/Cf7AJMvF-Ik" class="video-iframe" frameborder="0" allow="accelerometer; encrypted-media" allowfullscreen=""></iframe>
+            </div>
+            <p class="article-body-p">The gripper was reliable for everything except the pencils which it couldn't grasp, so rather than redesign it, I made a separate tool that the arm could pick up. It was basically a piece of foam with double-stick tape on the bottom and a handle for gripping it. The arm would slide all the pencils close together (like it does in the video), stick them all with the tool at the same time, and drop the tool and pencils in the west carton. Occasionally one of them didn’t stick but usually this got the full points for the pencils.</p>
+            <p class="article-body-p">The only remaining challenge was the the random assignment of the bonus slots for the ping pong balls. I needed a way to create the correct motion sequence on the fly in the short (5-minute) setup time window at the competition.</p>
+            <p class="article-body-p">To solve this, I first recorded a generic motion sequence for every carton slot which would make the arm drop the currently held object in that slot. I also recorded a sequence for picking up every individual object (except the pencils). I then made a new version of the GUI that showed a 2D replica of the competition area, complete with every object and carton slot. Instead of specifying joint positions, I could just click on an object and the arm would run the corresponding saved sequence to pick it up. Or, if I clicked on a carton slot, the arm would go drop the object there. The pencils were treated as a single sequence to be triggered once during the routine. Like before, I could use this interface to build, save, and replay sequences, only now, this took about 30 seconds rather than 30 minutes for the full routine.</p>
+            <p class="article-body-p">With this approach, I could program the full routine during my setup time at the competition, assigning the ping pong balls to the randomly selected bonus slots. This final version of the robot usually achieved a perfect score, however, it would occasionally misplace one of the ping pong balls due to shakiness in the arm caused by the servos. This unfortunately occurred during the state competition resulting in a score of 108/110 and a 2nd place finish. I was of course hoping to win but the arm worked pretty much exactly as expected so I was quite happy. Sadly I never took a video of the full-power robot :(</p>
+            <h2 class="article-body-h2">A few notes</h2>
+            <ol>
+                <li>The arm is only as accurate as the motors - I used cheap servo motors for most of the joints which were almost good enough but unfortunately made the arm quite shaky, particularly when it was near full extension. Given my budget, resources, and coding ability, this was a fine choice for me at the time - however, if you're looking for a high-precision arm, use steppers or in larger applications, industrial-grade servos</li>
+                <li>Autonomy is great for this task in that it’s efficient, precise, and, within the limits of the motors, very repeatable. The downside is that with no feedback, anything unexpected could potentially ruin the entire run. Without very sophisticated software, there’s no way to adjust and recover if something goes wrong. In my case, that meant dropping one of the ping pong balls in the wrong slot and missing a few points. My greatest fear, which thankfully never happened, was that I would slightly mis-align the robot during setup and it would miss every object as I looked on in horror</li>
+                <li>I thought that manual control couldn’t do as well as autonomy primarily because in every video I watched of a manually controlled arm, the controller was not intuitive (usually it was some type of two-stick handheld controller) and operation was way too slowly and imprecise to complete most of the tasks. However, a different approach is to make a little replica of the arm with potentiometers at each joint and program the real arm to mimic the replica. That controller design is extremely intuitive and could conceivably be good enough to complete the full routine in 3 minutes. And if you mess something up, you can adjust and recover from it. I've seen a few videos of teams that did this with good results.</li>
+            </ol>
+            <h2 class="article-body-h2">Acknowledgements</h2>
+            <p class="article-body-p">
+                <a href="https://www.linkedin.com/in/kyle-weingartner-2b5198193/" target="_blank">Kyle Weingartner</a>
+                , a fellow team member, helped throughout the project. He and my <a href="https://www.linkedin.com/in/nicole-gloudemans-00042b1a3/" target="_blank">sister</a>
+                made an entirely new arm the following year which went on to win the Indiana state competition! My <a href="https://www.linkedin.com/in/monica-gloudemans-51303b87/" target="_blank">mom</a>
+                ran the Science Olympiad team and supplied invaluable moral support along the way. My <a href="https://www.linkedin.com/in/mark-gloudemans-78451857/" target="_blank">dad</a>
+                , a brilliant engineer, gave essential technical guidance throughout the project. My grandpa, also a brilliant engineer, provided shop access and fabrication advice
+            </p>
+            <p id="bottom-nav-links">
+                <span id="back-to-projects">
+                    <a href="https://www.jakeg.cc/projects">
+                        <-- back to projects </a></span>
+            </p>
+        </div>
+    </body>
+</html>
