@@ -24,8 +24,7 @@ $(document).ready(function() {
 function populateArchivePanel() {
 
     // Fetch list of recent articles from the server
-    let prefix = window.location.hostname === "localhost" ? "" : window.location.href;
-    $.getJSON(prefix + "data/recent.json", function(recent) {
+    $.getJSON("/data/recent.json", function(recent) {
 
         // Iterate over headings
         for (const post in recent) {
@@ -48,14 +47,13 @@ function populateArchivePanel() {
 function loadMostRecent() {
 
     // Fetch blurb text from the server
-    let prefix = window.location.hostname === "localhost" ? "" : window.location.href;
-    $.getJSON(prefix + "data/recent.json", function(recent) {
+    $.getJSON("data/recent.json", function(recent) {
 
         // Get the url of the most recent article
         let mostRecentUrl = Object.values(recent)[0]["url"];
 
         // Request the article page from the server
-        $.get(prefix + mostRecentUrl, function(page) {
+        $.get(mostRecentUrl, function(page) {
 
             $("#current-post-wrapper").html(
                 $(page).find("#current-post-wrapper").html()
