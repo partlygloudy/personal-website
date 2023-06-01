@@ -1,5 +1,19 @@
 {
     
+    "crossword-editor": {
+        "img": "/static/img/projects/cards/crossword-card.png",
+        "href": "https://crossword.gloudemans.fun",
+        "title": "Collaborative Crossword Editor",
+        "description": "Web-based crossword editor with support for collaborative editing"
+    },
+
+    "pro-housing-pgh": {
+        "img": "/static/img/projects/cards/pro-housing-pgh-card.png",
+        "href": "https://www.prohousingpgh.org",
+        "title": "Pro-Housing PGH Website",
+        "description": "Website for Pittsburgh chapter of YIMBY Action"
+    },
+    
     "nasa-usli-drone": {
         "img": "/static/img/projects/cards/usli-drone-card.png",
         "href": "/projects/nasa-usli-drone",
