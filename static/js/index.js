@@ -12,13 +12,13 @@ $(document).ready(function(){
 
     // Redirect when an icon is clicked
     $("#about-icon").click(function() {
-        window.location.href = "about.html";
+        window.location.href = "about";
     });
     $("#projects-icon").click(function() {
-        window.location.href = "projects.html";
+        window.location.href = "projects";
     });
     $("#blog-icon").click(function() {
-        window.location.href = "blog.html";
+        window.location.href = "blog";
     });
     
 })

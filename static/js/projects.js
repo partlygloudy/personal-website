@@ -15,19 +15,21 @@ function populateFooter() {
         // Iterate over headings
         for (const project in manifest) {
 
+            let data = manifest[project]
+
             // Outer link
-            let card = $("<a href='${project.href}'>");
+            let card = $(`<a href='${data.href}'>`);
 
             // Div wrapper
             let cardWrapper = $("<div>").addClass("project-card");
 
             // Image
-            let cardImage = $("<img src='${project.img-url}'>").addClass("project-card-img");
+            let cardImage = $(`<img src='${data.img}'>`).addClass("project-card-img");
 
             // Text - title and description
             let cardText = $("<div>").addClass("project-card-text");
-            let cardTitle = $("<h1>").addClass("project-card-title").text(project.title);
-            let cardDescription = $("<p>").addClass("project-card-description").text(project.description);
+            let cardTitle = $("<h1>").addClass("project-card-title").text(data.title);
+            let cardDescription = $("<p>").addClass("project-card-description").text(data.description);
 
             // Assemble card and add to page
             cardText.append(cardTitle);
