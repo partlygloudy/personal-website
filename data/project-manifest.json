@@ -1,5 +1,5 @@
 {
-    
+
     "crossword-editor": {
         "img": "/static/img/projects/cards/crossword-card.png",
         "href": "https://crossword.gloudemans.fun",
@@ -10,8 +10,15 @@
     "pro-housing-pgh": {
         "img": "/static/img/projects/cards/pro-housing-pgh-card.png",
         "href": "https://www.prohousingpgh.org",
-        "title": "Pro-Housing PGH Website",
-        "description": "Website for Pittsburgh chapter of YIMBY Action"
+        "title": "Pro-Housing Pittsburgh",
+        "description": "Website and organizing for Pittsburgh chapter of YIMBY Action"
+    },
+
+    "pgh-new-libs": {
+        "img": "/static/img/projects/cards/pgh-new-libs-card.png",
+        "href": "https://www.pghnewlibs.org",
+        "title": "Pittsburgh New Liberals",
+        "description": "Website and organizing for Pittsburgh chapter of the Center for New Liberalism"
     },
     
     "nasa-usli-drone": {
