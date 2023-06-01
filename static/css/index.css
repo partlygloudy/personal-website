@@ -1,0 +1,49 @@
+html {
+	height: 100%;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    margin: 0px; 
+    font-family: 'Cardo', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+	text-align: center;
+	font-size: 1rem;
+	margin-top: 0;
+}
+
+.icon-container {
+	width: 150px;
+	cursor: pointer;
+    margin: 0 25px;
+}
+
+.icon-wrapper {
+	height: 100%;
+	width: 100%;
+}
+
+.icon-img {
+	height: 75px;
+	width: 100%;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+	body {
+		align-items: center;
+		flex-direction: column;
+	}
+
+    .icon-container {
+        margin: 25px 0;
+    }
+
+}

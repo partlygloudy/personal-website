@@ -1,0 +1,38 @@
+{
+    
+    "nasa-usli-drone": {
+        "img-url": "static/img/projects/cards/usli-drone.png",
+        "href": "projects/nasa-usli-drone.html",
+        "title": "NASA USLI (Drone)",
+        "description": "Foldable quadcopter for aerial sample collection, plus a rocket to transport the drone. Built for the NASA Student Launch Initiative"
+    },
+
+    "nasa-usli-rocket": {
+        "img-url": "static/img/projects/cards/usli-rocket.png",
+        "href": "projects/nasa-usli-rocket.html",
+        "title": "NASA USLI (Rocket)",
+        "description": "Foldable quadcopter for aerial sample collection, plus a rocket to transport the drone. Built for the NASA Student Launch Initiative"
+    },
+
+    "mining-robot": {
+        "img-url": "static/img/projects/cards/mining-robot.png",
+        "href": "projects/mining-robot.html",
+        "title": "Mining Robot",
+        "description": "Semi-autonomous robot for collecting gravel buried 1 foot beneath the ground. Built for the NASA Robotic Mining Competition"
+    },
+
+    "labyrinth-coffee-table": {
+        "img-url": "static/img/projects/cards/labyrinth-coffee-table.png",
+        "href": "projects/labyrinth-coffee-table.html",
+        "title": "Labyrinth Coffee Table",
+        "description": "Giant, electronically-controlled labyrinth-style marble maze built into a coffee table"
+    },
+
+    "robot-arm": {
+        "img-url": "static/img/projects/cards/robot-arm.png",
+        "href": "projects/robot-arm.html",
+        "title": "6-Axis Robot Arm",
+        "description": "Programmable robot arm built to compete in the Robot Arm event for the 2016 Science Olympiad Competition"
+    }
+
+}
