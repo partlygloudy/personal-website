@@ -1,4 +1,4 @@
-# Enemy of the Good
+# [Enemy of the Good](/post/enemy-of-the-good)
 
 #### February 4, 2023
 

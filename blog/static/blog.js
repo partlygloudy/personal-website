@@ -26,8 +26,6 @@ function populateRecentPanel() {
         // Iterate over headings
         for (const post of recent) {
 
-            console.log(post);
-
             // Read title and URL from JSON
             let title = post["title"];
             let url = `/post/${post["url"]}`;
