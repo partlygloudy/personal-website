@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Page title, text displayed in browser tab-->
+    <title>Jake Gloudemans</title>
+
+    <!-- Metadata-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Jake Gloudemans">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@partlygloudy">
+    <meta name="twitter:creator" content="@partlygloudy">
+    <meta name="twitter:title" content="Jake Gloudemans">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Fonts (loaded from Google fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- JQuery (loaded from Google hosted libraries) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <!-- Showdown markdown renderer -->
+    <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
+
+    <!-- Custom Javascript, implements event handlers, animation, etc. -->
+    <script src="static/js/blog.js"></script>
+
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="static/css/blog.css">
+
+</head>
+
+<body>
+
+<!-- Header bar with logo and nav links -->
+<div id="header-bar">
+
+    <!-- Main logo -->
+    <img id="header-logo" src="static/img/partly_gloudy_logo_black.png" alt="" />
+
+    <!-- Nav bar to other site pages -->
+    <div id="header-nav-bar">
+        <a class="header-nav-link" href="/about">About</a>
+        <a class="header-nav-link" href="/projects">Projects</a>
+    </div>
+
+</div>
+
+<!-- Main content - current post and archive panel -->
+<div id="main-content">
+
+    <!-- Current blog post - left side of screen -->
+    <div id="current-post-wrapper">
+
+        <!-- Contents of the current article are loaded separately  -->
+        <!-- They should be appended below here  -->
+
+    </div>
+
+    <!-- Archive panel with links to recent posts - right sie of screen -->
+    <div id="archive-panel">
+
+        <div class="archive-panel-section">
+
+            <h2 class="archive-panel-header">Recent Posts</h2>
+            <ul class="archive-panel-link-list" id="archive-panel-recent">
+            </ul>
+
+        </div>
+
+        <div class="archive-panel-section">
+            <h2 class="archive-panel-header">Blogs I Like</h2>
+            <ul class="archive-panel-link-list">
+                <li><a href="https://marginalrevolution.com/" class="archive-panel-link-external" target="_blank">Marginal Revolution</a></li>
+                <li><a href="https://www.slowboring.com/" class="archive-panel-link-external" target="_blank">Slow Boring</a></li>
+                <li><a href="https://noahpinion.substack.com/" class="archive-panel-link-external" target="_blank">Noahpinion</a></li>
+                <li><a href="https://astralcodexten.substack.com/" class="archive-panel-link-external" target="_blank">Astral Codex Ten</a></li>
+                <li><a href="https://rootsofprogress.org/" class="archive-panel-link-external" target="_blank">Roots of Progress</a></li>
+                <li><a href="https://guzey.com/" class="archive-panel-link-external" target="_blank">Alexey Guzey</a></li>
+            </ul>
+
+        </div>
+
+        <div class="archive-panel-section">
+            <h2 class="archive-panel-header">Publications I Like</h2>
+            <ul class="archive-panel-link-list">
+                <li><a href="https://www.worksinprogress.co/" class="archive-panel-link-external" target="_blank">Works in Progress</a></li>
+                <li><a href="https://asteriskmag.com/" class="archive-panel-link-external" target="_blank">Asterisk</a></li>
+                <li><a href="https://www.vox.com/future-perfect" class="archive-panel-link-external" target="_blank">Future Perect</a></li>
+                <li><a href="https://ourworldindata.org/" class="archive-panel-link-external" target="_blank">Our World in Data</a></li>
+                <li><a href="https://www.discoursemagazine.com/" class="archive-panel-link-external" target="_blank">Discourse</a></li>
+                <li><a href="https://www.vox.com/recode" class="archive-panel-link-external" target="_blank">Recode</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

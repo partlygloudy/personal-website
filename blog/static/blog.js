@@ -24,14 +24,14 @@ $(document).ready(function() {
 function populateArchivePanel() {
 
     // Fetch list of recent articles from the server
-    $.getJSON("/data/recent.json", function(recent) {
+    $.getJSON("/posts/manifest/recent.json", function(recent) {
 
         // Iterate over headings
         for (const post in recent) {
 
             // Read title and URL from JSON
             let title = recent[post]["title"];
-            let url = recent[post]["url"];
+            let url = `posts/${recent[post]["url"]}`;
 
             // Create link to the post and add it to the list
             let link = $("<a>").attr("url", url).html(title);
@@ -47,7 +47,7 @@ function populateArchivePanel() {
 function loadMostRecent() {
 
     // Fetch blurb text from the server
-    $.getJSON("data/recent.json", function(recent) {
+    $.getJSON("posts/manifest/recent.json", function(recent) {
 
         // Get the url of the most recent article
         let mostRecentUrl = Object.values(recent)[0]["url"];
