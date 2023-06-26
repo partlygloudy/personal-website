@@ -7,10 +7,7 @@
 $(document).ready(function() {
 
     // Fetch text blurbs from the server and populate elements from the data
-    populateArchivePanel();
-
-    // Load the most recent article
-    loadMostRecent();
+    populateRecentPanel();
 
 });
 
@@ -21,20 +18,22 @@ $(document).ready(function() {
  * only the most recent 10 or so. The JSON will include the title and url to use
  * when creating the article link
  */
-function populateArchivePanel() {
+function populateRecentPanel() {
 
     // Fetch list of recent articles from the server
-    $.getJSON("/posts/manifest/recent.json", function(recent) {
+    $.getJSON("/static/manifest.json", function(recent) {
 
         // Iterate over headings
-        for (const post in recent) {
+        for (const post of recent) {
+
+            console.log(post);
 
             // Read title and URL from JSON
-            let title = recent[post]["title"];
-            let url = `posts/${recent[post]["url"]}`;
+            let title = post["title"];
+            let url = `/post/${post["url"]}`;
 
             // Create link to the post and add it to the list
-            let link = $("<a>").attr("url", url).html(title);
+            let link = $("<a>").attr("href", url).html(title);
             $("#archive-panel-recent").append($("<li>").html(link));
 
         }
@@ -43,31 +42,3 @@ function populateArchivePanel() {
 
 }
 
-
-function loadMostRecent() {
-
-    // Fetch blurb text from the server
-    $.getJSON("posts/manifest/recent.json", function(recent) {
-
-        // Get the url of the most recent article
-        let mostRecentUrl = Object.values(recent)[0]["url"];
-
-        // Request the article page from the server
-        $.get(mostRecentUrl, function(page) {
-
-            $("#current-post-wrapper").html(
-                $(page).find("#current-post-wrapper").html()
-            );
-
-            // Add hyperlink to the title
-            let title = $("#current-post-title").html();
-            let linkedTitle = $("<a>").attr("href", mostRecentUrl).html(title)
-            $("#current-post-title").html(linkedTitle);
-
-        });
-
-
-
-    });
-
-}
