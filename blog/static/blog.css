@@ -206,9 +206,22 @@ a:link, a:visited, a:active {
 }
 
 .post ol {
+    font-size: 1.3rem;
+    line-height: 35px;
 }
 
 .post li {
+}
+
+.post blockquote {
+    padding-left: 20px;
+    border-left: 4px solid rgb(200,200,200);
+    margin-left: 20px;
+}
+
+.post blockquote p {
+    font-size: 1.0rem;
+    color: rgb(100,100,100);
 }
 
 
