@@ -18,7 +18,7 @@ $(document).ready(function(){
         window.location.href = "projects";
     });
     $("#blog-icon").click(function() {
-        window.location.href = "blog";
+        window.location.href = "https://blog.jakegloudemans.com";
     });
     
 })

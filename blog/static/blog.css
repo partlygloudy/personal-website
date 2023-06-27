@@ -1,0 +1,316 @@
+
+/* ------------------------------ */
+/* ---  VARIABLES  -------------- */
+/* ------------------------------ */
+
+:root {
+    --color-primary: rgb(242,242,242);
+    --color-secondary: white;
+    --font-color-primary: black;
+    --font-color-secondary: white;
+    --font-color-tertiary: white;
+}
+
+
+/* ------------------------------ */
+/* ---  Generic tag styling  ---- */
+/* ------------------------------ */
+
+
+html {
+    font-family: "Crimson Text", "serif";
+}
+
+body {
+    margin: 0;
+    background: var(--color-primary);
+    color: var(--font-color-primary);
+}
+
+body::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+a:link, a:visited, a:active {
+    color: inherit;
+}
+
+
+/* -------------------------------- */
+/* ---  Header bar ---------------- */
+/* -------------------------------- */
+
+
+#header-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 7vw;
+    min-height: 70px;
+    max-height: 120px;
+    background: var(--color-secondary);
+    color: var(--font-color-primary);
+    border-bottom: 1px solid black;
+}
+
+#header-bar-buffer {
+    width: 100%;
+    height: 7vw;
+    min-height: 70px;
+    max-height: 120px;
+}
+
+#header-logo {
+    margin-left: 2%;
+    align-self: center;
+    height: 80%;
+    cursor: pointer;
+}
+
+#header-title {
+    margin: 0 0 0 20px;
+    font-weight: lighter;
+    font-size: 1.3rem;
+    width: 0;
+    cursor: pointer;
+}
+
+#menu-button-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 7vw;
+    min-height: 70px;
+    max-height: 120px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px;
+}
+
+.menu-button {
+    height: 20px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.8rem;
+    background: rgb(245,245,245);
+    box-shadow: 2px 1px black;
+    border-radius: 100px;
+    border: 1px solid rgb(200,200,200);
+}
+
+.menu-button:hover {
+    background: rgb(230,230,230);
+    box-shadow: 3px 2px black;
+}
+
+
+/* -------------------------------------- */
+/* ---  Main content - basic layout ----- */
+/* -------------------------------------- */
+
+
+#main-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+#post-bucket {
+    width: 70%;
+    max-width: 800px;
+    min-height: 100vh;
+    padding: 25px 5% 5% 5%;
+}
+
+#archive-panel {
+    width: 30%;
+    padding: 40px;
+    max-width: 280px;
+    min-width: 225px;
+    min-height: 100vh;
+    background: var(--color-primary);
+    color: var(--font-color-primary);
+}
+
+
+/* ------------------------------------ */
+/* ---  Blog post element styling ----- */
+/* ------------------------------------ */
+
+
+.post {
+    width: 100%;
+    border-bottom: 1px solid black;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
+
+.post-final {
+    border-bottom: none;
+}
+
+.post h1 {
+    font-size: 2.0rem;
+    margin-bottom: 15px;
+}
+
+.post h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.post h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.post h4 {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+.post p {
+    font-size: 1.3rem;
+    line-height: 28px;
+}
+
+.post a {
+    text-decoration: underline;
+}
+
+.post a:hover {
+    background: black;
+    color: white;
+    text-decoration: underline;
+}
+
+.post h1 a {
+    text-decoration: none;
+}
+
+.post h1 a:hover {
+    text-decoration: underline;
+    color: black;
+    background: unset;
+}
+
+.post ol {
+}
+
+.post li {
+}
+
+
+/* -------------------------------- */
+/* ---  Archive panel ------------- */
+/* -------------------------------- */
+
+
+.archive-panel-section {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: left;
+    border: 1px solid black;
+    margin-bottom: 25px;
+}
+
+.archive-panel-header {
+    width: 100%;
+    padding: 10px 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+}
+
+.archive-panel-link-list {
+    margin-top: 0;
+}
+
+.archive-panel-section a:hover {
+    text-decoration: underline;
+}
+
+#archive-link {
+    margin: 5px 0 10px 10px;
+    font-style: italic;
+}
+
+/* ------------------------------- */
+/* ---  Archive Page ------------- */
+/* ------------------------------- */
+
+#post-archive-list a:hover {
+    text-decoration: underline;
+}
+
+/* ------------------------- */
+/* ---  Footer ------------- */
+/* ------------------------- */
+
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#copyright-text {
+    width: 90%;
+    max-width: 1300px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    border-top: 1px solid rgb(175, 175, 175);
+    font-size: 0.7rem;
+}
+
+
+/* -------------------------------- */
+/* ---  Narrow Screens ------------ */
+/* -------------------------------- */
+
+
+@media only screen and (max-width: 1000px) {
+
+    #post-bucket {
+        width: 90%;
+        padding: 25px 0;
+    }
+
+    #archive-panel {
+        width: 80%;
+    }
+
+    #header-bar {
+        height: 70px;
+    }
+
+    #header-title {
+        width: auto;
+    }
+
+    #menu-button-wrapper {
+        display: flex;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+}
+
+
+
+
