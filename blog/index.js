@@ -228,5 +228,5 @@ function loadCardData(manifest) {
 // Get port from env variable if set, otherwise use port 8080
 const port = parseInt(process.env.PORT) || 8080;
 app.listen(port, () => {
-    console.log(`Listening on port ${port}`);
+    console.log(`Running at http://localhost:${port}`);
 });
