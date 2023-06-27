@@ -48,6 +48,7 @@ a:link, a:visited, a:active {
 
 
 #header-bar {
+    width: 100%;
     display: flex;
     align-items: center;
     height: 7vw;
@@ -56,6 +57,13 @@ a:link, a:visited, a:active {
     background: var(--color-secondary);
     color: var(--font-color-primary);
     border-bottom: 1px solid black;
+}
+
+#header-bar-buffer {
+    width: 100%;
+    height: 7vw;
+    min-height: 70px;
+    max-height: 120px;
 }
 
 #header-logo {
@@ -71,6 +79,38 @@ a:link, a:visited, a:active {
     font-size: 1.3rem;
     width: 0;
     cursor: pointer;
+}
+
+#menu-button-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 7vw;
+    min-height: 70px;
+    max-height: 120px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px;
+}
+
+.menu-button {
+    height: 20px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.8rem;
+    background: rgb(245,245,245);
+    box-shadow: 2px 1px black;
+    border-radius: 100px;
+    border: 1px solid rgb(200,200,200);
+}
+
+.menu-button:hover {
+    background: rgb(230,230,230);
+    box-shadow: 3px 2px black;
 }
 
 
@@ -89,7 +129,7 @@ a:link, a:visited, a:active {
 #post-bucket {
     width: 70%;
     max-width: 800px;
-    height: 100vh;
+    min-height: 100vh;
     padding: 25px 5% 5% 5%;
 }
 
@@ -98,7 +138,7 @@ a:link, a:visited, a:active {
     padding: 40px;
     max-width: 280px;
     min-width: 225px;
-    height: 100vh;
+    min-height: 100vh;
     background: var(--color-primary);
     color: var(--font-color-primary);
 }
@@ -159,12 +199,17 @@ a:link, a:visited, a:active {
     text-decoration: none;
 }
 
+.post h1 a:hover {
+    text-decoration: underline;
+    color: black;
+    background: unset;
+}
+
 .post ol {
 }
 
 .post li {
 }
-
 
 
 /* -------------------------------- */
@@ -199,6 +244,38 @@ a:link, a:visited, a:active {
     text-decoration: underline;
 }
 
+#archive-link {
+    margin: 5px 0 10px 10px;
+    font-style: italic;
+}
+
+/* ------------------------------- */
+/* ---  Archive Page ------------- */
+/* ------------------------------- */
+
+#post-archive-list a:hover {
+    text-decoration: underline;
+}
+
+/* ------------------------- */
+/* ---  Footer ------------- */
+/* ------------------------- */
+
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#copyright-text {
+    width: 90%;
+    max-width: 1300px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    border-top: 1px solid rgb(175, 175, 175);
+    font-size: 0.7rem;
+}
+
 
 /* -------------------------------- */
 /* ---  Narrow Screens ------------ */
@@ -208,7 +285,6 @@ a:link, a:visited, a:active {
 @media only screen and (max-width: 1000px) {
 
     #post-bucket {
-        display: none;
         width: 90%;
         padding: 25px 0;
     }
@@ -223,6 +299,14 @@ a:link, a:visited, a:active {
 
     #header-title {
         width: auto;
+    }
+
+    #menu-button-wrapper {
+        display: flex;
+    }
+
+    .hidden {
+        display: none;
     }
 
 }

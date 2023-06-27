@@ -1,4 +1,6 @@
 
+let menuOpen = false;
+
 /**
  * This function is called when the page finishes loading. Any functions required
  * for loading/rendering the page should be added here, and all default event listeners
@@ -15,6 +17,10 @@ $(document).ready(function() {
     $("#header-logo, #header-title").click(() => {
         window.location.href = '/';
     });
+
+    // Add click handlers for menu toggle button
+    $("#menu-button-open").click(openMenu);
+    $("#menu-button-close").click(closeMenu);
 
 });
 
@@ -33,12 +39,19 @@ function populateRecentPanel() {
         // Iterate over headings
         for (const post of recent) {
 
+            // Format the post's date
+            let date = new Date(post["date"]);
+            let formattedDate = date.toLocaleDateString("en-US", {
+                month: 'short',
+                day: 'numeric'
+            });
+
             // Read title and URL from JSON
-            let title = post["title"];
+            let text = `${post["title"]} (${formattedDate})`;
             let url = `/post/${post["url"]}`;
 
             // Create link to the post and add it to the list
-            let link = $("<a>").attr("href", url).html(title);
+            let link = $("<a>").attr("href", url).html(text);
             $("#archive-panel-recent").append($("<li>").html(link));
 
         }
@@ -93,6 +106,24 @@ function populatePubsPanel() {
         }
 
     });
+
+}
+
+
+function openMenu() {
+
+    // Show the menu panel and hide blog posts, toggle which button is visible
+    $(".hidden").removeClass("hidden");
+    $("#post-bucket, #menu-button-open").addClass("hidden");
+
+}
+
+
+function closeMenu() {
+
+    // Show the blog posts and hide menu panel, toggle which button is visible
+    $(".hidden").removeClass("hidden");
+    $("#archive-panel, #menu-button-close").addClass("hidden");
 
 }
 

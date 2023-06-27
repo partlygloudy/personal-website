@@ -1,0 +1,17 @@
+{
+
+  "main": {
+    "title": "Blog - Jake Gloudemans",
+    "description": "Learning about the world by writing about the world. Covering science, technology, politics, and more",
+    "pageUrl": "https://blog.jakegloudemans.com",
+    "imgUrl": "https://blog.jakegloudemans.com/static/img/cards/card-default.png"
+  },
+
+  "archive": {
+    "title": "Archive - Jake Gloudemans",
+    "description": "Blog archive - links to all the posts I've ever written",
+    "pageUrl": "https://blog.jakegloudemans.com/archive",
+    "imgUrl": "https://blog.jakegloudemans.com/static/img/cards/card-archive.png"
+  }
+
+}
