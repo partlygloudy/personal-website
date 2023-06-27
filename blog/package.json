@@ -13,6 +13,7 @@
     "express": "^4.18.2",
     "jsdom": "^22.1.0",
     "path": "^0.12.7",
+    "serve-favicon": "^2.5.0",
     "showdown": "^2.1.0"
   }
 }

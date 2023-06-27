@@ -27,7 +27,7 @@
     <meta name="twitter:image" content="">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 
     <!-- Fonts (loaded from Google fonts) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,13 +47,13 @@
 
 <body>
 
-<!-- Header bar with logo and nav links -->
+<!-- Header bar with logo and name -->
 <div id="header-bar">
 
-    <!-- Main logo -->
+    <!-- Logo -->
     <img id="header-logo" src="/static/img/logo.svg" alt="" />
 
-    <!-- Title / my name -->
+    <!-- Name -->
     <h1 id="header-title">Jake Gloudemans</h1>
 
 </div>
@@ -64,47 +64,29 @@
     <!-- Current blog post - left side of screen -->
     <div id="post-bucket">
 
-        <!-- Contents of the current article are loaded separately  -->
-        <!-- They should be appended below here  -->
-        <%- postHtml %>
+        <%- postsHtml %>
 
     </div>
 
-    <!-- Archive panel with links to recent posts - right sie of screen -->
+    <!-- Archive panel with links to posts and other blogs and publications -->
     <div id="archive-panel">
 
+        <!-- Panel showing recent blog posts - populated by js on page load -->
         <div class="archive-panel-section">
-
             <h2 class="archive-panel-header">Recent Posts</h2>
-            <ul class="archive-panel-link-list" id="archive-panel-recent">
-            </ul>
-
+            <ul class="archive-panel-link-list" id="archive-panel-recent"></ul>
         </div>
 
+        <!-- Panel linking to recommended blogs - populated by js on page load -->
         <div class="archive-panel-section">
             <h2 class="archive-panel-header">Blogs I Like</h2>
-            <ul class="archive-panel-link-list">
-                <li><a href="https://marginalrevolution.com/" class="archive-panel-link-external" target="_blank">Marginal Revolution</a></li>
-                <li><a href="https://www.slowboring.com/" class="archive-panel-link-external" target="_blank">Slow Boring</a></li>
-                <li><a href="https://noahpinion.substack.com/" class="archive-panel-link-external" target="_blank">Noahpinion</a></li>
-                <li><a href="https://astralcodexten.substack.com/" class="archive-panel-link-external" target="_blank">Astral Codex Ten</a></li>
-                <li><a href="https://rootsofprogress.org/" class="archive-panel-link-external" target="_blank">Roots of Progress</a></li>
-                <li><a href="https://guzey.com/" class="archive-panel-link-external" target="_blank">Alexey Guzey</a></li>
-            </ul>
-
+            <ul class="archive-panel-link-list" id="archive-panel-blogs"></ul>
         </div>
 
+        <!-- Panel linking to recommended publications - populated by js on page load -->
         <div class="archive-panel-section">
             <h2 class="archive-panel-header">Publications I Like</h2>
-            <ul class="archive-panel-link-list">
-                <li><a href="https://www.worksinprogress.co/" class="archive-panel-link-external" target="_blank">Works in Progress</a></li>
-                <li><a href="https://asteriskmag.com/" class="archive-panel-link-external" target="_blank">Asterisk</a></li>
-                <li><a href="https://www.vox.com/future-perfect" class="archive-panel-link-external" target="_blank">Future Perect</a></li>
-                <li><a href="https://ourworldindata.org/" class="archive-panel-link-external" target="_blank">Our World in Data</a></li>
-                <li><a href="https://www.discoursemagazine.com/" class="archive-panel-link-external" target="_blank">Discourse</a></li>
-                <li><a href="https://www.vox.com/recode" class="archive-panel-link-external" target="_blank">Recode</a></li>
-            </ul>
-
+            <ul class="archive-panel-link-list" id="archive-panel-pubs"></ul>
         </div>
 
     </div>

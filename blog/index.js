@@ -1,6 +1,7 @@
 
 // Import packages
 const express = require('express');
+const favicon = require('serve-favicon')
 const path = require("path");
 const fs = require("fs");
 const showdown  = require('showdown');
@@ -20,6 +21,12 @@ let converter = new showdown.Converter({
 
 
 /**
+ * Configure favicon
+ */
+app.use(favicon(path.join(__dirname, 'static', 'img', 'favicon.ico')))
+
+
+/**
  * Request handler for all static file requests
  */
 app.use('/static', express.static("static"));
@@ -32,7 +39,7 @@ app.use('/static', express.static("static"));
 app.get("/", function (request, response) {
 
     // Load the blog post manifest
-    const manifestRaw = fs.readFileSync("static/manifest.json", "utf8");
+    const manifestRaw = fs.readFileSync("static/json/manifest.json", "utf8");
     const manifest = JSON.parse(manifestRaw);
 
     // Sort post manifest by date
@@ -61,7 +68,7 @@ app.get("/", function (request, response) {
 
     // Render blog home page and return
     response.render("blog-home", {
-        postHtml: postsHtml
+        postsHtml: postsHtml
     });
 
 })
@@ -81,7 +88,7 @@ app.get("/post/:post", function (request, response) {
 
     // Render blog home page and return
     response.render("blog-home", {
-        postHtml: postHtml
+        postsHtml: postHtml
     });
 
 })
