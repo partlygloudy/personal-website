@@ -4,9 +4,8 @@
 /* ------------------------------ */
 
 :root {
-    --color-primary: #ffffff;
-    --color-secondary: rgb(6, 18, 51);
-    --color-tertiary: rgb(94, 136, 148);
+    --color-primary: rgb(242,242,242);
+    --color-secondary: white;
     --font-color-primary: black;
     --font-color-secondary: white;
     --font-color-tertiary: white;
@@ -49,30 +48,29 @@ a:link, a:visited, a:active {
 
 
 #header-bar {
-    padding: 40px;
     display: flex;
-    justify-content: space-between;
-    background: var(--color-primary);
+    align-items: center;
+    height: 7vw;
+    min-height: 70px;
+    max-height: 120px;
+    background: var(--color-secondary);
     color: var(--font-color-primary);
+    border-bottom: 1px solid black;
 }
 
 #header-logo {
+    margin-left: 2%;
     align-self: center;
-    height: 65px;
+    height: 80%;
+    cursor: pointer;
 }
 
-#header-nav-bar {
-    display: flex;
-    align-self: start;
-}
-
-.header-nav-link {
-    font-size: 1.0rem;
-    margin-left: 25px;
-}
-
-.header-nav-link:hover {
-    text-decoration: underline;
+#header-title {
+    margin: 0 0 0 20px;
+    font-weight: lighter;
+    font-size: 1.3rem;
+    width: 0;
+    cursor: pointer;
 }
 
 
@@ -210,12 +208,21 @@ a:link, a:visited, a:active {
 @media only screen and (max-width: 1000px) {
 
     #post-bucket {
+        display: none;
         width: 90%;
         padding: 25px 0;
     }
 
     #archive-panel {
-        display: none;
+        width: 80%;
+    }
+
+    #header-bar {
+        height: 70px;
+    }
+
+    #header-title {
+        width: auto;
     }
 
 }
