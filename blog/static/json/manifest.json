@@ -1,5 +1,18 @@
 [
-
+  {
+    "url": "links-6-29-2023",
+    "title": "Thursday Links",
+    "date": "2023-06-29T20:30:00-05:00",
+    "cardImgUrl": "card-default.png",
+    "cardDescription": "Interesting links for Thursday June 29, 2023"
+  },
+  {
+    "url": "pulsar-gravitational-wave",
+    "title": "Making sense of... pulsars and gravity waves",
+    "date": "2023-06-29T19:55:00-05:00",
+    "cardImgUrl": "card-default.png",
+    "cardDescription": "Attempting to explain the latest fad in gravity wave detection"
+  },
   {
     "url": "timely-advice",
     "title": "Timely Advice",
@@ -7,13 +20,11 @@
     "cardImgUrl": "card-default.png",
     "cardDescription": "A timely encounter with Visakan Veerasamy's 'Letter To A Young Songwriter'"
   },
-
   {
     "url": "links-6-27-2023",
     "title": "Tuesday Links",
     "date": "2023-06-27T15:00:00-05:00",
     "cardImgUrl": "card-default.png",
-    "cardDescription": "Interesting links for Tuesday June 26, 2023"
+    "cardDescription": "Interesting links for Tuesday June 27, 2023"
   }
-
 ]
