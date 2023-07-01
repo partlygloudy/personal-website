@@ -1,6 +1,8 @@
 # Making sense of... pulsars and gravity waves
 #### June 29, 2023 @ 3:00 PM
 
+*Disclaimer: 'Making sense of...' posts are ones where I try to explain something in an understandable way in order to better understand it myself. Do not blindly accept this as definitive or factual! That said, I have tried to make this a good, accurate explanation (that's the whole point). If you notice any errors, please let me know!*
+
 We now have a completely new way to detect gravitational waves! We used to only have one way, and that way is mainly good at detecting really weird gravitational waves. Now we have two ways!
 
 ## LIGO (the old way)
@@ -56,7 +58,7 @@ Gravitational waves stretch and compress the space between the earth and the pul
 
 Over the last 15 years, astronomers have developed several “pulsar timing arrays” - taking regular measurements of the precise pulse timing of a set of ‘millisecond pulsars’. Now, the measurement precision and data analysis techniques have advanced to the point that they can tease out signals from the noise. And we can confidently say that the signal is showing gravitational waves, and that those waves match the ‘gravitational background noise’ that scientists had theorized. Neat!
 
-## More good stuff:
+## More good stuff on this topic:
 
 - [Nature Article](https://www.nature.com/articles/d41586-023-02167-7)
 - [Hank Green explainer](https://twitter.com/hankgreen/status/1673752025975394305)
