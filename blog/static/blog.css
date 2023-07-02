@@ -27,10 +27,6 @@ body {
     color: var(--font-color-primary);
 }
 
-body::-webkit-scrollbar {
-    display: none;  /* Safari and Chrome */
-}
-
 a {
     text-decoration: none;
     cursor: pointer;
@@ -253,6 +249,16 @@ a:link, a:visited, a:active {
     height: 100%;
 }
 
+.post figure {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.post figcaption {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
 
 /* -------------------------------- */
 /* ---  Archive panel ------------- */

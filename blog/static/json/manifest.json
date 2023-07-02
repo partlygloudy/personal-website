@@ -1,5 +1,12 @@
 [
   {
+    "url": "changed-my-mind-1",
+    "title": "Things I've Changed My Mind About #1",
+    "date": "2023-07-02T18:21:00-05:00",
+    "cardImgUrl": "card-default.png",
+    "cardDescription": "Some of the things I've changed my mind about over the last few years and the reasons why"
+  },
+  {
     "url": "why-blog",
     "title": "Why I'm Blogging",
     "date": "2023-06-30T22:48:00-05:00",
