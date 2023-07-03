@@ -1,41 +1,48 @@
 [
   {
-    "url": "changed-my-mind-1",
+    "url": "7-links-7-2-2023",
+    "title": "Sunday Links",
+    "date": "2023-07-02T23:54:00-05:00",
+    "cardImgUrl": "card-default.png",
+    "cardDescription": "Interesting links for Sunday July 2, 2023"
+  },
+  {
+    "url": "6-changed-my-mind-1",
     "title": "Things I've Changed My Mind About #1",
     "date": "2023-07-02T18:21:00-05:00",
     "cardImgUrl": "card-default.png",
     "cardDescription": "Some of the things I've changed my mind about over the last few years and the reasons why"
   },
   {
-    "url": "why-blog",
+    "url": "5-why-blog",
     "title": "Why I'm Blogging",
     "date": "2023-06-30T22:48:00-05:00",
     "cardImgUrl": "card-default.png",
     "cardDescription": "Why I decided to start blogging"
   },
   {
-    "url": "links-6-29-2023",
+    "url": "4-links-6-29-2023",
     "title": "Thursday Links",
     "date": "2023-06-29T20:30:00-05:00",
     "cardImgUrl": "card-default.png",
     "cardDescription": "Interesting links for Thursday June 29, 2023"
   },
   {
-    "url": "pulsar-gravity-wave",
+    "url": "3-pulsar-gravity-wave",
     "title": "Making sense of... pulsars and gravity waves",
     "date": "2023-06-29T19:55:00-05:00",
     "cardImgUrl": "card-default.png",
     "cardDescription": "Attempting to explain the latest fad in gravity wave detection"
   },
   {
-    "url": "excerpt-visakan",
+    "url": "2-excerpt-visakan",
     "title": "Excerpt from 'Letter to a Young Songwriter'",
     "date": "2023-06-27T18:27:00-05:00",
     "cardImgUrl": "card-default.png",
     "cardDescription": "Some relevant thoughts from Visakan Veerasamy's 'Letter To A Young Songwriter'"
   },
   {
-    "url": "links-6-27-2023",
+    "url": "1-links-6-27-2023",
     "title": "Tuesday Links",
     "date": "2023-06-27T15:00:00-05:00",
     "cardImgUrl": "card-default.png",
