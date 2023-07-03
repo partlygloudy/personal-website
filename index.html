@@ -31,9 +31,10 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
     <!-- Fonts (loaded from Google fonts) -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css?family=Cardo:400,400i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     <!-- JQuery (loaded from Google hosted libraries) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -49,45 +50,52 @@
 <!-- Page body -->
 <body>
 
-        <!-- Link to 'About' page -->
-        <div class="icon-container" id="about-icon">
+    <h1 id="name-text">Jake Gloudemans</h1>
 
-            <!-- Icon -->
-            <div class="icon-img-wrapper">
-                <img class="icon-img" src="/static/img/index/about_icon.svg"/>    
+    <!-- Text, changes based on what icon is hovered -->
+    <div id="blurb-wrapper">
+        <div id="blurb-wrapper-inner">
+            <div id="blurb-img-wrapper">
+                <img id="blurb-img" src="/static/img/index/portrait-date.png"/>
             </div>
+            <div id="blurb-text-wrapper"></div>
+        </div>
+    </div>
 
-            <!-- Text -->
-            <p id="about-label"><span class="label-text">&nbsp;about&nbsp;</span></p>
+    <!-- Horizontal panel with icons -->
+    <div id="icon-wrapper">
 
+        <!-- About icon -->
+        <div class="icon" id="icon-about">
+            <img class="icon-img" src="/static/img/index/icon-about.png"/>
+            <p class="icon-text">About</p>
         </div>
 
-        <!-- Link to 'Projects' page -->
-        <div class="icon-container" id="projects-icon">
-
-            <!-- Icon -->
-            <div class="icon-img-wrapper">
-                <img class="icon-img" src="/static/img/index/projects_icon.svg"/>    
-            </div>
-
-            <!-- Text -->
-            <p id="projects-label"><span class="label-text">&nbsp;projects&nbsp;</span></p>
-
+        <!-- Projects icon -->
+        <div class="icon" id="icon-projects">
+            <img class="icon-img" src="/static/img/index/icon-projects.png"/>
+            <p class="icon-text">Projects</p>
         </div>
 
-        <!-- Link to blog subdomain -->
-        <div class="icon-container" id="blog-icon">
-
-            <!-- Icon -->
-            <div class="icon-img-wrapper">
-                <img class="icon-img" src="/static/img/index/blog_icon.svg"/>
-            </div>
-
-            <!-- Text -->
-            <p id="blog-label"><span class="label-text">&nbsp;blog&nbsp;</span></p>
-
+        <!-- Blog icon -->
+        <div class="icon" id="icon-blog">
+            <img class="icon-img" src="/static/img/index/icon-blog.svg"/>
+            <p class="icon-text">Blog</p>
         </div>
 
+        <!-- Hire icon -->
+        <div class="icon" id="icon-hire">
+            <img class="icon-img" src="/static/img/index/icon-hire.png"/>
+            <p class="icon-text">Hire Me</p>
+        </div>
+
+    </div>
+
+    <div id="links-panel">
+        <a target="_blank" href="https://www.twitter.com/partlygloudy">Twitter</a>
+        <a target="_blank" href="https://www.github.com/partlygloudy">GitHub</a>
+        <a target="_blank" href="https://www.linkedin.com/in/jake-gloudemans-a56608133/">LinkedIn</a>
+        <a href="mailto:jake.gloudemans@gmail.com">Email</a>
     </div>
 
 </body>
