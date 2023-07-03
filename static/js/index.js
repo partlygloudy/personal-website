@@ -20,10 +20,10 @@ $(document).ready(function(){
     $("body").click(bodyClick);
 
     // Fade icons in left to right
-    $("#name-text").delay(1000).fadeTo(500, 1.0);
+    $("#name-text").delay(850).fadeTo(500, 1.0);
     $("#icon-about").delay(700).fadeTo(500, 1.0);
-    $("#icon-blog").delay(800).fadeTo(500, 1.0);
-    $("#icon-projects").delay(900).fadeTo(500, 1.0);
+    $("#icon-projects").delay(800).fadeTo(500, 1.0);
+    $("#icon-blog").delay(900).fadeTo(500, 1.0);
     $("#icon-hire").delay(1000).fadeTo(500, 1.0);
 
 })

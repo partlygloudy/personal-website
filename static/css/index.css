@@ -94,6 +94,11 @@ body {
     opacity: 0;
 }
 
+#icon-hire {
+    padding: 6px 0;
+    box-sizing: border-box;
+}
+
 .icon-img {
     height: 80%;
 }
@@ -136,7 +141,7 @@ body {
 @media only screen and (max-width: 750px) {
 
     #name-text {
-        margin-bottom: 40px;
+        margin-bottom: 60px;
     }
 
     #blurb-wrapper {
