@@ -371,6 +371,10 @@ a:link, a:visited, a:active {
         width: 100%;
     }
 
+    .post .metaculus-embed {
+        height:500px;
+    }
+
 }
 
 
