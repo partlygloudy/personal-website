@@ -3,7 +3,7 @@
 let blurbs = {};
 let selected = false;
 
-$(document).ready(function(){
+window.onload = function() {
 
     // Get blurbs JSON
     $.getJSON("/static/json/blurbs.json", function(data) {
@@ -26,7 +26,7 @@ $(document).ready(function(){
     $("#icon-blog").delay(900).fadeTo(500, 1.0);
     $("#icon-hire").delay(1000).fadeTo(500, 1.0);
 
-})
+}
 
 
 function iconHoverIn() {
@@ -103,7 +103,7 @@ function bodyClick() {
 function blogClick() {
 
     // Fade out icons, then redirect to blog
-    $("#icon-wrapper, #name-text").fadeOut(200).promise().done(() => {
+    $("#icon-wrapper, #name-text").fadeTo(200, 0.0).promise().done(() => {
         window.location.href = "https://blog.jakegloudemans.com";
     });
 
@@ -113,7 +113,7 @@ function blogClick() {
 function projectsClick() {
 
     // Fade out icons, then redirect to projects page
-    $("#icon-wrapper, #name-text").fadeOut(200).promise().done(() => {
+    $("#icon-wrapper, #name-text").fadeTo(200, 0.0).promise().done(() => {
         window.location.href = "projects";
     });
 

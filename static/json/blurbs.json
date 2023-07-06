@@ -1,20 +1,10 @@
 {
   "about": [
-    "Hi, my name is Jake. I'm an engineer, writer, and aspiring startup founder. I like to spend my time learning about the world and solving hard problems to make life better for people. I have a background in robotics and web development, and right now I'm especially interested in nuclear fusion, cultivated meat, and carbon removal.",
-    "I’m currently working on starting my blog, getting a new job, and some other projects I’ve had in the queue for a while. If there’s something I can help with or you just want to talk, please reach out!"
-  ],
-  "blog": [
-    "After about 5 years of putting it off, I finally started a blog! I'm not 100% sure what the main theme will be or if there will be one - my current plan is to just figure it out as I go. I'm interested in difficult but important technologies like nuclear fusion, cultivated meat, and carbon removal. I’m also interested in politics, economics, ideas, sports, AI safety, effective altruism, progress studies, …. So yeah, there will be a bit of everything.",
-    "I’d like to improve as a writer, so please feel free to reach out with feedback, edits, critiques, reasons why I’m wrong, etc."
-  ],
-  "projects": [
-    "I've cataloged a handful of the projects I've worked on over the past 5 years or so. A few robots for high school and college competitions, a crazy labyrinth coffee table thing, and recently a bunch of web development work. Hopefully more cool things are on the way!"
+    "Hi, I'm Jake. I'm an engineer, blogger, and aspiring startup founder. I like to learn about the world and solve hard problems to make life better for people. I have a background in robotics and web development, and right now I'm especially interested in nuclear fusion, cultivated meat, and carbon removal.",
+    "I’m currently working on getting a new job, starting my blog, and a bunch of other side projects. If you're interested in my work or there's something I can help with, please reach out!"
   ],
   "hire": [
-    "If you have a role you think I'd be a good fit for, please reach out! I'm most experienced as a software developer, and also have a fair bit of experience working with electronics and hardware. My strongest languages are C++ and Python, and lately I've been working with JS/Node and various frontend and backend web dev tools.",
-    "I learn quickly and love to take on new challenges in different fields - I’m motivated by the problem being solved more than the specific tools to solve it. If you're looking for an all-purpose problem solver that can take on complex technical problems, I can help!"
-  ],
-  "date": [
-    "I think 'date-me docs' are kind of a neat idea, so I've decided to give it a try! Click on the link to see my doc and reach out if you're interested. And of course feel free to forward to anyone else who you think might be. If this is visible, it means I'm available!"
+    "I'm currently looking for work, either full time or freelance! I'm most experienced as a software developer and have also done a bunch of work with electronics and hardware. My strongest languages are C++ and Python, and lately I've been working with JavaScript and lots of frontend and backend web dev tools.",
+    "I learn quickly and love to take on new challenges. If you're looking for an all-purpose problem solver who can tackle complex technical problems, I can help!"
   ]
 }
