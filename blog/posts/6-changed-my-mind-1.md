@@ -35,7 +35,7 @@ As with the poor environmental aesthetics of cities, there’s something aesthet
 I used to think it nuclear power plants are dangerous, that the radioactive byproducts they create are a big problem, and that we should prefer them less than other renewable energy sources. Now, I think they are not very dangerous and that we should build lots more of them.
 
 - Previously, I under-appreciated how dangerous other forms of energy are. Burning things to generate energy is tremendously bad for people’s health. The burning of coal has caused [millions of premature deaths](https://ourworldindata.org/outdoor-air-pollution#outdoor-air-pollution-is-attributed-to-millions-of-deaths-each-year) over the last half century
-- Conversely, I overrated how risky nuclear power plants are. Nuclear power plants are a textbook example of the “[availability heuristic](https://en.wikipedia.org/wiki/Availability_heuristic)” tricking us. There are a few memorable, frightening events that come to mind easily when we think of nuclear, whereas fossil fuels do their killing inconspicuously. Had we not kneecapped the nuclear industry following the Chernobyl disaster, many of the millions of premature deaths from fossil fuel pollution could have been prevented.
+- Conversely, I overrated how risky nuclear power plants are. Nuclear power plants are a textbook example of the “[availability heuristic](https://en.wikipedia.org/wiki/Availability_heuristic)” tricking us. There are a few memorable, frightening events that come to mind easily when we think of nuclear, whereas fossil fuels do their killing inconspicuously. Had we not kneecapped the nuclear industry in the 80s and 90s, many of the millions of premature deaths from fossil fuel pollution could have been prevented
 
 <iframe src="https://ourworldindata.org/grapher/death-rates-from-energy-production-per-twh" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
 
@@ -67,6 +67,3 @@ Through high school and college, I had started to think of capitalism as mostly 
 - If we have the ability as a society to eliminate extreme poverty and provide a baseline level of food, shelter, and medical security, it seems morally wrong not to do so. I think a robust social safety net that guarantees these things, perhaps funded by *modest* wealth redistribution through taxation, is necessary for the best implementation of capitalism. 
 
 Generally speaking, I think that ‘capitalism’ should have an overall positive connotation, and that the current fad of [attributing every modern inconvenience to 'late-stage capitalism'](https://www.infinitescroll.us/p/ugh-capitalism?nthPub=291) is lazy and misguided.
-
-
-*Disagree with me on any of these? Let me know, maybe I will change my mind once again!*
