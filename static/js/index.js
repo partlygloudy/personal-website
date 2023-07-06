@@ -2,7 +2,6 @@
 // Globals
 let blurbs = {};
 let selected = false;
-let cached = false;
 
 window.onload = function() {
 
@@ -21,27 +20,12 @@ window.onload = function() {
     $("body").click(bodyClick);
 
     // Fade icons in left to right
-    fadeIconsIn();
-
-}
-
-
-// On some devices/browsers, back arrow loads cached page, so
-// faded-out buttons need to be faded-in in those cases
-window.onpageshow = function() {
-    if (cached) {
-        fadeIconsIn();
-        cached = false;
-    }
-}
-
-
-function fadeIconsIn() {
     $("#name-text").delay(850).fadeTo(500, 1.0);
     $("#icon-about").delay(700).fadeTo(500, 1.0);
     $("#icon-projects").delay(800).fadeTo(500, 1.0);
     $("#icon-blog").delay(900).fadeTo(500, 1.0);
     $("#icon-hire").delay(1000).fadeTo(500, 1.0);
+
 }
 
 
@@ -117,22 +101,10 @@ function bodyClick() {
 
 
 function blogClick() {
-
-    // Fade out icons, then redirect to blog
-    $("#icon-wrapper, #name-text").fadeTo(200, 0.0).promise().done(() => {
-        cached = true;
-        window.location.href = "https://blog.jakegloudemans.com";
-    });
-
+    window.location.href = "https://blog.jakegloudemans.com";
 }
 
 
 function projectsClick() {
-
-    // Fade out icons, then redirect to projects page
-    $("#icon-wrapper, #name-text").fadeTo(200, 0.0).promise().done(() => {
-        cached = true;
-        window.location.href = "projects";
-    });
-
+    window.location.href = "projects";
 }
