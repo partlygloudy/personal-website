@@ -65,12 +65,12 @@ app.get("/", function (request, response) {
         let postMd = fs.readFileSync(`posts/${blogManifest[i]["url"]}.md`, "utf8");
         let postHtml = converter.makeHtml(postMd);
 
+        // Apply permalink to the post title
+        postHtml = applyLinks(postHtml, blogManifest[i]["url"], blogManifest[i]["title"]);
+
         // Wrap the post in a div
         let postClass = i + 1 === n ? 'post post-final' : 'post'
         postHtml = `<div class="${postClass}">${postHtml}</div>`
-
-        // Apply permalink to the post title
-        postHtml = applyPermalink(postHtml, blogManifest[i]["url"]);
 
         // Add to full html post block
         postsHtml += postHtml;
@@ -99,11 +99,17 @@ app.get("/post/:post", function (request, response) {
     // Load the markdown for specified post
     const post = fs.readFileSync(`posts/${request.params.post}.md`, "utf8");
 
-    // Convert the post markdown to html
-    let postHtml = `<div class='post post-final'>${converter.makeHtml(post)}</div>`;
-
     // Get the card data for this post
     const postCardData = cardData[request.params.post];
+
+    // Convert post markdown to html
+    let postHtml = converter.makeHtml(post);
+
+    // Apply reply link
+    postHtml = applyLinks(postHtml, "", postCardData["title"]);
+
+    // Convert the post markdown to html
+    postHtml = `<div class='post post-final'>${postHtml}</div>`;
 
     // Render blog home page and return
     response.render("main", {
@@ -165,21 +171,41 @@ app.get("/archive", function (request, response) {
 // ---------------------------- //
 
 
-function applyPermalink(htmlString, linkHref) {
+function applyLinks(htmlString, permaHref, mailtoHref) {
 
     // Convert html to virtual dom so we can manipulate it
     let dom = new JSDOM(htmlString);
     let document = dom.window.document;
 
-    // Get the h1 tag (there should only ever be 1)
-    let h1 = document.getElementsByTagName('h1')[0];
+    // Apply permalink if one provided
+    if (permaHref !== "") {
 
-    // Create an <a> tag around the h1 text
-    let a = document.createElement('a');
-    a.textContent = h1.textContent;
-    a.href = `post/${linkHref}`
-    h1.textContent = '';
-    h1.appendChild(a);
+        // Get the h1 tag (there should only ever be 1)
+        let h1 = document.getElementsByTagName('h1')[0];
+
+        // Create an <a> tag around the h1 text
+        let perma = document.createElement('a');
+        perma.textContent = h1.textContent;
+        perma.href = `post/${permaHref}`
+        h1.textContent = '';
+        h1.appendChild(perma);
+
+    }
+
+    // Apply email reply link if one provided
+    if (mailtoHref !== "") {
+
+        // Append email reply link to the end
+        let replyWrapper = document.createElement('div');
+        replyWrapper.className = "reply-link-wrapper";
+        let reply = document.createElement('a');
+        reply.textContent = "reply to this post";
+        reply.className = "reply-link";
+        reply.href = `mailto:jake.gloudemans+blog@gmail.com?subject=re: ${mailtoHref}`
+        replyWrapper.appendChild(reply)
+        document.body.appendChild(replyWrapper);
+
+    }
 
     // Return the modified html as a string
     return dom.serialize();

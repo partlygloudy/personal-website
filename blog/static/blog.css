@@ -148,7 +148,6 @@ a:link, a:visited, a:active {
 .post {
     width: 100%;
     border-bottom: 1px solid black;
-    padding-bottom: 50px;
     margin-bottom: 50px;
 }
 
@@ -299,6 +298,27 @@ a:link, a:visited, a:active {
     width: 100px;
     height: 35px;
     text-align: center;
+}
+
+.post .reply-link-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin: 50px 0 15px 0;
+}
+
+.post .reply-link {
+    margin-right: 20px;
+    text-decoration: none;
+    font-style: italic;
+    color: rgb(175, 175, 175);
+    text-align: right;
+}
+
+.post .reply-link:hover {
+    text-decoration: underline;
+    color: black;
+    background-color: unset;
 }
 
 /* -------------------------------- */
