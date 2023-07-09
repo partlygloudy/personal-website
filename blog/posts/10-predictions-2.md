@@ -176,11 +176,11 @@ So in total…
 
 P(Y) = (0.59 * 0.30 * 0.85) + 0.07 = 0.22
 
-So **22% Yes**
+**22% Yes**
 
 ## What will be the Accumulated Cyclone Energy of the 2023 Atlantic hurricane season on September 30, 2023?
 
-**Resolution Criteria:** *The question resolves as the observed "North Atlantic Accumulated Cyclone Energy" reported by Colorado State University's [real-time tracker](http://tropical.atmos.colostate.edu/Realtime/) for the 2023 hurricane season through the date of September 30, 2023.*
+**Resolution Criteria:** *The question resolves as the observed "North Atlantic Accumulated Cyclone Energy" reported by Colorado State University's [real-time tracker](http://tropical.atmos.colostate.edu/Realtime/) for the 2023 hurricane season through the date of September 30, 2023.*
 
 <iframe class="metaculus-embed" src="https://www.metaculus.com/questions/question_embed/17721/?theme=light"></iframe>
 
@@ -194,14 +194,14 @@ Upper quartile: 143
 
 **Reasoning:**
 
-Background: ACE is essentially a measure of how major a given storm season is. It’s calculated by summing the individual ‘cyclone energy’ of each storm throughout the season. The storm energy is calculated by squaring the maximum sustained wind velocity within the storm.
+Background: ACE is essentially a measure of how intense a given storm season is. It’s calculated by summing the individual ‘cyclone energy’ of each storm throughout the season. The storm energy is calculated by squaring the maximum sustained wind velocity within the storm and adding this to a sum every few hours.
 
 The resolution date, September 30, is about 2/3 of the way through the season.
 
 To come up with estimates, I’m doing the following:
 
 - Starting with the historical averages (‘climatology’) that show how ACE builds over the course of the year. [see image below]
-- Scaling the values so that they plot has the same shape, but finishes at 160 - the forecasted ACE from [Colorado St.’s July 6th forecast](https://tropical.colostate.edu/Forecast/2023-07.pdf)
+- Scaling the values so that the plot has the same shape, but finishes at 160 - the forecasted ACE from [Colorado State’s July 6th forecast](https://tropical.colostate.edu/Forecast/2023-07.pdf)
 - Taking the value predicted by that plot at September 30
 - Adding the current deviation between the scaled, forecasted value for today, and the measured value
 
@@ -223,6 +223,6 @@ The plot below shows the climatology, scaled, and ‘adjusted scaled’ value fo
 
 ![Plot showing the season average ACE over the course of a hurricane season, as well as the scaled averages based on this year's forecast, and updated projections factoring in current deviation from the initial forecast](/static/img/posts/ace-chart.svg)
 
-Colorado St. also publishes the uncertainty for their estimates, so I used the same approach to compute the 25 and 75 percentiles
+Colorado State also publishes the uncertainty for their estimates, so I used the same approach to compute the 25 and 75 percentiles, but then apply an additional scaling to those bounds that will reduce them to near 0 by the time we reach September 30.
 
-I plan to just update this every couple days with the latest measured data, and adjust the scaling if Colorado St. publishes updated forecasts.
+I plan to just update this every couple days with the latest measured data, and adjust the scaling if Colorado State publishes updated forecasts.
