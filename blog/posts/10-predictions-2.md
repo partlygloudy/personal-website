@@ -13,7 +13,7 @@ Laying out my reasoning for my second batch of predictions for the  [Metaculus Q
 
 **Reasoning:**
 
-There are 21 stages in the Tour de France, raced on consecutive days. The ‘General Individual Ranking’  is the ranking of the riders based on cumulative time across all completed stages. So the question is asking if the winner of stage 9 will also have the lowest cumulative race time at the end of the stage.
+There are 21 stages in the Tour de France, raced on consecutive days with a few rest days scattered throughout. The ‘General Individual Ranking’ is the ranking of the riders based on cumulative time across all completed stages. So the question is asking if the winner of stage 9 will also have the lowest cumulative race time at the end of the stage.
 
 I made my prediction when the question opened, which was after stage 6, and then updated it once, after betting odds for stage 9 became available. After stage 6, the GIR leaderboard looked like this:
 
