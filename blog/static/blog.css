@@ -183,12 +183,13 @@ a:link, a:visited, a:active {
 
 .post a {
     text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+    transition: 0.2s;
 }
 
 .post a:hover {
-    background: black;
-    color: white;
-    text-decoration: underline;
+    background-color: lightgray;
 }
 
 .post h1 a {
