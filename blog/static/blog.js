@@ -37,7 +37,7 @@ function populateRecentPanel() {
     $.getJSON("/static/json/manifest.json", function(recent) {
 
         // Iterate over headings
-        for (const post of recent) {
+        for (const post of recent.slice(0, 10)) {
 
             // Format the post's date
             let date = new Date(post["date"]);

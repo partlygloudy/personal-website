@@ -156,28 +156,30 @@ a:link, a:visited, a:active {
 }
 
 .post h1 {
-    font-size: 2.0rem;
-    margin-bottom: 15px;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
 }
 
 .post h2 {
-    font-size: 1.4rem;
-    margin-top: 50px;
+    font-size: 1.6rem;
+    margin-top: 30px;
     margin-bottom: 10px;
 }
 
 .post h3 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-bottom: 8px;
 }
 
 .post h4 {
     font-size: 0.9rem;
-    margin-bottom: 30px;
+    margin: 0 0 30px 10px;
+    color: rgb(125, 125, 125);
+    font-weight: normal;
 }
 
 .post p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 28px;
 }
 
@@ -203,11 +205,11 @@ a:link, a:visited, a:active {
 }
 
 .post ol {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .post ul {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .post li {
@@ -275,6 +277,7 @@ a:link, a:visited, a:active {
     border: none;
     display: block;
     margin: 30px 0;
+    box-shadow: 0 0 1px 0 rgb(0,0,0,0.5);
 }
 
 .post .table-padding {
@@ -285,21 +288,35 @@ a:link, a:visited, a:active {
 
 .post table {
     border-collapse: collapse;
+    background-color: white;
+    padding: 20px;
+    display: inline-block;
+    box-shadow: 0 0 1px 0 rgb(0,0,0,0.5);
+    font-family: monospace;
+    color: rgb(75, 75, 75);
 }
 
 .post table thead {
     font-weight: bold;
+    text-align: left;
 }
 
-.post table thead td {
+.post table tr {
+    height: 35px;
+}
+
+.post table tr:nth-child(even) {
+    background-color: rgb(245, 245, 245);
+}
+
+.post table thead th {
     border-bottom: 1px solid black;
     border-top: 1px solid black;
+    padding: 5px 10px;
 }
 
 .post table td {
-    width: 100px;
-    height: 35px;
-    text-align: center;
+    padding: 5px 10px;
 }
 
 .post .reply-link-wrapper {
@@ -321,6 +338,16 @@ a:link, a:visited, a:active {
     text-decoration: underline;
     color: black;
     background-color: unset;
+}
+
+.post .red-highlight {
+    color: darkred;
+    background-color: rgb(255, 200, 200);
+}
+
+.post .green-highlight {
+    color: darkgreen;
+    background-color: rgb(200, 255, 200);
 }
 
 /* -------------------------------- */

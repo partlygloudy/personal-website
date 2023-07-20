@@ -17,40 +17,37 @@ There are 21 stages in the Tour de France, raced on consecutive days with a few 
 
 I made my prediction when the question opened, which was after stage 6, and then updated it once, after betting odds for stage 9 became available. After stage 6, the GIR leaderboard looked like this:
 
-<div class="table-padding">
-    <table>
-        <thead>
-            <tr>
-                <td>Rank</td>
-                <td>Name</td>
-                <td>Behind By</td>
-            </tr>
-        </thead>
-    <tbody>
-    </tbody>
+<table>
+    <thead>
         <tr>
-            <td>1</td>
-            <td>Vingegaard</td>
-            <td>-</td>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Behind By</th>
         </tr>
-        <tr>
-            <td>2</td>
-            <td>Pogacar</td>
-            <td>+25s</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Hindley</td>
-            <td>+94s</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>+Yates</td>
-            <td>+194s</td>
-        </tr>
-    </table>
-</div>
-
+    </thead>
+<tbody>
+</tbody>
+    <tr>
+        <td>1</td>
+        <td>Vingegaard</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Pogacar</td>
+        <td>+25s</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Hindley</td>
+        <td>+94s</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>+Yates</td>
+        <td>+194s</td>
+    </tr>
+</table>
 
 … with lots more riders bunched around +3 to +4 minutes.
 
@@ -63,35 +60,33 @@ I don’t follow cycling at all, but these are some general observations I made 
 
 I also looked at the time spreads on the two hilly days completed so far in this race, 5 and 6, to get a sense for how much time the stage winner might gain on the field:
 
-<div class="table-padding">
-    <table>
-        <thead>
-            <tr>
-                <td>Day</td>
-                <td>1-2</td>
-                <td>1-5</td>
-                <td>1-10</td>
-                <td>1-20</td>
-            </tr>
-        </thead>
-    <tbody>
-    </tbody>
+<table>
+    <thead>
         <tr>
-            <td>5</td>
-            <td>+32</td>
-            <td>+34</td>
-            <td>+98</td>
-            <td>+117</td>
+            <th>Day</th>
+            <th>1-2</th>
+            <th>1-5</th>
+            <th>1-10</th>
+            <th>1-20</th>
         </tr>
-        <tr>
-            <td>6</td>
-            <td>+24</td>
-            <td>+120</td>
-            <td>+180</td>
-            <td>+240</td>
-        </tr>
-    </table>
-</div>
+    </thead>
+<tbody>
+</tbody>
+    <tr>
+        <td>5</td>
+        <td>+32</td>
+        <td>+34</td>
+        <td>+98</td>
+        <td>+117</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>+24</td>
+        <td>+120</td>
+        <td>+180</td>
+        <td>+240</td>
+    </tr>
+</table>
 
 To estimate the probability of a Yes resolution, I broke it down as the sum of
 

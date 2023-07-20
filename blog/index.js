@@ -21,7 +21,8 @@ app.set('views', path.join(__dirname, '/views'));
 
 // Create and configure Showdown markdown converter
 let converter = new showdown.Converter({
-    "noHeaderId": true
+    "noHeaderId": true,
+    "tables": true
 });
 
 
