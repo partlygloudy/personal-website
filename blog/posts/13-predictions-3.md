@@ -74,7 +74,7 @@ Unfortunately, it’s pretty much impossible to be precise using Metaculus’s t
 
 - 25% chance of next test by August 21
 - 50% chance of next test by September 25
-- 54% chance the test occurs after the question resolves on October 1
+- 54% chance the test occurs before the question resolves on October 1
 
 ### Will the U2 concert at The Sphere on September 29, 2023 take place?
 
