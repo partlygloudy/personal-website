@@ -5,3 +5,5 @@ _config.yml
 Gemfile
 Gemfile.lock
 /blog/node_modules/
+
+blog/posts/##-links-D-M-YYYY.md
