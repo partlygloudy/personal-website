@@ -1,0 +1,20 @@
+# Things usually get less dangerous, not more
+#### July 25, 2023 at 10:15 PM 
+
+I think AI-risk doomers generally underestimate the fact that ‘dangerousness’ is part of a closed-loop feedback system. The more dangerous we perceive something to be, the more aggressive actions we take to mitigate the danger and the more money we’ll pay for a safer version of it. ‘Dangerousness’ is, to some extent, self-defeating. Most dangerous things have become less dangerous over time.
+
+- Aviation, aka “packing people into metal tubes and shooting them across the sky at 600 miles per hour”, is very dangerous. But understanding this risk, we’ve done so much work to make airplanes more reliable that flying is now safer than riding a bike.
+- Disease is very dangerous. But because of this, a large portion of humanity dedicates itself to understanding, treating, and preventing disease. This has led to an enormous reduction in the dangerousness of disease. There’s never been a safer time to get sick than today. When a new disease risk - COVID-19 - recently emerged, humanity’s dangerousness feedback system kicked into gear and we developed multiple vaccines much faster than we’ve ever developed vaccines before.
+- Nuclear fission is very dangerous. You are probably familiar with the nuclear bomb or the Chernobyl disaster. And yet all around the world, we continue to harness the energy from nuclear fission to power our cities, having turned it into [one of the safest](https://ourworldindata.org/nuclear-energy#nuclear-and-renewables-are-far-far-safer-than-fossil-fuels) energy-producing processes we have
+- Asteroids are potentially catastrophically dangerous. A sufficiently large asteroid strike could cause human extinction. Perceiving this danger, [we’ve systematically begun](https://worksinprogress.co/issue/asteroid-spotting) tracking all of the potentially threatening asteroids in the solar system to make sure an asteroid strike doesn't take us by surprise.
+- Crop failures, building fires, wild animal attacks, ozone-layer depletion, “getting lost”, launching people into space - all dangerous things that we’ve reduced the risk of over time.
+
+Throughout history, we’ve taken unacceptably dangerous things and made them safer, all while continuing to reduce the level of danger we consider acceptable. In fact, aside from weapons - which we’ve explicitly designed to be increasingly dangerous - is there *anything* that has grown more dangerous over time? 
+
+*[best examples I could come up with: synthetic opioids, certain countries with political instability, outdoor air (though this is improving in much of the world now), certain drug-resistant bacteria (though bacterial infections writ-large have become much less dangerous)]*
+
+The driver of this feedback loop is the fact that people don’t want to die and so they value safety very highly. This creates strong economic incentives for safety - few people would buy cheap plane tickets if it meant flying on unreliable planes! Likewise, people will generally prefer to spend money on AIs that don’t try and kill them, meaning companies that make AIs that don’t kill people will have a major competitive advantage.
+
+It’s worth noting that *people need to actually be scared of a thing* for the safety feedback loop to kick in! The fear of the thing’s dangerousness is what drives up demand for safety. The truly dangerous things are the things that *are* dangerous, but which *people don’t perceive as* dangerous. 
+
+In that regard, it’s encouraging that fear of superintelligent AI has become so mainstream recently. For most of the last decade, AI arguably fell into the category of *probably dangerous, but not perceived as dangerous*. But now our societal safety feedback mechanisms are kicking in. Governments around the world are starting to think about policy frameworks for AI safety. Every major AI lab is building out a safety team. Much of the “Effective Altruism” movement has re-purposed itself as an AI safety movement. And this has all happened before AI has actually demonstrated any concrete large-scale threat.
