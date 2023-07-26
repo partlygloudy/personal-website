@@ -13,7 +13,7 @@ Throughout history, we’ve taken unacceptably dangerous things and made them sa
 
 *[best examples I could come up with: synthetic opioids, certain countries with political instability, outdoor air (though this is improving in much of the world now), certain drug-resistant bacteria (though bacterial infections writ-large have become much less dangerous)]*
 
-The driver of this feedback loop is the fact that people don’t want to die and so they value safety very highly. This creates strong economic incentives for safety - few people would buy cheap plane tickets if it meant flying on unreliable planes! Likewise, people will generally prefer to spend money on AIs that don’t try and kill them, meaning companies that make AIs that don’t kill people will have a major competitive advantage.
+The driver of this feedback loop is the fact that people don’t want to die and so they value safety very highly. This creates strong economic incentives for safety - few people would buy cheap plane tickets if it meant flying on unreliable planes! Likewise, people will generally prefer to spend money on AIs that don’t try and kill them, meaning companies that make AIs that don’t kill people will have a major competitive advantage. (AI weapon systems being a concerning exception here)
 
 It’s worth noting that *people need to actually be scared of a thing* for the safety feedback loop to kick in! The fear of the thing’s dangerousness is what drives up demand for safety. The truly dangerous things are the things that *are* dangerous, but which *people don’t perceive as* dangerous. 
 
