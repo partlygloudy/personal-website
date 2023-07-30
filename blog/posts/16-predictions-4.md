@@ -120,7 +120,7 @@ The launch for the Chandrayaan-3 mission took place on July 14th without any iss
 
 *for a great overview of the mission, I recommend [this Scott Manley video](https://www.youtube.com/watch?v=hP0GbRNGMLk&ab_channel=ScottManley)*
 
-Soft landings like this are very difficult, and the track record for recent attempts is mixed. While, China has rapidly established itself as a major player in space with 3 successful soft landings, each of the 4 other attempts since 2013 has been unsuccessful. The last attempts pre-2013 were in the mid 1970s when the US and Soviet Union were each making several attempts per year. I’m ignoring the pre-2013 attempts here since there’s such a time gap, and since there’s no overlap in terms of the countries involved. This 4/7 success rate gives me a starting point of around 43%. 
+Soft landings like this are very difficult, and the track record for recent attempts is mixed. While China has rapidly established itself as a major player in space with 3 successful soft landings, each of the 4 other attempts since 2013 has been unsuccessful. The last attempts pre-2013 were in the mid 1970s when the US and Soviet Union were each making several attempts per year. I’m ignoring the pre-2013 attempts here since there’s such a time gap, and since there’s no overlap in terms of the countries involved. This 4/7 success rate gives me a starting point of around 43%. 
 
 | Mission                | Year | Country | Result         |
 |------------------------|------|---------|----------------|
@@ -197,7 +197,7 @@ I opened at 7% chance of a strike. The two sides reached an agreement on July 25
 
 ## Updates
 
-### Will Ohio Issue 1 Pass:
+### Will Ohio Issue 1 Pass?
 
 *Increase from 14% to 22%*
 
