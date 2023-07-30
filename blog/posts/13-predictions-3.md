@@ -7,7 +7,7 @@ We’ve entered the third week of the Metaculus Quarterly Cup! I had a few quest
 | Current Metaculus Stats | <!-- -->                                       |
 |-------------------------|------------------------------------------------|
 | Total Points            | 128 <span style="color: red">(-55)</span>      |
-| Overall Rank            | 5708 <span style="color: red">(-1233)</span>   |
+| Overall Rank            | 5708 <span style="color: red">(+1233)</span>   |
 | QC Resolved Qs          | 3                                              |
 | QC Open Qs              | 9                                              |
 | QC Rank                 | 28 / 223 <span style="color: red">(-20)</span> |
