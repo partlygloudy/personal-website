@@ -3,9 +3,9 @@
 
 This was a pretty taxing week in the prediction tournament. A bunch of new questions opened up, several of them relating to breaking news events and requiring some vigilance to keep track of. We’re also close to 20 active questions now, so just checking for updates on each of these is getting to be a big task on its own. 
 
-At the same time, and handful of questions resolved this week - all of them favorably for me - and I’m now inside the top 10. So at least the effort is paying off!
+On the other hand, a handful of questions resolved this week - all of them favorably for me - and I’m now inside the top 10. So at least the effort is paying off!
 
-I’m going to hold off on doing a deep dive this week since there were so many new questions and resolutions (plus I was a little behind already last week), but the pace of new questions seems to have cooled off the last few days, so hopefully I’ll do one next week.
+I’m going to hold off on doing a deep dive this week since there are so many new questions and resolutions to cover (plus I was a little behind already last week), but the pace of new questions seems to have cooled off the last few days, so hopefully I’ll do one next week.
 
 | Current Metaculus Stats | <!-- -->                                                |
 |-------------------------|---------------------------------------------------------|
