@@ -3,7 +3,7 @@
 
 I’ve been pretty busy with moving and starting a new job the last few weeks, so I’ve fallen a bit behind on documenting my tournament predictions. We’ve got some catching up to do!
 
-Somehow I am now in 2nd place in the Quarterly Cup… While I think my predictions have been good enough that I should be in the top 10 or 15, it’s a bit of random good luck that has me all the way up to 2nd. My 2 best predictions (in terms of tournament score) of the tournament both were questions that I either put low effort into, or got very lucky with how they resolved. (see *Argentina Primary Election* and *World Cup % possession questions* in the resolution section below for more on that).
+Somehow I'm now in 2nd place in the Quarterly Cup… I think my predictions have been good enough that I should be in the top 10 or 15, but it’s a bit of luck that has me all the way up to 2nd. My 2 best predictions (by tournament score, i.e. relative to the field) were questions that I either put low effort into, or got very lucky with how they resolved. (see *Argentina Primary Election* and *World Cup % possession questions* in the resolution section below for more on that).
 
 And of course, there’s still a long way to go, with less than half of the tournament questions resolved so far, so plenty of time to plummet back into obscurity!
 
@@ -23,9 +23,9 @@ And of course, there’s still a long way to go, with less than half of the tour
 
 ### Will a non-proprietary LLM be in the top 5 of the [chat.lmsys.org](http://chat.lmsys.org) leaderboard on September 30, 2023?
 
-This is a website that ranks various proprietary (GPT, Claude, PaLM) and non-proprietary (mostly variants of Meta’s LLaMA models) large language models, using [Elo Rankings](https://en.wikipedia.org/wiki/Elo_rating_system). Elo rankings assign scores to each participant by giving each one an initial number of points, and then re-distributing those points based on the results of head-to-head matchups between participants. Winners take points from the losers in each matchup, where the amount of points transferred is based on the difference in Elo between the two competitors. This is the strategy used for professional Chess rankings, among many other things.
+This is a website that ranks various proprietary (GPT, Claude, PaLM) and non-proprietary (mostly variants of Meta’s LLaMA models) large language models using [Elo Rankings](https://en.wikipedia.org/wiki/Elo_rating_system). Elo rankings assign scores to each participant by giving each one an initial number of points, and then re-distributing those points based on the results of head-to-head matchups. Winners take points from the losers after each 'game', where the amount of points transferred is based on the difference in Elo between the two competitors. Elo rankings are used for professional Chess rankings, among many other things.
 
-The website works by letting users submit prompts and returning the outputs from two different models side-by-side. The user can then choose if one model’s output is noticeably better, or if they are about the same. User’s don’t see which model produced each response until after they’ve chosen which one is better. So the language models are ‘competing’ against each other, sort of like chess players playing games of chess. The models that consistently win more end up higher in the Elo rankings.
+The website works by letting users submit prompts and returning the outputs from two different language models side-by-side. The user can then choose if one model’s output is noticeably better, or if they are about the same. User’s don’t see which model produced each response until after they’ve chosen which one is better. So the language models are ‘competing’ against each other, sort of like chess players playing games of chess. The models that win the most end up higher in the Elo rankings.
 
 Currently the top 5 models in the rankings are all versions of either GPT or Claude, with a version of the LLaMA-based ‘Vicuna’ model ranked #6.
 
@@ -46,7 +46,7 @@ From what I’ve read, it seems like newer versions of LLaMA-derived models may 
 
 This question unfortunately is dependent on a lot of hard-to-predict details of how the site will be updated - for example, they are only adding a few models each month, and even the frequency at which they update the site is unclear. 
 
-Given that the question only includes one month, and the site has only been adding a few new models each month, my starting point here is to assume the status quo, that the proprietary models will stay on top. Given my general lack of familiarity with the open source models, uncertainty around how the site will be updated, and the fact that some open source models apparently perform better than GPT-3.5-turbo on metrics listed in the rankings, I have very low confidence in either direction here. 
+Given that the question only lasts one month, and the site has only been adding a few new models each month, my starting point here is to assume the status quo, that the proprietary models will stay on top. Given my general lack of familiarity with the open source models, uncertainty around how the site will be updated, and the fact that some open source models apparently perform better than GPT-3.5-turbo on metrics listed in the rankings, I have very low confidence in either direction here. 
 
 **Prediction**: 45% 
 
@@ -54,22 +54,22 @@ Given that the question only includes one month, and the site has only been addi
 
 The details of this question are somewhat complicated and hard to summarize concisely, but roughly speaking:
 
-- there are 4 state-level special elections  scheduled for the next month (these are elections to replace a candidate who has resigned, died, or otherwise vacated their seat before their term ended)
+- There are 4 state-level special elections scheduled for the next month - these are elections to replace a candidate who has resigned, died, or otherwise vacated their seat before their term ended
 - For each of these elections, find Biden’s margin of victory in the relevant district during the 2020 presidential election
 - Take the margin of victory (or defeat) for the democratic candidate in each of these 4 elections
 - Subtract Biden’s 2020 margin of victory
 - Take the average of this number across the 4 special elections
 
-The question details link to a [spreadsheet](https://docs.google.com/spreadsheets/d/11ZlsgliiaOa92s9PkoSW244QbfxWZbw8cIW4TF_TTKU/edit#gid=2073652358) that some [election analyst on Twitter](https://twitter.com/ECaliberSeven) has been maintaining, which tracks this data for all special elections so far in 2023 (there have been 27 so far).
+The question details link to a [spreadsheet](https://docs.google.com/spreadsheets/d/11ZlsgliiaOa92s9PkoSW244QbfxWZbw8cIW4TF_TTKU/edit#gid=2073652358) that an [election analyst on Twitter](https://twitter.com/ECaliberSeven) has been maintaining, which tracks this data for all special elections so far in 2023 (there have been 27 so far).
 
-This data gives us a hint as to how the electoral environment today compares to the environment the day of the 2020 presidential election. Recent special election results are one of the better indicators to use when trying to predict the results of upcoming elections. Since the overturning of Roe vs. Wade, democrats have been performing very strongly in special elections relative to Biden’s 2020 margins.
+This data gives us a hint as to how the electoral environment today compares to the environment the day of the 2020 presidential election. Recent special election results are one of the better indicators to use when trying to predict the results of upcoming elections. Since the overturning of *Roe vs. Wade*, Democrats have been performing very strongly in special elections relative to Biden’s 2020 margins.
 
 To make a prediction for this question, I used the following approach:
 
 - assume that the 4 upcoming special elections are drawn from roughly the same distribution as the previous 27 elections in the dataset
 - run 1000 “simulations” of those 4 elections by randomly selecting 4 results from the dataset and computing the average
 - these 1000 trials give us a new distribution which should roughly model the question at hand
-- Find the 25, 50, and 75 %-iles of the new distribution (which should be approximately normal) and use this to specify the distribution for the question.
+- Find the 25, 50, and 75 %-iles of the new distribution and use them to specify the distribution for the question.
 
 <figure >
     <img src="/static/img/posts/18-special-elections-dist-base.svg"
@@ -80,10 +80,10 @@ To make a prediction for this question, I used the following approach:
 <figure style="margin-top: 25px">
     <img src="/static/img/posts/18-special-elections-dist-sample.svg"
          alt="Histogram showing the distribution created by averaging 4 randomly drawn samples from the above distribution, and repeating 1000 times">
-    <figcaption>Distribution created by averaging 4 randomly drawn samples from the above distribution, and repeating 1000 times</figcaption>
+    <figcaption>Distribution created by averaging 4 randomly drawn samples from the above distribution, repeating 1000 times</figcaption>
 </figure>
 
-According the ChatGPT, this method is called “bootstrapping” and is probably a reasonable way to approach the question. To run these ‘simulations’ I described the problem the ChatGPT Code Interpreter and uploaded a CSV with the previous 2023 results, and then it wrote the python code, ran the trials, and returned a new CSV with all the trial results. Really cool! \[here’s a [link to the conversation](https://chat.openai.com/share/349516cc-f4b2-497f-9b61-e56737c7da6e)\] 
+According the ChatGPT, this method is called “bootstrapping” and is probably a reasonable way to approach the question. To run these ‘simulations’ I described the problem to ChatGPT Code Interpreter and uploaded a CSV with the previous 2023 results, and then it wrote the python code, ran the trials, and returned a new CSV with all the trial results. Really cool! \[here’s a [link to the conversation](https://chat.openai.com/share/349516cc-f4b2-497f-9b61-e56737c7da6e)\] 
 
 The 1000 trials had a **median of 6.6% and an IQR of 1.8% - 10.9%**, which is what I used to specify the distribution on Metaculus.
 
@@ -120,7 +120,7 @@ A day later, after the community forecast was revealed, the community was at 12%
 
 BA.2.86 is a recently detected Covid variant that’s caught scientists’ attention due to it’s very high number of mutations, relative to the variants it evolved from. Eric Topol has a (fairly technical) write-up of it [here](https://erictopol.substack.com/p/a-quick-update-on-the-ba286-variant).
 
-The high number of mutations are likely to mean that this variant will be better at “immune escape”, because it looks significantly different in many respects than the viruses our antibodies are designed to detect. This *could* mean that it’s more likely to cause symptoms in those infected. 
+The high number of mutations are likely to mean that this variant will be better at “immune escape”, because it looks significantly different in many respects than the viruses our antibodies are designed to detect. This *could* mean that it’s more likely to cause symptoms in those infected by it. 
 
 On the other hand, only a very small number of samples have been collected, and we don’t yet know how *transmissible* the variant is. If it’s not more transmissible than the existing dominant variants, it’s unlikely to have much impact.
 
@@ -143,7 +143,7 @@ There’s still very limited information about the variant, and this is by no me
 
 ### What will the median % prevalence of EG.5 in the US be for the biweekly periods for August 19th and September 2? 
 
-Honestly, I was very busy when this question popped up, and I don’t really have experience predicting on questions like this previously, so I didn’t put a ton of effort into this one. There’s a good chance I will get totally hammered on this.
+Honestly, I was very busy when this question popped up, and I don’t really have experience predicting on questions like this previously, so I didn’t put a ton of effort into this one. There’s a good chance I will get totally crushed on this.
 
 The question is based on [this CDC page](https://covid.cdc.gov/covid-data-tracker/#variant-proportions), which tracks the proportion of each different known Covid variant as a percentage of new cases, and is updated every two weeks. The question is asking for predictions on what the prevalence of the EG.5 variant will be on 8/19 and 9/2. 
 
@@ -216,7 +216,7 @@ This seemed unlikely because:
 - There were reports saying that all of Trump’s advisors were telling him not to debate
 - He had made comments along the lines of “why should I debate when I have such a big lead”
 - His schedule seemed busy between all the various indictments and logistics around that
-- Strategically, it seemed like skipping it was smarter, since most of the candidates won’t criticize him directly. It gives the whole debate a junior-varsity team feel. If it turns out the other candidates start gaining ground after the debate, you can always still go to the later ones
+- Strategically, it seemed like skipping it was smarter, since most of the candidates won’t criticize him directly. It gives the whole debate a "junior-varsity" feel. If it turns out the other candidates start gaining ground after the debate, you can always still go to the later ones
 
 I was a little under the community the whole way here and so ended up with a pretty good tournament score here.
 
@@ -228,7 +228,7 @@ I was a little under the community the whole way here and so ended up with a pre
 
 This one played out pretty much exactly as expected. There were really no issues the whole way, and the transfer finished a few days before the deadline. The one thing that worried me a little towards the end was that there way me a long period right at the end as they removed the last bit of oil, but the transfer rate ended up being pretty much constant the whole way.
 
-Still though, I think the reasoning that once the transfer started, there was very low risk of a disruption and the salvage company would give a conservative time estimate anyway, held up quite well.
+I think my reasoning that once the transfer started, there was very low risk of a disruption and the salvage company would give a conservative time estimate anyway, held up quite well.
 
 ### Will ECOWAS launch a military intervention in Niger before August 12?
 
@@ -238,11 +238,11 @@ Still though, I think the reasoning that once the transfer started, there was ve
 
 My prediction history on this one was wild, lol. In the end, my score was basically zero, which I am totally fine with, but my forecasting was frenetic. 
 
-I think the lesson here is that for rapidly unfolding events, particularly those with the “fog of war”, where reliable information is hard to come by, it’s probably best to not make sudden large adjustments to the prediction, absent very compelling new evidence. The reason my predictions look so crazy is that I kept overreacting to Tweets, and then realizing I had overreacted and correcting back to about where I was before. 
+I think the lesson here is that for rapidly unfolding events, particularly those with the “fog of war”, where reliable information is hard to come by, it’s probably best to not make sudden large adjustments to the prediction, absent very compelling new evidence. The reason my predictions look so crazy is that I kept overreacting to Tweets and then realizing I had overreacted and correcting back to about where I was before. 
 
 There’s definitely some pressure where I want to react quickly and decisively to important news to get an edge by being ahead of the field for a while. But actually I don’t think there’s really that much to gain from doing this - if the evidence really is compelling, it will trickle out to the community pretty quickly anyway, so you’re not gaining all that much by getting a head start. And if it isn’t compelling, then you shouldn’t be reacting strongly to it.
 
-Much of my individual advantage comes from interpreting the evidence in a more accurate way then other predictors, rather than just getting the best evidence faster. 
+Much of my individual advantage comes from interpreting the evidence in a more accurate way than other predictors, rather than just getting the best evidence faster. 
 
 ### Will any of Donald Trump’s alleged co-conspirators be indicted before August 11th?
 
@@ -252,7 +252,7 @@ Much of my individual advantage comes from interpreting the evidence in a more a
 
 No too much to say about this one. This seemed unlikely given news reports and the short time frame, and after the first few weekdays passed, the forecast dropped to the single digits.
 
-Interestingly, some (maybe all?) of these co-conspirators were actually indicted a week or so after the question resolution in the *Georgia* case, which I believe would still have resolved this to Yes. Given that there wasn’t any news indicating that indictments from the Georgia case were imminent, it was okay to not consider that a major factor, but that was definitely a blind spot that could have come back to bite me.
+Interestingly, some (maybe all?) of these co-conspirators were actually indicted a week or so after the question resolution in the *Georgia* case, which I believe would still have resolved this to Yes. Given that there wasn't any news indicating that indictments from the Georgia case were imminent, it was okay to not consider that a major factor, but that was definitely a blind spot that could have come back to bite me.
 
 ### Will Luisa González receive the most votes in the first round of the Ecuadorian election?
 
