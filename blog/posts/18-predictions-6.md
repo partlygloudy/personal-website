@@ -157,6 +157,7 @@ It turned out that I wasn’t ********that******** different from what the commu
 
 ![Plot showing my forecast vs. the Metaculus forecast for this question](/static/img/posts/18-metaculus-argentina.png)
 
+*Resolved to >30*
 
 In what turned out to be a big polling miss, Javier Milei finished with the highest vote share in the primary, finishing with 30% of the vote, despite polling around 20% (in 3rd place) in the weeks before the election. 
 
@@ -167,6 +168,8 @@ I wish I could say that I put lots of thought into this and decided “I don’t
 ### What % of possession will the winning team have in the Women’s World Cup Final?
 
 ![Plot showing my forecast vs. the Metaculus forecast for this question](/static/img/posts/18-metaculus-world-cup.png)
+
+*Resolved to 60*
 
 On this question, which is now my best question of the tournament, I both made a great prediction and also got incredibly, undeservedly lucky. Let me explain.
 
@@ -184,7 +187,9 @@ So in the end, I feel like I somewhat deserve the good score I got, since I actu
 
 ![Plot showing my forecast vs. the Metaculus forecast for this question](/static/img/posts/18-metaculus-chandrayaan.png)
 
-Chandrayaan-3 did successfully land on the moon and deploy it's rover - congrats India! I predicted Yes here, but with lower confidence than the field overall, so my tournament score was negative. I think my reasoning was okay - I was mainly sticking with the base rate which was about 50/50 - however I think now in hindsight I can see a few things worth adjusting on moving forward:
+*Resolved to Yes*
+
+Chandrayaan-3 did successfully land on the moon and deploy its rover - congrats India! I predicted Yes here, but with lower confidence than the field overall, so my tournament score was negative. I think my reasoning was okay - I was mainly sticking with the base rate which was about 50/50 - however I think now in hindsight I can see a few things worth adjusting on moving forward:
 
 - India was quite close in their previous attempt, much closer than, for example, Russia’s recent Luna-25 attempt
 - This attempt being a follow-up to a recent, close attempt should maybe have increased my confidence more than it did. I wasn’t sure how much of a boost this should give, but I probably undervalued it
@@ -194,6 +199,8 @@ Chandrayaan-3 did successfully land on the moon and deploy it's rover - congrats
 
 ![Plot showing my forecast vs. the Metaculus forecast for this question](/static/img/posts/18-metaculus-threads-web.png)
 
+*Resolved to Yes*
+
 Meta did indeed launch a web version of Threads a few days ago. I was very confident on this one from the open, because it seemed like (a) imperative from a business perspective that they launch this quickly, and (b) executives from the Threads team were strongly hinting that they were actively working on it. 
 
 Unfortunately, there was a fairly long delay between when Mark Zuckerberg explicitly stated that a web version was imminent (which moved the whole community to 99%) and when it actually launched, so my big early advantage vs. the field diminished quite a bit. Still gained a bit of ground though.
@@ -201,6 +208,8 @@ Unfortunately, there was a fairly long delay between when Mark Zuckerberg explic
 ### Will Donald Trump participate in the first Republican presidential debate?
 
 ![Plot showing my forecast vs. the Metaculus forecast for this question](/static/img/posts/18-metaculus-trump-debate.png)
+
+*Resolved to No*
 
 This seemed unlikely because:
 
@@ -215,6 +224,8 @@ I was a little under the community the whole way here and so ended up with a pre
 
 ![Plot showing my forecast vs. the Metaculus forecast for this question](/static/img/posts/18-metaculus-fso-safer.png)
 
+*Resolved to Yes*
+
 This one played out pretty much exactly as expected. There were really no issues the whole way, and the transfer finished a few days before the deadline. The one thing that worried me a little towards the end was that there way me a long period right at the end as they removed the last bit of oil, but the transfer rate ended up being pretty much constant the whole way.
 
 Still though, I think the reasoning that once the transfer started, there was very low risk of a disruption and the salvage company would give a conservative time estimate anyway, held up quite well.
@@ -222,6 +233,8 @@ Still though, I think the reasoning that once the transfer started, there was ve
 ### Will ECOWAS launch a military intervention in Niger before August 12?
 
 ![Plot showing my forecast vs. the Metaculus forecast for this question](/static/img/posts/18-metaculus-ecowas-intervention.png)
+
+*Resolved to No*
 
 My prediction history on this one was wild, lol. In the end, my score was basically zero, which I am totally fine with, but my forecasting was frenetic. 
 
@@ -235,6 +248,8 @@ Much of my individual advantage comes from interpreting the evidence in a more a
 
 ![Plot showing my forecast vs. the Metaculus forecast for this question](/static/img/posts/18-metaculus-trump-co-conspirators.png)
 
+*Resolved to No*
+
 No too much to say about this one. This seemed unlikely given news reports and the short time frame, and after the first few weekdays passed, the forecast dropped to the single digits.
 
 Interestingly, some (maybe all?) of these co-conspirators were actually indicted a week or so after the question resolution in the *Georgia* case, which I believe would still have resolved this to Yes. Given that there wasn’t any news indicating that indictments from the Georgia case were imminent, it was okay to not consider that a major factor, but that was definitely a blind spot that could have come back to bite me.
@@ -242,6 +257,8 @@ Interestingly, some (maybe all?) of these co-conspirators were actually indicted
 ### Will Luisa González receive the most votes in the first round of the Ecuadorian election?
 
 ![Plot showing my forecast vs. the Metaculus forecast for this question](/static/img/posts/18-metaculus-ecuador-gonzales.png)
+
+*Resolved to Yes*
 
 González had a strong lead in almost every poll in the run-up to the election, which would have indicated a pretty high probability here, but there were a few factors that added a dose of uncertainty:
 
