@@ -1,13 +1,11 @@
 # Interactive Chart - 2023 ACE Forecast
 #### September 1, 2023 at 7:00 PM
 
-I finally finished up a project I've been working on for a while - an interactive version of the model I've been using to make forecasts for the Metaculus question: *What will be the Accumulated Cyclone Energy of the 2023 Atlantic hurricane season on September 30, 2023?*
+I finally finished up a project I've been working on for a while - an interactive version of the model I've been using to make forecasts for the Metaculus question: *[What will be the Accumulated Cyclone Energy of the 2023 Atlantic hurricane season on September 30, 2023?](https://www.metaculus.com/questions/17721/north-atlantic-ace-on-sep-30-2023/)*
 
 I'm mostly excited that I was actually able to learn enough d3.js to get the chart to look how I wanted and scale reasonably well to differently-sized screens. In the process, I also set up a bunch of tools that should make it way easier for me to create and publish more interactive charts like this in the future. So hopefully more cool charts coming soon!
 
-The model itself isn't anything crazy (or at least, *I* didn't do any of the difficult modelling work). It's entirely based on the forecasts that Colorado State's Tropical Meteorology Project has been publishing each month. Based on how the community forecast has lined up with my own, it seems like lots of other forecasters are using this model as well (which makes sense, CSU's site is linked in the question details and the resolution is based on their data).
-
-
+The model itself isn't anything crazy (or at least, *I* didn't do any of the difficult modelling work). It's entirely based on the forecasts that Colorado State's Tropical Meteorology Project has been [publishing each month](https://tropical.colostate.edu/forecasting.html). Based on how the community forecast has lined up with my own, it seems like lots of other forecasters are using this model as well (which makes sense, CSU's site is linked in the question details and the resolution is based on their data).
 
 <iframe class="mychart-embed" width="100%" height="725px" src="https://charts.jakegloudemans.com/embed/ace-forecast-2023"></iframe>
 
@@ -22,5 +20,7 @@ Here's the approach I took to make daily forecasts:
 6. To model the uncertainty, I start by finding the difference between the 25th percentile and median and between the 75th percentile and median, using the cumulative distribution from the CSU model
 7. I scale these ranges down by a factor of 123/160 - this gives me the 25th and 75th percentiles for September 30th, on the day the CSU-model was released. Again, this is based on the assumption I made in (1) - if 75% of the action is expected to happen before September 30th, I'm assuming that 75% of the variance is there as well. I'm definitely not confident that this is a statistically valid thing to do, but it's probably not the worst strategy out there at least. 
 8. I gradually scale this variance down, based on the proportion of the expected full-season ACE that has passed. So for example historically, about 1/3 of the September 30th ACE has accumulated by this point in the season. So I reduce the inter-quartile differences by about 1/3. (I will probably stop decaying this noise after a certain point, just because I don't really want the uncertainty to very close to zero in the last few days)
+
+And of course this is all making the assumption that CSU's forecasts are actually good! It probably would have been worthwhile to look back at some of their old forecasts and see how they panned out. But given that I know nothing about meteorology or weather forecasting, sticking with their model seemed like a good way to go. 
 
 So far, this model has actually tracked the measured ACE values quite well! There was a quiet period in early August where there were several weeks with no storms at all, but Hurricanes Franklin and Idalia very quickly made up the deficit over the last week or so.
