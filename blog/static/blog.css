@@ -300,7 +300,7 @@ a:link, a:visited, a:active {
     font-family: monospace;
     color: rgb(75, 75, 75);
     max-width: 100%;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .post table thead {
