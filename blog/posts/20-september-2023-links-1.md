@@ -1,4 +1,5 @@
-# September Links
+# September Links #1
+#### September 3, 2023 at 4:52 PM
 
 1. Nate Silver on [the Indigo Blob](https://www.natesilver.net/p/twitter-elon-and-the-indigo-blob)
 2. [A Portrait of Tenochtitlan:](https://tenochtitlan.thomaskole.nl/) a 3D reconstruction of the capital of the Aztec Empire
