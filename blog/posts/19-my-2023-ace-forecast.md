@@ -1,6 +1,8 @@
 # Interactive Chart - 2023 ACE Forecast
 #### September 1, 2023 at 7:00 PM
 
+*Edit: See [this post](https://blog.jakegloudemans.com/post/22-ace-model-update) for a correction I've made to the initial model as described here*
+
 I finally finished up a project I've been working on for a while - an interactive version of the model I've been using to make forecasts for the Metaculus question: *[What will be the Accumulated Cyclone Energy of the 2023 Atlantic hurricane season on September 30, 2023?](https://www.metaculus.com/questions/17721/north-atlantic-ace-on-sep-30-2023/)*
 
 I'm mostly excited that I was actually able to learn enough d3.js to get the chart to look how I wanted and scale reasonably well to differently-sized screens. In the process, I also set up a bunch of tools that should make it way easier for me to create and publish more interactive charts like this in the future. So hopefully more cool charts coming soon!

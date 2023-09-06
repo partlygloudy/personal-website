@@ -1,4 +1,4 @@
-# Driverless car update
+# New analysis of driverless car safety
 #### September 4, 2023 at 2:20 PM
 
 Tim Lee has an [excellent new post](https://www.understandingai.org/p/driverless-cars-may-already-be-safer) examining the track record of Waymo and Cruise, both of which were recently approved for fared driverless rides across San Francisco. 
