@@ -1,9 +1,16 @@
 [
   {
+    "url": "23-predictions-7",
+    "title": "Predictions #7",
+    "date": "2023-09-24T14:10:00-05:00",
+    "cardImgUrl": "card-default.png",
+    "cardDescription": "One week to go and I'm winning!"
+  },
+  {
     "url": "22-ace-model-update",
     "title": "2023 ACE model update",
     "date": "2023-09-04T14:20:00-05:00",
-    "cardImgUrl": "card-default.png",
+    "cardImgUrl": "card-ace-model.png",
     "cardDescription": "I updated my cyclone energy model to calculate uncertainty in a more statistically valid way"
   },
   {
@@ -17,14 +24,14 @@
     "url": "20-september-2023-links-1",
     "title": "September Links #1",
     "date": "2023-09-03T16:51:00-05:00",
-    "cardImgUrl": "card-default.png",
+    "cardImgUrl": "card-links.png",
     "cardDescription": "A collection of interesting links from the last few weeks"
   },
   {
     "url": "19-my-2023-ace-forecast",
     "title": "Interactive Chart - 2023 ACE Forecast",
     "date": "2023-09-01T19:00:00-05:00",
-    "cardImgUrl": "card-default.png",
+    "cardImgUrl": "card-ace-model.png",
     "cardDescription": "An interactive chart showing my forecasts for Accumulated Cyclone Energy through 9/31 (for Metaculus's quarterly forecasting competition)"
   },
   {
@@ -52,7 +59,7 @@
     "url": "15-links-7-26-2023",
     "title": "Wednesday Links",
     "date": "2023-07-26T11:37:00-05:00",
-    "cardImgUrl": "card-default.png",
+    "cardImgUrl": "card-links.png",
     "cardDescription": "Interesting links for Wednesday July 26, 2023"
   },
   {
@@ -80,7 +87,7 @@
     "url": "11-links-7-11-2023",
     "title": "Tuesday Links",
     "date": "2023-07-11T00:34:00-05:00",
-    "cardImgUrl": "card-default.png",
+    "cardImgUrl": "card-links.png",
     "cardDescription": "Interesting links for Tuesday July 11, 2023"
   },
   {
@@ -108,7 +115,7 @@
     "url": "7-links-7-2-2023",
     "title": "Sunday Links",
     "date": "2023-07-02T23:54:00-05:00",
-    "cardImgUrl": "card-default.png",
+    "cardImgUrl": "card-links.png",
     "cardDescription": "Interesting links for Sunday July 2, 2023"
   },
   {
@@ -136,7 +143,7 @@
     "url": "3-pulsar-gravity-wave",
     "title": "Making sense of... pulsars and gravity waves",
     "date": "2023-06-29T19:55:00-05:00",
-    "cardImgUrl": "card-default.png",
+    "cardImgUrl": "card-gravity-waves.png",
     "cardDescription": "Attempting to explain the latest fad in gravity wave detection"
   },
   {
@@ -150,7 +157,7 @@
     "url": "1-links-6-27-2023",
     "title": "Tuesday Links",
     "date": "2023-06-27T15:00:00-05:00",
-    "cardImgUrl": "card-default.png",
+    "cardImgUrl": "card-links.png",
     "cardDescription": "Interesting links for Tuesday June 27, 2023"
   }
 ]
