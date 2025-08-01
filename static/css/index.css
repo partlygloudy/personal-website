@@ -92,11 +92,11 @@ body {
     cursor: pointer;
 }
 
-#icon-about, #icon-blog, #icon-projects, #icon-hire {
+#icon-about, #icon-blog, #icon-projects, #icon-support {
     opacity: 0;
 }
 
-#icon-hire {
+#icon-support {
     padding: 6px 0;
     box-sizing: border-box;
 }

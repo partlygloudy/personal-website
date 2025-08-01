@@ -11,20 +11,21 @@ window.onload = function() {
     });
 
     // Add hover and click handlers to icons
-    $("#icon-about, #icon-hire").click(iconClick);
+    $("#icon-about").click(iconClick);
     $("#icon-blog").click(blogClick);
     $("#icon-projects").click(projectsClick);
+    $("#icon-support").click(supportClick);
     $(".icon").hover(iconHoverIn, iconHoverOut);
 
     // Add click handler to body for return clicks
     $("body").click(bodyClick);
 
     // Fade icons in left to right
-    $("#name-text").delay(850).fadeTo(500, 1.0);
-    $("#icon-about").delay(700).fadeTo(500, 1.0);
-    $("#icon-projects").delay(800).fadeTo(500, 1.0);
-    $("#icon-blog").delay(900).fadeTo(500, 1.0);
-    $("#icon-hire").delay(1000).fadeTo(500, 1.0);
+    $("#name-text").delay(200).fadeTo(600, 1.0);
+    $("#icon-about").delay(100).fadeTo(600, 1.0);
+    $("#icon-projects").delay(200).fadeTo(600, 1.0);
+    $("#icon-blog").delay(300).fadeTo(600, 1.0);
+    $("#icon-support").delay(400).fadeTo(600, 1.0);
 
 }
 
@@ -107,4 +108,8 @@ function blogClick() {
 
 function projectsClick() {
     window.location.href = "projects";
+}
+
+function supportClick() {
+    window.location.href = "support";
 }
