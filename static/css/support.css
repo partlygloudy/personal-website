@@ -42,7 +42,7 @@ a:link, a:visited, a:active {
     box-shadow: 0 0 7px 0 rgba(0,0,0,0.12);
     padding: 40px;
     box-sizing: border-box;
-    border-radius: 3px;
+    border-radius: 15px;
     background-color: white;
 }
 
@@ -85,7 +85,7 @@ a:link, a:visited, a:active {
     background-color: black;
     color: white;
     cursor: pointer;
-    border-radius: 3px;
+    border-radius: 10px;
 }
 
 #checkout-button-wrapper:hover {
