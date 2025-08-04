@@ -120,4 +120,9 @@ a:link, a:visited, a:active {
         line-height: 22px;
     }
 
+    #card-wrapper {
+        width: 92%;
+        padding: 30px 30px 40px 30px;
+    }
+
 }
