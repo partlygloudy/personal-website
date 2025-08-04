@@ -7,7 +7,7 @@ body {
     --overlay: rgb(225 225 225 / 95%);
     background:
       linear-gradient(var(--overlay),var(--overlay)), 
-      url('backgrounds/support-bkgd.png') center/cover no-repeat;      
+      url('backgrounds/fastcards-bkgd.png') center/cover no-repeat;      
     height: 100%;
     margin: 0;
     display: flex;
@@ -15,7 +15,7 @@ body {
     justify-content: start;
     align-items: center;
     padding-top: 10%;
-    padding-bottom: 50px;
+    box-sizing: border-box;
 }
 
 body::-webkit-scrollbar {
