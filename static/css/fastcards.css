@@ -15,6 +15,7 @@ body {
     justify-content: start;
     align-items: center;
     padding-top: 10%;
+    padding-bottom: 50px;
 }
 
 body::-webkit-scrollbar {
@@ -109,3 +110,14 @@ a:link, a:visited, a:active {
 }
 
 
+@media only screen and (max-width: 750px) {
+
+    body {
+        padding-top: 7%;
+    }
+
+    .card-text-section {
+        line-height: 22px;
+    }
+
+}
