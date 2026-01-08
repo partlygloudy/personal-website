@@ -1,5 +1,5 @@
 # 2025 Reading - Shakespeare
-#### October 1, 2025 at 11:30 PM
+#### January 7, 2026 at 11:30 PM
 
 In 2025 I started working through Henry Oliver’s  [Great English Literature syllabus](https://www.syllabi.directory/english-literature). Shakespeare is Henry’s recommended starting point, given his profound influence on all the literature that followed. My goal was to read all 11 of his suggested sampling of plays over the course of the year. I finished 9 of the 11 (plus Richard II, which I wanted to read before Henry IV pt. 1), and will round out the last two in January or February. 
 
@@ -10,15 +10,25 @@ This was my first time reading Shakespeare, aside from an in-class reading of Ma
 **The Tempest**: I put this in Tier 2 out of 4 in my personal Shakespeare rankings (additional tiers may be added as I read more, all rankings subject to change). I found the character of Caliban difficult but overall the themes of this play were more interesting to me than those in the other, more conventional comedies.
 
 >Our revels now are ended. These our actors,
+
 >As I foretold you, were all spirits, and
+
 >Are melted into air, into thin air:
+
 >And, like the baseless fabric of this vision,
+
 >The cloud-capp'd towers, the gorgeous palaces,
+
 >The solemn temples, the great globe itself,
+
 >Yea, all which it inherit, shall dissolve,
+
 >And, like this insubstantial pageant faded,
+
 >Leave not a rack behind. We are such stuff
+
 >As dreams are made on; and our little life
+
 >Is rounded with a sleep.
 
 **A Midsummer Night's Dream:** A good play. A classic Shakespearian comedy. I’m glad I read it. But it goes in Tier 3. The bar is high!
@@ -40,20 +50,31 @@ This was my first time reading Shakespeare, aside from an in-class reading of Ma
 pg. 67
 
 >Methinks King Richard and myself should meet
+
 >With no less terror than the elements
+
 >Of fire and water when their thund’ring shock
+
 >At meeting tears the cloudy cheeks of heaven.
+
 >Be he fire, I’ll be the yielding water;
+
 >The rage be his, whilst on the earth I rain
+
 >My waters; on the earth, and not on him.
 
 And
 
 >King Richard doth himself appear,
+
 >As doth the blushing discontented sun
+
 >From out the fiery portal of the east
+
 >When he perceives the envious clouds are bent
+
 >To dim his glory and to stain the track
+
 >Of his bright passage to the occident.
 
 Marvelous! There are very few ‘filler’ lines in this play, even minor plot development is written beautifully. And they say Henry IV and V are the real standouts of the Henriad! 
