@@ -9,31 +9,31 @@ This was my first time reading Shakespeare, aside from an in-class reading of Ma
 
 **The Tempest**: I put this in Tier 2 out of 4 in my personal Shakespeare rankings (additional tiers may be added as I read more, all rankings subject to change). I found the character of Caliban difficult but overall the themes of this play were more interesting to me than those in the other, more conventional comedies.
 
->Our revels now are ended. These our actors,
+>*Our revels now are ended. These our actors,*
 
->As I foretold you, were all spirits, and
+>*As I foretold you, were all spirits, and*
 
->Are melted into air, into thin air:
+>*Are melted into air, into thin air:*
 
->And, like the baseless fabric of this vision,
+>*And, like the baseless fabric of this vision,*
 
->The cloud-capp'd towers, the gorgeous palaces,
+>*The cloud-capp'd towers, the gorgeous palaces,*
 
->The solemn temples, the great globe itself,
+>*The solemn temples, the great globe itself,*
 
->Yea, all which it inherit, shall dissolve,
+>*Yea, all which it inherit, shall dissolve,*
 
->And, like this insubstantial pageant faded,
+>*And, like this insubstantial pageant faded,*
 
->Leave not a rack behind. We are such stuff
+>*Leave not a rack behind. We are such stuff*
 
->As dreams are made on; and our little life
+>*As dreams are made on; and our little life*
 
->Is rounded with a sleep.
+>*Is rounded with a sleep.*
 
 **A Midsummer Night's Dream:** A good play. A classic Shakespearian comedy. I’m glad I read it. But it goes in Tier 3. The bar is high!
 
-**Measure for Measure:** Very enjoyable. More complex than the other comedies I read (in fact it’s sometimes categorized as a ‘problem’ play, not fitting neatly in the comedy or tragedy category), and though the ending is a bit awkward, that’s a minor part of the play all things considered. I liked the Globe Theatre rendition, especially the Duke. 
+**Measure for Measure:** Very enjoyable. More complex than the other comedies I read (in fact it’s sometimes categorized as a ‘problem’ play, not fitting neatly in the comedy or tragedy category), and though the ending is a bit awkward, that’s a minor part of the play all things considered. I liked the Globe Theatre rendition, especially the Duke. I'm looking forward to the forthcoming [Tyler Cowen - Henry Oliver discussion](https://marginalrevolution.com/marginalrevolution/2026/01/what-should-i-ask-henry-oliver.html) of Measure for Measure.
 
 **Romeo and Juliet:** I’m glad that I finally know the actual plot of this one and that all the references make sense now! It goes in Tier 2. There’s lots of memorable poetry, a good plot, and it’s more ‘re-readable’ than most of the other plays. At the risk of giving deeply-uninformed literary analysis, this one felt a bit ‘messier’ or less ‘polished’ than, say, Hamlet or Richard II, almost as though the ideal version of it would be edited to 80 or 90% of the words. But of course we're nitpicking here, it's a wonderful play. I've not yet found  a top-tier recording. The Globe Theatre taping had a phenomenal Juliet, but the Romeo was so bad it ruined everything else about the play and made it borderline unwatchable.
 
@@ -49,33 +49,33 @@ This was my first time reading Shakespeare, aside from an in-class reading of Ma
 
 pg. 67
 
->Methinks King Richard and myself should meet
+>*Methinks King Richard and myself should meet*
 
->With no less terror than the elements
+>*With no less terror than the elements*
 
->Of fire and water when their thund’ring shock
+>*Of fire and water when their thund’ring shock*
 
->At meeting tears the cloudy cheeks of heaven.
+>*At meeting tears the cloudy cheeks of heaven.*
 
->Be he fire, I’ll be the yielding water;
+>*Be he fire, I’ll be the yielding water;*
 
->The rage be his, whilst on the earth I rain
+>*The rage be his, whilst on the earth I rain*
 
->My waters; on the earth, and not on him.
+>*My waters; on the earth, and not on him.*
 
 And
 
->King Richard doth himself appear,
+>*King Richard doth himself appear,*
 
->As doth the blushing discontented sun
+>*As doth the blushing discontented sun*
 
->From out the fiery portal of the east
+>*From out the fiery portal of the east*
 
->When he perceives the envious clouds are bent
+>*When he perceives the envious clouds are bent*
 
->To dim his glory and to stain the track
+>*To dim his glory and to stain the track*
 
->Of his bright passage to the occident.
+>*Of his bright passage to the occident.*
 
 Marvelous! There are very few ‘filler’ lines in this play, even minor plot development is written beautifully. And they say Henry IV and V are the real standouts of the Henriad! 
 

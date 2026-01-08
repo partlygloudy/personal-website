@@ -225,6 +225,8 @@ a:link, a:visited, a:active {
 .post blockquote p {
     font-size: 1.0rem;
     color: rgb(100,100,100);
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .post img {
