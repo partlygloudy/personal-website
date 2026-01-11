@@ -1,6 +1,5 @@
 # Business update, week 25
 #### January 11, 2026 at 10:45 AM
-Hi Everyone,
 
 Since the last update I:
 
@@ -44,5 +43,3 @@ I think I was feeling a bit burned out after all the effort that went into creat
 | Mentor Program Interest Calls | 1                         |
 | **Mentor Program Signups**    | 0                         |
 | **Interview Signups**         | 0                         |
-
-Until next week
