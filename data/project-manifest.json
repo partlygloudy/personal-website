@@ -5,12 +5,21 @@
         "title": "Robotics Prep",
         "description": "Robotics career preparedness website and business"
     },
+
+    "forecasting-101": {
+        "img": "/static/img/projects/cards/forecasting-101-card.png",
+        "href": "https://jakegloudemans.com/static/misc/forecasting-101.pdf",
+        "title": "Forecasting 101",
+        "description": "A short book I wrote reflecting on my first two years of crowd forecasting work"
+    },
+    
     "fast-cards": {
         "img": "/static/img/projects/cards/fast-cards-card.png",
         "href": "https://fast.cards",
         "title": "fast.cards",
         "description": "Tool for quickly creating language flashcards in a variety of languages"
     },
+
     "crossword-editor": {
         "img": "/static/img/projects/cards/crossword-card.png",
         "href": "https://crossword.gloudemans.fun",

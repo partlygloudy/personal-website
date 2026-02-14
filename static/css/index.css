@@ -76,7 +76,7 @@ body {
 
 #icon-wrapper {
     width: 90%;
-    max-width: 550px;
+    max-width: 350px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -168,6 +168,11 @@ body {
         position: relative;
         box-shadow: 10px 10px rgb(200, 200, 200);
         border: 2px solid black;
+    }
+
+    #blurb-img {
+        height: unset;
+        width: 100%;
     }
 
     #blurb-text-wrapper {
