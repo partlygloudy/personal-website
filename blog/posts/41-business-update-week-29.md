@@ -16,15 +16,15 @@ I took the next two weeks to complete a mini robotics project, a simulator for a
 
 The posts still take a while to create, but I'm getting faster - it now takes one or two days to create a full week of posts, which is freeing up more time for me to work on other things.
 
-![LinkedIn post example](/static/img/posts/41-img-0.png)
+![LinkedIn post example|width-narrow](/static/img/posts/41-img-0.png)
 
-![LinkedIn post example](/static/img/posts/41-img-1.png)
+![LinkedIn post example|width-narrow](/static/img/posts/41-img-1.png)
 
 For the last three weeks, I’ve been methodically expanding my LinkedIn network, specifically among people in the robotics industry. Every morning, I send out 15 connection requests to people who I have mutual connections with. I’d estimate that about 10 / 15 of those requests are eventually accepted. Since my last update, my follower count has grown from 290 to 600, with all of the new following coming from the robotics industry. My hope is that when I post things about robotics or advertise my services, those posts will get high engagement among my network, being especially relevant to that audience.
 
 The educational posts from the Robotics Prep page continue to get extremely good engagement (% of people who see the post who stop to read it), but poor reach (# of people who are shown the post). I mentioned in the last update that the algorithm heavily prioritizes posts from personal accounts over pages, so this isn’t really surprising. The post I published from my personal account, kicking off the ‘Intro to Navigation’ series did really well - over 4,000 views with high engagement.
 
-![Data for my personal LinkedIn account. The Robotics Prep page has significantly less reach.](/static/img/posts/41-img-2.png)
+![Data for my personal LinkedIn account. The Robotics Prep page has significantly less reach.|width-medium](/static/img/posts/41-img-2.png)
 
 My social media plan seems to be going well in the sense that my reach is increasing and my posts are engaging. The question now is whether I can turn that into paying customers. None of my posts from the last few weeks have mentioned my services at all, they’ve been strictly educational, so it’s unsurprising that they haven’t driven any interest in the mentorship program.
 

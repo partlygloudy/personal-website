@@ -208,6 +208,17 @@ function applyLinks(htmlString, permaHref, mailtoHref) {
 
     }
 
+    // Apply classes to images using |class syntax in alt text
+    let images = document.getElementsByTagName('img');
+    for (let img of images) {
+        let alt = img.getAttribute('alt') || '';
+        let match = alt.match(/^(.*?)\|(\S+)$/);
+        if (match) {
+            img.setAttribute('alt', match[1]);
+            img.classList.add(match[2]);
+        }
+    }
+
     // Return the modified html as a string
     return dom.serialize();
 

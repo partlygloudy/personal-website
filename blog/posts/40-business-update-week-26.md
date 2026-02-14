@@ -30,7 +30,7 @@ My first goal for this week was to create some kind of educational robotics post
 
 Here's an example of the style of post I've been creating:
 
-![Example LinkedIn post](/static/img/posts/40-img-0.gif)
+![Example LinkedIn post|width-narrow](/static/img/posts/40-img-0.gif)
 
 Most of the posts were connected to the same topic (modeling the motion of a vehicle). This week I was sort of figuring that out as I went - for next week, I’m going to pick a topic up front, plan out all the posts, and will also try to create them all in one go, rather than one per day.
 
@@ -47,7 +47,7 @@ The other update from the week is that I had someone sign up for the mentorship 
 
 Here are the stats for the week:
 
-![Weekly stats](/static/img/posts/40-img-1.png)
+![Weekly stats|width-narrow](/static/img/posts/40-img-1.png)
 
 Until next week,
 

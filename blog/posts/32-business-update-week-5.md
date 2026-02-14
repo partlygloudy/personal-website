@@ -35,7 +35,7 @@ Anyway, my plan was to spend Wednesday scripting a video and setting up the film
 
 Instead I spent Wednesday setting up the filming stuff, Thursday overthinking what I was going to say and messing with the set some more, and Friday continuing to overthink, struggling to speak out loud in front of the camera, and then realizing “what am I doing, I just spent three days on this and it’s not even clear how it’s going to help my business”, before giving up.
 
-![At least the set looks kinda nice](/static/img/posts/32-img-0.jpeg)
+![At least the set looks kinda nice|width-medium](/static/img/posts/32-img-0.jpeg)
 
 ***Confidence crisis and recovery***
 

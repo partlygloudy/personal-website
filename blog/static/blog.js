@@ -12,6 +12,7 @@ $(document).ready(function() {
     populateRecentPanel();
     populateBlogsPanel();
     populatePubsPanel();
+    populatePodcastsPanel();
 
     // Add click handlers to logo and name, redirecting to blog home
     $("#header-logo, #header-title").click(() => {
@@ -102,6 +103,30 @@ function populatePubsPanel() {
                 .addClass("archive-panel-link-external")
                 .attr("target", "_blank")
             $("#archive-panel-pubs").append($("<li>").html(link));
+
+        }
+
+    });
+
+}
+
+function populatePodcastsPanel() {
+
+    // Fetch list of recommended podcasts from the server
+    $.getJSON("/static/json/recommended-podcasts.json", function(podcasts) {
+
+        // Iterate over headings
+        for (const key of Object.keys(podcasts)) {
+
+            // Read URL and title from JSON
+            let url = key;
+            let title = podcasts[key];
+
+            // Create link to each podcast and add to the list
+            let link = $(`<a href='${url}'>${title}</a>`)
+                .addClass("archive-panel-link-external")
+                .attr("target", "_blank")
+            $("#archive-panel-podcasts").append($("<li>").html(link));
 
         }
 
