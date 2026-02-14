@@ -8,7 +8,7 @@
 
     "forecasting-101": {
         "img": "/static/img/projects/cards/forecasting-101-card.png",
-        "href": "https://jakegloudemans.com/static/misc/forecasting-101.pdf",
+        "href": "/static/misc/forecasting-101.pdf",
         "title": "Forecasting 101",
         "description": "A short book I wrote reflecting on my first two years of crowd forecasting work"
     },
