@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Blog Editor</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Blog's original fonts and CSS (for visual fidelity) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/blog.css">
+
+    <!-- CodeMirror 5 via CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/markdown/markdown.min.js"></script>
+
+    <!-- Editor-specific CSS overrides -->
+    <link rel="stylesheet" type="text/css" href="/editor-static/editor.css">
+
+</head>
+
+<body>
+
+<!-- Header bar with logo and name (matches blog layout) -->
+<div id="header-bar">
+
+    <!-- Logo -->
+    <img id="header-logo" src="/static/img/logo.svg" alt="" />
+
+    <!-- Name -->
+    <h1 id="header-title">Jake Gloudemans</h1>
+
+</div>
+
+<!-- Main content (same structure as blog) -->
+<div id="main-content">
+
+    <!-- Button panel (left) -->
+    <div id="editor-toolbar">
+        <button id="btn-new-post">NEW</button>
+        <button id="btn-save" disabled>SAVE</button>
+        <button id="btn-toggle-mode">VIEW</button>
+        <button id="btn-commit-push" disabled>PUSH</button>
+        <span id="status-message"></span>
+    </div>
+
+    <!-- Post editing / preview area (center) -->
+    <div id="post-bucket">
+
+        <!-- Manifest fields (shown in edit mode) -->
+        <div id="manifest-fields">
+            <div class="field-group">
+                <label for="field-title">Title</label>
+                <input type="text" id="field-title">
+            </div>
+            <div class="field-group">
+                <label for="field-card-desc">Card Description</label>
+                <input type="text" id="field-card-desc">
+            </div>
+            <div class="field-group">
+                <label for="field-card-img">Card Image</label>
+                <input type="text" id="field-card-img">
+            </div>
+        </div>
+
+        <!-- CodeMirror editor (shown in edit mode) -->
+        <div id="editor-pane">
+            <textarea id="markdown-editor"></textarea>
+        </div>
+
+        <!-- Preview (shown in preview mode, hidden by default) -->
+        <div id="preview-pane" class="hidden">
+            <!-- Preview HTML injected here -->
+        </div>
+
+    </div>
+
+    <!-- Post selector panel (right side, replaces archive panel) -->
+    <div id="archive-panel">
+
+        <div class="archive-panel-section" id="post-selector-section">
+            <h2 class="archive-panel-header">Posts</h2>
+            <ul class="archive-panel-link-list" id="post-list"></ul>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Footer (matches blog layout) -->
+<div id="footer">
+    <div id="copyright-text">
+        <span>Blog Editor</span>
+    </div>
+</div>
+
+<!-- Editor JS -->
+<script src="/editor-static/editor.js"></script>
+
+</body>
+</html>

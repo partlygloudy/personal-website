@@ -1,0 +1,173 @@
+/* ---- Override main-content to be a 3-column layout ---- */
+
+#main-content {
+    align-items: flex-start;
+}
+
+
+/* ---- Editor toolbar (vertical button panel, left side) ---- */
+
+#editor-toolbar {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 40px 20px 0 20px;
+}
+
+#editor-toolbar button {
+    padding: 6px 20px;
+    border: 1px solid black;
+    border-radius: 0;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    background: transparent;
+    color: black;
+    transition: 0.15s;
+    min-width: 70px;
+}
+
+#editor-toolbar button:hover:not(:disabled) {
+    background: rgb(230, 230, 230);
+}
+
+#editor-toolbar button:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+#status-message {
+    font-family: monospace;
+    font-size: 0.6rem;
+    color: rgb(125, 125, 125);
+    text-align: center;
+}
+
+
+/* ---- Make archive panel always visible in editor ---- */
+
+#archive-panel {
+    display: block !important;
+}
+
+
+/* ---- Post selector list styling ---- */
+
+#post-selector-section {
+    max-height: 78vh;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#post-selector-section::-webkit-scrollbar {
+    display: none;
+}
+
+#post-list {
+    padding-right: 10px;
+    margin: 0;
+}
+
+#post-list li {
+    cursor: pointer;
+    transition: background 0.1s;
+    border-radius: 3px;
+    padding: 2px 0;
+}
+
+#post-list li:hover {
+    background: rgb(230, 230, 230);
+}
+
+#post-list li.active {
+    background: rgb(215, 225, 240);
+    font-weight: bold;
+}
+
+
+/* ---- Manifest metadata fields ---- */
+
+#manifest-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 20px;
+    padding-top: 15px;
+    margin-bottom: 10px;
+}
+
+.field-group {
+    display: flex;
+    align-items: stretch;
+}
+
+.field-group label {
+    font-size: 0.6rem;
+    color: black;
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 10px;
+    border: 1px solid black;
+    border-right: none;
+    font-family: monospace;
+    box-sizing: border-box;
+}
+
+.field-group input {
+    flex: 1;
+    padding: 8px 10px;
+    border: 1px solid black;
+    font-family: monospace;
+    font-size: 0.6rem;
+    color: black;
+    background: transparent;
+    border-radius: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+
+/* ---- CodeMirror editor pane ---- */
+
+#editor-pane {
+    min-height: 60vh;
+}
+
+.CodeMirror {
+    height: auto !important;
+    min-height: 60vh;
+    font-size: 0.82rem;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+    line-height: 1.5;
+    border: 1px solid black;
+    background: transparent;
+    padding: 10px;
+    overflow-x: hidden;
+}
+
+.CodeMirror-scroll {
+    overflow-x: hidden !important;
+}
+
+.CodeMirror-gutters {
+    background: rgb(248, 248, 248);
+    border-right: 1px solid rgb(230, 230, 230);
+}
+
+
+/* ---- Preview pane ---- */
+
+#preview-pane {
+    min-height: 60vh;
+}
+
+
+/* ---- Utility ---- */
+
+.hidden {
+    display: none !important;
+}

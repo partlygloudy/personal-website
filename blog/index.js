@@ -4,8 +4,7 @@ const express = require('express');
 const favicon = require('serve-favicon')
 const path = require("path");
 const fs = require("fs");
-const showdown  = require('showdown');
-const {JSDOM} = require('jsdom');
+const { createConverter, applyLinks } = require('./shared/rendering');
 
 
 // ----------------- //
@@ -19,16 +18,11 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 
 
-// Create and configure Showdown markdown converter
-let converter = new showdown.Converter({
-    "noHeaderId": true,
-    "tables": true
-});
+// Create Showdown markdown converter
+const converter = createConverter();
 
 
-// Load manifest and card data for quick access
-const blogManifest = loadManifest();
-const cardData = loadCardData(blogManifest);
+// Load card defaults (static, only changes on deploy)
 const cardDefaultsRaw = fs.readFileSync("static/json/card-defaults.json", "utf8");
 const cardDefaults = JSON.parse(cardDefaultsRaw);
 
@@ -56,6 +50,9 @@ app.use('/static', express.static("static"));
  * page content set to a handful of the most recent posts
  */
 app.get("/", function (request, response) {
+
+    // Load manifest fresh on each request
+    const blogManifest = loadManifest();
 
     // Load the markdown for the 5 latest posts, render into html
     let postsHtml = "";
@@ -100,7 +97,8 @@ app.get("/post/:post", function (request, response) {
     // Load the markdown for specified post
     const post = fs.readFileSync(`posts/${request.params.post}.md`, "utf8");
 
-    // Get the card data for this post
+    // Get the card data for this post (reload manifest to pick up editor changes)
+    const cardData = loadCardData(loadManifest());
     const postCardData = cardData[request.params.post];
 
     // Convert post markdown to html
@@ -134,6 +132,9 @@ app.get("/archive", function (request, response) {
     // Convert the post markdown to html
     let postArchive = `<h2>All Posts</h2>`;
     postArchive += `<ul id="post-archive-list">`
+
+    // Load manifest fresh on each request
+    const blogManifest = loadManifest();
 
     // Add a list item for each post in archive
     for (post of blogManifest) {
@@ -171,58 +172,6 @@ app.get("/archive", function (request, response) {
 // ----- HELPER FUNCTIONS ----- //
 // ---------------------------- //
 
-
-function applyLinks(htmlString, permaHref, mailtoHref) {
-
-    // Convert html to virtual dom so we can manipulate it
-    let dom = new JSDOM(htmlString);
-    let document = dom.window.document;
-
-    // Apply permalink if one provided
-    if (permaHref !== "") {
-
-        // Get the h1 tag (there should only ever be 1)
-        let h1 = document.getElementsByTagName('h1')[0];
-
-        // Create an <a> tag around the h1 text
-        let perma = document.createElement('a');
-        perma.textContent = h1.textContent;
-        perma.href = `post/${permaHref}`
-        h1.textContent = '';
-        h1.appendChild(perma);
-
-    }
-
-    // Apply email reply link if one provided
-    if (mailtoHref !== "") {
-
-        // Append email reply link to the end
-        let replyWrapper = document.createElement('div');
-        replyWrapper.className = "reply-link-wrapper";
-        let reply = document.createElement('a');
-        reply.textContent = "reply to this post";
-        reply.className = "reply-link";
-        reply.href = `mailto:jake.gloudemans+blog@gmail.com?subject=re: ${mailtoHref}`
-        replyWrapper.appendChild(reply)
-        document.body.appendChild(replyWrapper);
-
-    }
-
-    // Apply classes to images using |class syntax in alt text
-    let images = document.getElementsByTagName('img');
-    for (let img of images) {
-        let alt = img.getAttribute('alt') || '';
-        let match = alt.match(/^(.*?)\|(\S+)$/);
-        if (match) {
-            img.setAttribute('alt', match[1]);
-            img.classList.add(match[2]);
-        }
-    }
-
-    // Return the modified html as a string
-    return dom.serialize();
-
-}
 
 
 function loadManifest() {
