@@ -26,6 +26,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (firstPost) loadPost(firstPost.dataset.slug);
     });
 
+    // Mark dirty when manifest fields change
+    for (const id of ['field-title', 'field-card-desc', 'field-card-img']) {
+        document.getElementById(id).addEventListener('input', () => {
+            dirty = true;
+            updateButtons();
+        });
+    }
+
     // Wire up toolbar buttons
     document.getElementById('btn-new-post').addEventListener('click', createNewPost);
     document.getElementById('btn-save').addEventListener('click', savePost);
@@ -135,10 +143,15 @@ async function savePost() {
     });
 
     if (res.ok) {
+        const data = await res.json();
+        if (data.newSlug) {
+            currentSlug = data.newSlug;
+        }
         dirty = false;
         updateButtons();
         showStatus('Saved');
-        loadPostList(); // Refresh in case title changed
+        await loadPostList();
+        updateActivePost();
     } else {
         showStatus('Save failed');
     }

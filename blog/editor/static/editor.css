@@ -10,13 +10,15 @@
 #editor-toolbar {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    padding: 40px 20px 0 20px;
+    margin-top: 40px;
+    padding: 5px 10px 0 0px;
+    border-right: 1px solid lightgray;
 }
 
 #editor-toolbar button {
-    padding: 6px 20px;
-    border: 1px solid black;
+    padding: 3px 5px;
+    margin: 7px;
+    border: none;
     border-radius: 0;
     cursor: pointer;
     font-family: monospace;
@@ -24,12 +26,12 @@
     text-transform: uppercase;
     background: transparent;
     color: black;
-    transition: 0.15s;
-    min-width: 70px;
+    box-shadow: 0 1px 0 transparent;
+    transition: 0.5s;
 }
 
 #editor-toolbar button:hover:not(:disabled) {
-    background: rgb(230, 230, 230);
+    box-shadow: 0 1px 0 black;
 }
 
 #editor-toolbar button:disabled {

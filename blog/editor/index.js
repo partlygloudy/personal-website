@@ -113,13 +113,43 @@ app.post('/api/posts/:slug', (req, res) => {
     const slug = req.params.slug;
     const { markdown, manifestData } = req.body;
 
-    // Write markdown file
-    fs.writeFileSync(path.join(POSTS_DIR, `${slug}.md`), markdown);
+    let newSlug = slug;
 
-    // Update manifest entry
-    if (manifestData) {
+    // If title changed, rename the file
+    if (manifestData && manifestData.title) {
         const manifest = loadManifest();
         const idx = manifest.findIndex(m => m.url === slug);
+        if (idx !== -1 && manifestData.title !== manifest[idx].title) {
+            // Extract the number prefix from the current slug
+            const numPrefix = slug.match(/^(\d+)-/);
+            const num = numPrefix ? numPrefix[1] : '';
+            const titleSlug = manifestData.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+            newSlug = `${num}-${titleSlug}`;
+
+            // Rename the file
+            const oldPath = path.join(POSTS_DIR, `${slug}.md`);
+            const newPath = path.join(POSTS_DIR, `${newSlug}.md`);
+            if (slug !== newSlug && fs.existsSync(oldPath)) {
+                fs.renameSync(oldPath, newPath);
+            }
+
+            // Update the manifest url
+            manifest[idx].url = newSlug;
+            Object.assign(manifest[idx], manifestData);
+            saveManifest(manifest);
+
+            // Write markdown to the new file
+            fs.writeFileSync(newPath, markdown);
+            return res.json({ success: true, newSlug });
+        }
+    }
+
+    // No title change — just write the file and update manifest
+    fs.writeFileSync(path.join(POSTS_DIR, `${newSlug}.md`), markdown);
+
+    if (manifestData) {
+        const manifest = loadManifest();
+        const idx = manifest.findIndex(m => m.url === newSlug);
         if (idx !== -1) {
             Object.assign(manifest[idx], manifestData);
             saveManifest(manifest);
